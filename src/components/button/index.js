@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './style.module.css';
 
 const Button = ({ children }) => (
-  <button>
+  <button className={styles.base}>
     {children}
   </button>
 );
