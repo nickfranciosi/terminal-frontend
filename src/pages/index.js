@@ -2,20 +2,10 @@ import React from "react"
 import ViewPortView from '../components/viewPortView';
 import Container from '../components/container';
 import Button from '../components/button';
-import logo from '../assets/images/LogoMainColor.png';
+import AngledImage from '../components/angledImage';
+import mastheadImage from '../assets/images/homeAngle.png';
 
 export default () => (
-  <div>
-    <div 
-        className="logo"
-        style={{
-          maxWidth: 120,
-          marginLeft: 87,
-          marginTop: 70,
-        }}
-      >
-        <img src={logo} alt="Terminal Logo"/>
-    </div>
     <ViewPortView>
       <Container>
         <div 
@@ -46,10 +36,18 @@ export default () => (
           >
             Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem magna mollis euismod.
           </p>
-          <Button>Learn More</Button>
+          <Button to="/about/">Learn More</Button>
         </div>
-      </Container>
+        <div style={{
+          position: "absolute",
+          right: 0,
+          top: 0,
+          bottom: 0,
+          height: "100%",
+        }}>
+          <AngledImage src={mastheadImage} />
+        </div>
+      </Container>  
     </ViewPortView>
-  </div>
 );
   

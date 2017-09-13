@@ -32,11 +32,12 @@ const typography = new Typography({
       letterSpacing: "1.14px",
       textTransform: "uppercase",
     },
-    button: {
+    a: {
       fontFamily: ['MaisonNeueMedium', 'sans-serif'].join(','),
       fontSize: "13px",
       color: colors.white,
       letterSpacing: "0.81px",
+      textDecoration: "none",
       textTransform: "uppercase",
     }
   })

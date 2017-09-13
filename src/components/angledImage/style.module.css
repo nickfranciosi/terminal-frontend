@@ -1,0 +1,50 @@
+.imageWrap {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.imageWrap::after {
+  content: '';
+  position: absolute;
+  height: 160%;
+  width: 100%;
+  top: -25%;
+  right: 0;
+  background-color: white;
+  z-index: 5;
+  transform-origin: 100% 0;
+  animation: rotate 2s ease;
+  animation-fill-mode: forwards;
+}
+
+.image {
+  height: 100vh;
+  transform: scale(1.1);
+  animation: scale 6s ease;
+  animation-fill-mode: forwards;  
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0)
+  }
+  80% {
+    transform: rotate(28deg)
+  }
+  100% {
+    transform: rotate(28deg)
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
