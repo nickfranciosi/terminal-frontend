@@ -1,6 +1,7 @@
 import React from "react"
 import ViewPortView from '../components/viewPortView';
 import Container from '../components/container';
+import CalloutLink from '../components/calloutLink';
 import FullBackgroundImage from '../components/fullBackgroundImage';
 import aboutFull from '../assets/images/aboutFull.jpg';
 
@@ -60,10 +61,16 @@ export default () => (
               style={{
                 color: "#fff",
                 opacity: 1,
+                marginBottom: 37,
               }}
             >
               Lorem ipsum dolor sit amet consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus fringilla.
             </p>
+            <CalloutLink
+              to="/manifesto"
+            >
+              Read the manifesto
+            </CalloutLink>
           </div>
         </Container>
       </FullBackgroundImage>

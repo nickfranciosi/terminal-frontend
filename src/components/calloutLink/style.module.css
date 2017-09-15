@@ -1,0 +1,19 @@
+.callout {
+  font-family: 'MaisonNeueBook';
+  text-decoration: none;
+  color: inherit;
+  padding-bottom: 12px;
+  color: white;
+  font-size: 20px;
+  text-transform: none;
+  font-weight: light;
+  letter-spacing: -0.43px;
+  border-bottom: 1px solid white;
+  transition: border-bottom-color .4s ease, color .4s .1s ease;
+  cursor: pointer;
+}
+
+.callout:hover {
+  color: #F43D3D;
+  border-bottom-color: #F43D3D;
+}

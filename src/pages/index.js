@@ -11,7 +11,7 @@ export default () => (
         <div 
           className="content"
           style={{
-            width: "60%",
+            width: "50%",
           }}
         >
           <span

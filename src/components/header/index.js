@@ -4,7 +4,7 @@ import Link from 'gatsby-link';
 import styles from './style.module.css';
 import logo from '../../assets/images/LogoMainColor.png';
 
-const Logo = () => (
+const Header = () => (
     <Link 
       className={styles.container}
       to="/"
@@ -13,5 +13,5 @@ const Logo = () => (
    </Link>
 );
 
-export default Logo;
+export default Header;
 

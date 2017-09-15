@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import Logo from '../components/logo';
+import Header from '../components/header';
 
 import './global.css';
 
@@ -18,7 +18,7 @@ const TemplateWrapper = ({ children }) => (
       <link rel="icon" type="image/png" href="/favicon-16x16.png" />
     </Helmet>
     <div>
-      <Logo />
+      <Header />
       {children()}
     </div>
   </div>
