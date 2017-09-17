@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  width: 285px;
+  height: 285px;
+  margin-bottom: 30px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.icon {
+  max-width: 100%;
+}

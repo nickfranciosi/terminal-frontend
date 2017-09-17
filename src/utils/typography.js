@@ -18,6 +18,12 @@ const typography = new Typography({
       fontSize: "42px",
       letterSpacing: "-1.68px",
     },
+    h3: {
+      fontSize: "24px",
+      color: colors.primaryText,
+      fontFamily: ['MaisonNeueBook', 'sans-serif'].join(','),
+      letterSpacing: "-0.43px",
+    },
     p: {
       color: colors.secondaryText,
       letterSpacing: "-0.43px",

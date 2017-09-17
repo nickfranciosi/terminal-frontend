@@ -4,7 +4,20 @@ import Container from '../components/container';
 import CalloutLink from '../components/calloutLink';
 import FullBackgroundImage from '../components/fullBackgroundImage';
 import aboutFull from '../assets/images/aboutFull.jpg';
+import Carousel from '../components/carousel';
+import InvestorGrid from '../components/investorGrid';
 import Footer from '../components/footer';
+
+const investors = [
+  {name: "NEA1", icon: require('../assets/images/investors/nea-ventures.png')},
+  {name: "NEA2", icon: require('../assets/images/investors/nea-ventures.png')},
+  {name: "NEA3", icon: require('../assets/images/investors/nea-ventures.png')},
+  {name: "NEA4", icon: require('../assets/images/investors/nea-ventures.png')},
+  {name: "NEA5", icon: require('../assets/images/investors/nea-ventures.png')},
+  {name: "NEA6", icon: require('../assets/images/investors/nea-ventures.png')},
+  {name: "NEA7", icon: require('../assets/images/investors/nea-ventures.png')},
+  {name: "NEA8", icon: require('../assets/images/investors/nea-ventures.png')},
+];
 
 export default () => (
   <div>
@@ -76,6 +89,38 @@ export default () => (
         </Container>
       </FullBackgroundImage>
     </ViewPortView>
+    <Container>
+      <div
+      style={{
+          textAlign: "center",
+        }}
+      >
+        {/* <Carousel /> */}
+      </div>
+    </Container>
+    <div
+      style={{
+        width: "90%",
+        margin: "0 auto",
+      }}
+    >
+      <div
+      style={{
+        marginBottom: "112px",
+      }}
+      >
+        <div
+          style={{
+            textAlign: "center",
+            marginTop: "100px",
+            marginBottom: "60px",
+          }}
+        >
+          <h3>Trusted by the world’s best investors</h3>
+        </div>
+        <InvestorGrid investors={investors} />
+      </div>
+    </div>
     <Footer />
   </div>
 );
