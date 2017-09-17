@@ -4,6 +4,7 @@ import Container from '../components/container';
 import CalloutLink from '../components/calloutLink';
 import FullBackgroundImage from '../components/fullBackgroundImage';
 import aboutFull from '../assets/images/aboutFull.jpg';
+import Footer from '../components/footer';
 
 export default () => (
   <div>
@@ -75,6 +76,7 @@ export default () => (
         </Container>
       </FullBackgroundImage>
     </ViewPortView>
+    <Footer />
   </div>
 );
   

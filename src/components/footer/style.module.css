@@ -16,6 +16,8 @@
 .logo {
   max-width: 100%;
   width: 120px;
+  margin-right: 20px;
+  margin-top: -10px;
 }
 
 .content {
@@ -26,6 +28,8 @@
 
 .body {
   flex: 1;
+  display: flex;
+  align-items: flex-start;
 }
 
 .menu {
@@ -33,13 +37,44 @@
   flex-direction: row;
 }
 
+.menu li{
+  margin-right: 8px;
+}
+
+.menu li a{
+  font-size: 16px;
+  font-family: "MaisonNeueBook";
+  margin-right: 8px;
+  color: #191919;
+  text-transform: none;
+  margin-right: 0;
+  transition: color .3s ease;
+}
+
+.menu li a:hover{
+  color: #F43D3D;
+}
+
+.menu li+li:before {
+  content: '|';
+  margin-right: 8px;
+}
+
 .locationList {
   display: flex;
   flex-direction: row;
   flex: 1;
+  font-size: 16px;
 }
 
 .location {
   flex: 1;
   text-align: right;
+}
+
+.location p {
+  margin-bottom: 8px;
+}
+.location p:first-of-type{
+  font-family: "MaisonNeueBold";
 }
