@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import ViewPortView from '../components/viewPortView';
 import Container from '../components/container';
 import CalloutLink from '../components/calloutLink';
@@ -7,6 +7,7 @@ import aboutFull from '../assets/images/aboutFull.jpg';
 import Carousel from '../components/carousel';
 import InvestorGrid from '../components/investorGrid';
 import Footer from '../components/footer';
+import SubMenu from '../components/subMenu';
 
 const investors = [
   {name: "NEA1", icon: require('../assets/images/investors/nea-ventures.png')},
@@ -52,7 +53,8 @@ export default () => (
             Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem magna mollis euismod.
           </p>
         </div>
-      </Container>  
+      </Container>
+      <SubMenu />
     </ViewPortView>
     <ViewPortView>
       <FullBackgroundImage src={aboutFull}>
@@ -62,6 +64,7 @@ export default () => (
             style={{
               width: "50%",
             }}
+            id="overview"
           >
             <h2 
               style={{
@@ -103,11 +106,12 @@ export default () => (
         width: "90%",
         margin: "0 auto",
       }}
+      id="team"
     >
       <div
-      style={{
-        marginBottom: "112px",
-      }}
+        style={{
+          marginBottom: "112px",
+        }}
       >
         <div
           style={{

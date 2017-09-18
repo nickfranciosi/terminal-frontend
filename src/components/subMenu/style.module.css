@@ -1,0 +1,26 @@
+.stickyContainer{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.container{
+  background-color: transparent;
+  height: 5vw;
+  max-height: 100px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 75px;
+  transition: background-color .5s ease;
+}
+
+.container a{
+  color: #191919;
+  opacity: 0.6,
+}
+
+.active .container {
+  background-color: white;
+}

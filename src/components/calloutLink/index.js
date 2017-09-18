@@ -16,7 +16,7 @@ const CalloutLink = ({ children, to, style }) => (
 CalloutLink.propTypes = {
   children: PropTypes.string,
   to: PropTypes.string,
-  styles: PropTypes.obj,
+  styles: PropTypes.object,
 };
 
 export default CalloutLink;
