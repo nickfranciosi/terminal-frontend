@@ -1,9 +1,10 @@
 import React from 'react';
-import Scroll, { Link } from 'react-scroll'; 
+import Scroll, { Link, animateScroll } from 'react-scroll'; 
 import classNames from 'classnames';
 import Sticky from 'react-stickynode';
 import styles from './style.module.css';
 import Button from '../button';
+import upLogo from '../../assets/images/upLogo.png';
 
 class SubMenu extends React.Component {
 
@@ -32,6 +33,11 @@ class SubMenu extends React.Component {
         className={stickContainerClass}
         innerZ={100}
       >
+        <img 
+          src={upLogo}
+          className={styles.logo}
+          onClick={animateScroll.scrollToTop}
+        />
         <div className={styles.container}>
           <div className={styles.menu}>
             <Link 
@@ -50,7 +56,7 @@ class SubMenu extends React.Component {
             </Link>
           </div>
           <div>
-            <Button>Test</Button>
+            <Button>Request an appointment</Button>
           </div>
         </div>
       </Sticky>

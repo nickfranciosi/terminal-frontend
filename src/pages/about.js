@@ -1,4 +1,6 @@
 import React from "react";
+import Reveal from 'react-reveal';
+import 'animate.css/animate.css';
 import ViewPortView from '../components/viewPortView';
 import Container from '../components/container';
 import CalloutLink from '../components/calloutLink';
@@ -56,73 +58,77 @@ export default () => (
       </Container>
       <SubMenu />
     </ViewPortView>
-    <ViewPortView>
-      <FullBackgroundImage src={aboutFull}>
-        <Container>
-          <div 
-            className="content"
-            style={{
-              width: "50%",
-            }}
-            id="overview"
-          >
-            <h2 
-              style={{
-                color: "#fff",
-                marginBottom: 30,
-              }}
-            >
-              We bring together companies and engineers.
-            </h2>
-            <p
-              style={{
-                color: "#fff",
-                opacity: 1,
-                marginBottom: 37,
-              }}
-            >
-              Lorem ipsum dolor sit amet consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus fringilla.
-            </p>
-            <CalloutLink
-              to="/manifesto"
-            >
-              Read the manifesto
-            </CalloutLink>
-          </div>
-        </Container>
-      </FullBackgroundImage>
-    </ViewPortView>
-    <Container>
-      <div
-      style={{
-          textAlign: "center",
-        }}
-      >
-        {/* <Carousel /> */}
-      </div>
-    </Container>
-    <div
-      style={{
-        width: "90%",
-        margin: "0 auto",
-      }}
-      id="team"
-    >
+    <div id="overview">
+      <ViewPortView>
+        <FullBackgroundImage src={aboutFull}>
+          <Container>
+            <Reveal effect="animated fadeInUp">
+              <div
+                className="content"
+                style={{
+                  width: "50%",
+                }}
+              >
+                <h2 
+                  style={{
+                    color: "#fff",
+                    marginBottom: 30,
+                  }}
+                >
+                  We bring together companies and engineers.
+                </h2>
+                <p
+                  style={{
+                    color: "#fff",
+                    opacity: 1,
+                    marginBottom: 37,
+                  }}
+                >
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus fringilla.
+                </p>
+                <CalloutLink
+                  to="/manifesto"
+                >
+                  Read the manifesto
+                </CalloutLink>
+              </div>
+            </Reveal>
+          </Container>
+        </FullBackgroundImage>
+      </ViewPortView>
+    </div>
+    <div id="team">
+      <Container>
+        <div
+        style={{
+            textAlign: "center",
+          }}
+        >
+          {/* <Carousel /> */}
+        </div>
+      </Container>
       <div
         style={{
-          marginBottom: "112px",
+          width: "90%",
+          margin: "0 auto",
         }}
       >
         <div
           style={{
-            textAlign: "center",
-            marginTop: "100px",
-            marginBottom: "60px",
+            marginBottom: "112px",
           }}
         >
-          <h3>Trusted by the world’s best investors</h3>
+          <div
+            style={{
+              textAlign: "center",
+              marginTop: "100px",
+              marginBottom: "60px",
+            }}
+          >
+            <h3>Trusted by the world’s best investors</h3>
+          </div>
+          <InvestorGrid investors={investors} />
         </div>
-        <InvestorGrid investors={investors} />
       </div>
     </div>
     <Footer />

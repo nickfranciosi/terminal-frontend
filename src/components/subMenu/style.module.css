@@ -4,11 +4,28 @@
   bottom: 0;
 }
 
+.logo{
+  position: absolute;
+  width: 25px;
+  left: 20px;
+  bottom: 36px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity .3s ease, transform .5s .2s ease;
+  transform: rotate(45deg);
+}
+
+.active .logo {
+  opacity: 1;
+  transform: rotate(0);
+}
 .container{
-  background-color: transparent;
-  height: 5vw;
+  /* background-color: transparent; */
+  background-color: white;
+  /* height: 5vw;
   max-height: 100px;
-  min-height: 50px;
+  min-height: 50px; */
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,9 +33,10 @@
   transition: background-color .5s ease;
 }
 
-.container a{
+.container .menu a{
   color: #191919;
-  opacity: 0.6,
+  opacity: 0.6;
+  margin-right: 38px;
 }
 
 .active .container {
