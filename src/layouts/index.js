@@ -18,7 +18,7 @@ const TemplateWrapper = ({ children }) => (
       <link rel="icon" type="image/png" href="/favicon-16x16.png" />
     </Helmet>
     <div>
-      <Header />
+      {/* <Header /> */}
       {children()}
     </div>
   </div>
