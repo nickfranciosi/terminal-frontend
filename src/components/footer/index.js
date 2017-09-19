@@ -6,14 +6,14 @@ import logo from '../../assets/images/LogoMainColor.png';
 
 const Footer = ({  }) => (
   <div className={styles.container}>
-    <Container style={{ marginRight: 75 }}>
+    <Container>
       <div className={styles.content}>
         <div className={styles.body}>
           <img className={styles.logo} src={logo} />
           <ul className={styles.menu}>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/manifesto">Privacy Policy</Link></li>
-            <li><Link to="/manifesto">Terms &amp; Conditions</Link></li>
+            <li><Link activeClassName={styles.currentLink} to="/about">About</Link></li>
+            <li><Link activeClassName={styles.currentLink} to="/manifesto">Privacy Policy</Link></li>
+            <li><Link activeClassName={styles.currentLink}to="/manifesto">Terms &amp; Conditions</Link></li>
           </ul>
         </div>
         <div className={styles.locationList}>

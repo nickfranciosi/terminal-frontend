@@ -61,6 +61,7 @@ class IndexPage extends React.Component{
                 right: 0,
                 top: 0,
                 bottom: 0,
+                zIndex: -1,
                 height: "100%",
               }}>
                 <AngledImage src={mastheadImage} />

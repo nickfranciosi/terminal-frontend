@@ -109,12 +109,7 @@ export default () => (
           {/* <Carousel /> */}
         </div>
       </Container>
-      <div
-        style={{
-          width: "90%",
-          margin: "0 auto",
-        }}
-      >
+     <Container>
         <div
           style={{
             marginBottom: "112px",
@@ -131,7 +126,7 @@ export default () => (
           </div>
           <InvestorGrid investors={investors} />
         </div>
-      </div>
+      </Container>
     </div>
     <Footer />
   </div>

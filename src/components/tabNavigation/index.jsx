@@ -9,6 +9,7 @@ class TabNavigation extends React.Component {
     super(props);
 
     this.state = {
+      pointerId: 0,
       pointer: {},
     };
 
@@ -19,7 +20,7 @@ class TabNavigation extends React.Component {
   }
 
   componentDidMount() {
-    this.updatePointer(this.props.index);
+    this.updatePointer(this.state.pointerId);
     window.addEventListener("resize", this.handleResize);
     this.handleResize();
   }
@@ -42,7 +43,7 @@ class TabNavigation extends React.Component {
   }
 
   handleResizeEnd() {
-    this.updatePointer(this.props.index);
+    this.updatePointer(this.state.pointerId);
   }
 
   handleClick(e) {
@@ -55,8 +56,8 @@ class TabNavigation extends React.Component {
     this.pointerTimeout = setTimeout(() => {
       const startPoint = this.tabsRef.getBoundingClientRect().left;
       const label = this.navRef.children[id].getBoundingClientRect();
-      console.log({id}, {label}, {startPoint});
       this.setState({
+        pointerId: id,
         pointer: {
           bottom: 0,
           left: `${label.left - startPoint}px`,
@@ -73,7 +74,7 @@ class TabNavigation extends React.Component {
           smooth={true}
           duration={1000}
           to={tab.link}
-          offset={index > 0 && -100}
+          offset={(index > 0) ? -100 : 0}
           spy
           onSetActive={() => this.updatePointer(index)}
         >
