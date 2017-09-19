@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classNames from 'classnames';
 import { Link } from "react-scroll";
-import styles from "./styles.module.css";
+import styles from "./style.module.css";
 
 class TabNavigation extends React.Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class TabNavigation extends React.Component {
     this.handleResizeEnd = this.handleResizeEnd.bind(this);
     this.handleResize = this.handleResize.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.updatePointer = this.updatePointer.bind(this);
   }
 
   componentDidMount() {
@@ -53,9 +55,10 @@ class TabNavigation extends React.Component {
     this.pointerTimeout = setTimeout(() => {
       const startPoint = this.tabsRef.getBoundingClientRect().left;
       const label = this.navRef.children[id].getBoundingClientRect();
+      console.log({id}, {label}, {startPoint});
       this.setState({
         pointer: {
-          top: 0,
+          bottom: 0,
           left: `${label.left - startPoint}px`,
           width: `${label.width}px`,
         },
@@ -65,23 +68,41 @@ class TabNavigation extends React.Component {
 
   renderTabs() {
     return this.props.tabs.map((tab, index) => (
-      <div key={index} id={index} onClick={this.handleClick} style={styles.tab}>
-        <Link>
-        {tab}
+      <div key={index} id={index} className={styles.tab}>
+        <Link 
+          smooth={true}
+          duration={1000}
+          to={tab.link}
+          offset={index > 0 && -100}
+          spy
+          onSetActive={() => this.updatePointer(index)}
+        >
+          {tab.name}
         </Link>
       </div>
     ));
   }
 
   render() {
+    let pointerClasses = classNames({
+      [styles.pointer]: true,
+      [styles.hidden]: !this.props.showLine,
+    });
     return (
-      <div className="TabNavigation" style={styles.container}>
-        <div ref={(node) => { this.tabsRef = node; }} style={styles.navContainer}>
-          <nav ref={(node) => { this.navRef = node; }} style={styles.nav}>
-            {this.renderTabs()}
-          </nav>
-          <span style={assign({}, styles.pointer, this.state.pointer)} />
-        </div>
+      <div
+        ref={(node) => { this.tabsRef = node; }}
+        className={styles.navContainer}
+      >
+        <nav
+          ref={(node) => { this.navRef = node; }}
+          className={styles.nav}
+        >
+          {this.renderTabs()}
+        </nav>
+        <span 
+          className={pointerClasses}
+          style={this.state.pointer} 
+        />
       </div>
     );
   }
@@ -91,10 +112,11 @@ TabNavigation.propTypes = {
   index: PropTypes.number,
   tabs: PropTypes.array,
   onChange: PropTypes.func,
+  showLine: PropTypes.bool,
 };
 
 TabNavigation.defaultProps = {
   index: 0,
 };
 
-export default radium(TabNavigation);
+export default TabNavigation;

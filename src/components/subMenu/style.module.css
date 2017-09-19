@@ -27,7 +27,7 @@
   min-height: 50px; */
   height: 100px;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
   padding: 0 75px;
   transition: background-color .5s ease;
@@ -37,8 +37,14 @@
   color: #191919;
   opacity: 0.6;
   margin-right: 38px;
+  display: block;
+  margin-top: 40px;
 }
 
 .active .container {
   background-color: white;
+}
+
+.callout {
+  margin-top: 40px;
 }

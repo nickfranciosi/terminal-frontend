@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import Sticky from 'react-stickynode';
 import styles from './style.module.css';
 import Button from '../button';
+import TabNavigation from '../tabNavigation';
 import upLogo from '../../assets/images/upLogo.png';
 
 class SubMenu extends React.Component {
@@ -40,22 +41,15 @@ class SubMenu extends React.Component {
         />
         <div className={styles.container}>
           <div className={styles.menu}>
-            <Link 
-              to="overview"
-              smooth={true}
-              duration={1000}
-            >
-              Overview
-            </Link>
-            <Link 
-              to="team"
-              smooth={true}
-              duration={1000}
-            >
-              Team
-            </Link>
+            <TabNavigation 
+              showLine={this.state.stuck}
+              tabs={[
+                {name: "Overview", link: "overview"}, 
+                {name: "Team", link: "team"},
+              ]}
+            />
           </div>
-          <div>
+          <div className={styles.callout}>
             <Button>Request an appointment</Button>
           </div>
         </div>

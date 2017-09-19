@@ -1,0 +1,29 @@
+  .nav{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navContainer {
+    position: relative;
+    height: 100%;
+  }
+
+  .tab{
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-self: center;
+    overflow: hidden;
+  }
+
+  .pointer{
+    height: 6px;
+    position: absolute;
+    background-color: #F43D3D;
+    transition: width .35s ease, left .35s ease, height .5s ease;
+  }
+
+  .pointer.hidden{
+    height: 0;
+  }
+  
