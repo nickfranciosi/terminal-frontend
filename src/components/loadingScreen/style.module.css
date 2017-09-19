@@ -5,5 +5,7 @@
 
 
 .loadingBar{
-
+  width: 45%;
+  margin: 0 auto;
+  margin-top: 60px;
 }

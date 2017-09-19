@@ -4,6 +4,7 @@ import Container from '../components/container';
 import Button from '../components/button';
 import LoadingScreen from '../components/loadingScreen';
 import AngledImage from '../components/angledImage';
+import Header from '../components/header';
 import mastheadImage from '../assets/images/homeAngle.png';
 
 class IndexPage extends React.Component{
@@ -20,50 +21,53 @@ class IndexPage extends React.Component{
     return(
       <div>
       { this.state.showLoader ?
-        <LoadingScreen /> :
-        <ViewPortView>
-          <Container>
-            <div 
-              className="content"
-              style={{
-                width: "50%",
-              }}
-            >
-              <span
+        <LoadingScreen done={() => this.setState({ showLoader: false })}/> :
+        <div>
+        <Header />
+          <ViewPortView>
+            <Container>
+              <div 
+                className="content"
                 style={{
-                  display: "inline-block",
-                  marginBottom: 37,
+                  width: "50%",
                 }}
               >
-                Tristique Parturient
-              </span>
-              <h1
-              style={{
-                  marginBottom: 30,
-                }}
-              >
-                We build teams in emerging tech hubs around the world.
-              </h1>
-              <p
-              style={{
-                  marginBottom: 73,
-                }}
-              >
-                Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem magna mollis euismod.
-              </p>
-              <Button to="/about/">Learn More</Button>
-            </div>
-            <div style={{
-              position: "absolute",
-              right: 0,
-              top: 0,
-              bottom: 0,
-              height: "100%",
-            }}>
-              <AngledImage src={mastheadImage} />
-            </div>
-          </Container>
-        </ViewPortView>
+                <span
+                  style={{
+                    display: "inline-block",
+                    marginBottom: 37,
+                  }}
+                >
+                  Tristique Parturient
+                </span>
+                <h1
+                style={{
+                    marginBottom: 30,
+                  }}
+                >
+                  We build teams in emerging tech hubs around the world.
+                </h1>
+                <p
+                style={{
+                    marginBottom: 73,
+                  }}
+                >
+                  Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem magna mollis euismod.
+                </p>
+                <Button to="/about/">Learn More</Button>
+              </div>
+              <div style={{
+                position: "absolute",
+                right: 0,
+                top: 0,
+                bottom: 0,
+                height: "100%",
+              }}>
+                <AngledImage src={mastheadImage} />
+              </div>
+            </Container>
+          </ViewPortView>
+        </div>
       }
       </div>
     )

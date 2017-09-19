@@ -9,6 +9,7 @@ import aboutFull from '../assets/images/aboutFull.jpg';
 import Carousel from '../components/carousel';
 import InvestorGrid from '../components/investorGrid';
 import Footer from '../components/footer';
+import Header from '../components/header';
 import SubMenu from '../components/subMenu';
 
 const investors = [
@@ -24,6 +25,7 @@ const investors = [
 
 export default () => (
   <div>
+    <Header />
     <ViewPortView>
       <Container>
         <div 
