@@ -1,10 +1,10 @@
 import React from "react"
 import ViewPortView from '../components/viewPortView';
 import Container from '../components/container';
-import Button from '../components/button';
 import LoadingScreen from '../components/loadingScreen';
 import AngledImage from '../components/angledImage';
 import Header from '../components/header';
+import HeaderTextBlock from '../components/headerTextBlock';
 import mastheadImage from '../assets/images/homeAngle.png';
 
 class IndexPage extends React.Component{
@@ -26,46 +26,16 @@ class IndexPage extends React.Component{
         <Header />
           <ViewPortView>
             <Container>
-              <div 
-                className="content"
-                style={{
-                  width: "50%",
+              <HeaderTextBlock 
+                description="Tristique Parturient"
+                headline="We build teams in emerging tech hubs around the world."
+                body="Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem magna mollis euismod."
+                callout={{
+                  text: "Learn More",
+                  link: "/about",
                 }}
-              >
-                <span
-                  style={{
-                    display: "inline-block",
-                    marginBottom: 37,
-                  }}
-                >
-                  Tristique Parturient
-                </span>
-                <h1
-                style={{
-                    marginBottom: 30,
-                  }}
-                >
-                  We build teams in emerging tech hubs around the world.
-                </h1>
-                <p
-                style={{
-                    marginBottom: 73,
-                  }}
-                >
-                  Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem magna mollis euismod.
-                </p>
-                <Button to="/about/">Learn More</Button>
-              </div>
-              <div style={{
-                position: "absolute",
-                right: 0,
-                top: 0,
-                bottom: 0,
-                zIndex: -1,
-                height: "100%",
-              }}>
-                <AngledImage src={mastheadImage} />
-              </div>
+              />
+              <AngledImage src={mastheadImage} />
             </Container>
           </ViewPortView>
         </div>

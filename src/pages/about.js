@@ -10,6 +10,7 @@ import Carousel from '../components/carousel';
 import InvestorGrid from '../components/investorGrid';
 import Footer from '../components/footer';
 import Header from '../components/header';
+import HeaderTextBlock from '../components/headerTextBlock';
 import SubMenu from '../components/subMenu';
 
 const investors = [
@@ -28,35 +29,11 @@ export default () => (
     <Header />
     <ViewPortView>
       <Container>
-        <div 
-          className="content"
-          style={{
-            width: "60%",
-          }}
-        >
-          <span
-            style={{
-              display: "inline-block",
-              marginBottom: 37,
-            }}
-          >
-            Tristique Parturient
-          </span>
-          <h1
-          style={{
-              marginBottom: 30,
-            }}
-          >
-          Get to know us a little better.
-          </h1>
-          <p
-          style={{
-              marginBottom: 73,
-            }}
-          >
-            Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem magna mollis euismod.
-          </p>
-        </div>
+        <HeaderTextBlock 
+          description="Tristique Parturient"
+          headline="Get to know us a little better."
+          body="Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem magna mollis euismod."
+        />
       </Container>
       <SubMenu />
     </ViewPortView>
@@ -65,35 +42,16 @@ export default () => (
         <FullBackgroundImage src={aboutFull}>
           <Container>
             <Reveal effect="animated fadeInUp">
-              <div
-                className="content"
-                style={{
-                  width: "50%",
+              <HeaderTextBlock
+                theme="white"
+                headlineSize="h2"
+                headline="We bring together companies and engineers."
+                body="Lorem ipsum dolor sit amet consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus fringilla."
+                callout={{
+                  text: "Read the manifesto",
+                  link: "/manifesto"
                 }}
-              >
-                <h2 
-                  style={{
-                    color: "#fff",
-                    marginBottom: 30,
-                  }}
-                >
-                  We bring together companies and engineers.
-                </h2>
-                <p
-                  style={{
-                    color: "#fff",
-                    opacity: 1,
-                    marginBottom: 37,
-                  }}
-                >
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus fringilla.
-                </p>
-                <CalloutLink
-                  to="/manifesto"
-                >
-                  Read the manifesto
-                </CalloutLink>
-              </div>
+              />
             </Reveal>
           </Container>
         </FullBackgroundImage>

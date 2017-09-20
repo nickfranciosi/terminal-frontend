@@ -1,7 +1,14 @@
 .container {
   position: absolute;
-  left: 50px;
-  top: 50px;
+  left: 25px;
+  top: 25px;
   max-width: 120px;
   z-index: 10;
+}
+
+@media only screen and (min-width: 750px) {
+  .container {
+    left: 50px;
+    top: 50px;
+  }
 }

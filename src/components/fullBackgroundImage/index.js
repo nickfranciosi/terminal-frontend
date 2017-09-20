@@ -8,6 +8,7 @@ const FullBackgroundImage = ({ children, src }) => (
       backgroundImage: `url(${src})`,
     }}
   >
+    <div className={styles.gradient} />
     {children}
   </div>
 );

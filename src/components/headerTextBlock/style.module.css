@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+}
+
+.description {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.headline {
+  margin-bottom: 20px;
+}
+
+.body {
+  margin-bottom: 30px;
+}
+
+.whiteTheme *{
+  color: white;
+}
+
+.whiteTheme p{
+  opacity: 1;
+}
+
+@media only screen and (min-width: 750px) {
+  .container {
+    width: 60%;
+  }
+
+  .description {
+    margin-bottom: 37px;
+  }
+
+  .headline {
+    margin-bottom: 30px;
+  }
+
+  .body {
+    margin-bottom: 73px;
+  }
+}
