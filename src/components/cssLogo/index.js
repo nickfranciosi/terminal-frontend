@@ -12,12 +12,9 @@ const CssLogo = ({ animate }) => {
     <div className={styles.container}>
       <div className={wrapperClass}>
         <div className={styles.topLeft} />
-        <div className={styles.topMiddle} />
+        <div className={styles.middle} />
         <div className={styles.topRight} />
-        <div className={styles.bottomMiddle} />
-      </div>
-
-      
+      </div>   
     </div>
   )
 };

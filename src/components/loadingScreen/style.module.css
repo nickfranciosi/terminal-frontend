@@ -3,9 +3,24 @@
   flex-direction: column;
 }
 
+.done.container {
+  animation: fadeAway 1s 1.5s ease;
+  animation-fill-mode: forwards;  
+}
 
 .loadingBar{
   width: 45%;
   margin: 0 auto;
   margin-top: 60px;
+}
+
+@keyframes fadeAway {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-25px);
+    opacity: 0;
+  }
 }

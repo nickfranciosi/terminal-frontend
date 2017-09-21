@@ -5,7 +5,7 @@ import LoadingScreen from '../components/loadingScreen';
 import AngledImage from '../components/angledImage';
 import Header from '../components/header';
 import HeaderTextBlock from '../components/headerTextBlock';
-import mastheadImage from '../assets/images/homeAngle.png';
+import mastheadImage from '../assets/images/mast-cropped.jpg';
 
 class IndexPage extends React.Component{
 
@@ -15,13 +15,20 @@ class IndexPage extends React.Component{
     this.state = {
       showLoader: true,
     }
+
+  }
+
+  handleDone = () => {
+    setTimeout(() => {
+      this.setState({ showLoader: false});
+    }, 2750)
   }
 
   render() {
     return(
       <div>
       { this.state.showLoader ?
-        <LoadingScreen done={() => this.setState({ showLoader: false })}/> :
+        <LoadingScreen done={this.handleDone}/> :
         <div>
         <Header />
           <ViewPortView>
