@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './style.module.css';
 
-const ViewPortView = ({ children, style }) => (
+const ViewportView = ({ children, style }) => (
   <div 
     className={styles.container}
     style={style}
@@ -11,4 +11,4 @@ const ViewPortView = ({ children, style }) => (
 );
 
 
-export default ViewPortView;
+export default ViewportView;

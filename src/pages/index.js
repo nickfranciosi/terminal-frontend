@@ -1,5 +1,5 @@
 import React from "react"
-import ViewPortView from '../components/viewPortView';
+import ViewportView from '../components/viewportView';
 import Container from '../components/container';
 import LoadingScreen from '../components/loadingScreen';
 import AngledImage from '../components/angledImage';
@@ -31,7 +31,7 @@ class IndexPage extends React.Component{
         <LoadingScreen done={this.handleDone}/> :
         <div>
         <Header />
-          <ViewPortView>
+          <ViewportView>
             <Container>
               <HeaderTextBlock 
                 description="Tristique Parturient"
@@ -44,7 +44,7 @@ class IndexPage extends React.Component{
               />
               <AngledImage src={mastheadImage} />
             </Container>
-          </ViewPortView>
+          </ViewportView>
         </div>
       }
       </div>

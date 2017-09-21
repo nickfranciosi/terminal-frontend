@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import ViewPortView from "../viewPortView";
+import ViewportView from "../viewportView";
 import CssLogo from "../cssLogo";
 import { Line } from 'react-progressbar.js';
 import styles from './style.module.css';
@@ -81,7 +81,7 @@ render(){
   });
 
   return (
-    <ViewPortView style={{justifyContent: "center"}}>
+    <ViewportView style={{justifyContent: "center"}}>
       <div className={containerClass}>
         <div className={styles.icon}>
           <CssLogo animate={this.state.animateLogo} />
@@ -96,7 +96,7 @@ render(){
           />
         </div>
       </div>
-    </ViewPortView>
+    </ViewportView>
   )}
 }
 
