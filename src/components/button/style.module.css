@@ -1,6 +1,7 @@
 .base {
   background-color: #F43D3D; 
   border: none;
-  padding: 16px 25px;
+  padding: 14px 22px;
   cursor: pointer;
+  display: inline-block;
 }

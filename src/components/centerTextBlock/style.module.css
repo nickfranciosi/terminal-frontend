@@ -1,0 +1,22 @@
+.container {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.description{
+  margin-bottom: 19px;
+  display: inline-block;
+}
+
+.headline {
+  margin-bottom: 24px;
+}
+
+.body {
+  max-width: 610px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  color: #7B7B7B;
+  opacity: 1;
+  font-size: 20px;
+}

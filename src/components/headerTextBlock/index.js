@@ -11,6 +11,7 @@ const HeaderTextBlock = ({
   headlineSize,
   body,
   callout,
+  secondaryCallout,
   theme,
   style,
 }) => {
@@ -42,7 +43,22 @@ const HeaderTextBlock = ({
       <p className={styles.body}>
         {body}
       </p>
-      {callout && renderButton()}
+      <div className={styles.calloutContainer}>
+        <Button 
+          to={callout.link}
+          style={{
+            marginRight: "20px",
+          }}
+        >
+          {callout.text}
+        </Button>
+        <a 
+          href={secondaryCallout.link}
+          className={styles.secondaryCallout}
+        >
+          {secondaryCallout.text}
+        </a>
+      </div>
     </div>
   );
 }

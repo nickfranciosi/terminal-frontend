@@ -4,15 +4,33 @@
 
 .description {
   display: inline-block;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 }
 
 .headline {
   margin-bottom: 20px;
+  letter-spacing: -.06px;
 }
 
 .body {
   margin-bottom: 30px;
+  max-width: 100%;
+}
+
+.calloutContainer {
+  display: flex;
+  align-items: center;
+}
+
+.secondaryCallout {
+  color: #7B7B7B;
+  border-bottom: 1px rgba(151, 151, 151, 0.4) solid;
+  transition: border-bottom .35s ease-in;
+}
+
+.secondaryCallout:hover {
+  color: #7B7B7B;
+  border-bottom: 1px #7B7B7B solid;
 }
 
 .whiteTheme *{
@@ -29,14 +47,20 @@
   }
 
   .description {
-    margin-bottom: 37px;
+    margin-bottom: 40px;
   }
 
   .headline {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    letter-spacing: -1.92px;
   }
 
   .body {
-    margin-bottom: 73px;
+    margin-bottom: 48px;
+    max-width: 385px;
+  }
+
+  .calloutContainer {
+    margin-top: 16px;
   }
 }
