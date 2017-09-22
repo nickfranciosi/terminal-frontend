@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import ViewportView from "../viewportView";
+import Viewport from '../viewport';
 import CssLogo from "../cssLogo";
 import { Line } from 'react-progressbar.js';
 import styles from './style.module.css';
@@ -67,7 +67,7 @@ render(){
 
   let options = {
     color: '#F43D3D',
-    trailColor: '#D8D8D8',  
+    trailColor: '#D8D8D8',
     strokeWidth: 1,
   }
 
@@ -81,13 +81,13 @@ render(){
   });
 
   return (
-    <ViewportView style={{justifyContent: "center"}}>
+    <Viewport style={{justifyContent: "center"}}>
       <div className={containerClass}>
         <div className={styles.icon}>
           <CssLogo animate={this.state.animateLogo} />
         </div>
         <div className={styles.loadingBar}>
-          <Line 
+          <Line
             progress={this.state.progress}
             initialAnimate
             options={options}
@@ -96,7 +96,7 @@ render(){
           />
         </div>
       </div>
-    </ViewportView>
+    </Viewport>
   )}
 }
 

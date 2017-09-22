@@ -5,7 +5,7 @@ import Button from '../button';
 import CalloutLink from '../calloutLink';
 import styles from './style.module.css';
 
-const HeaderTextBlock = ({ 
+const HeaderTextBlock = ({
   description,
   headline,
   headlineSize,
@@ -43,22 +43,26 @@ const HeaderTextBlock = ({
       <p className={styles.body}>
         {body}
       </p>
-      <div className={styles.calloutContainer}>
-        <Button 
-          to={callout.link}
-          style={{
-            marginRight: "20px",
-          }}
-        >
-          {callout.text}
-        </Button>
-        <a 
-          href={secondaryCallout.link}
-          className={styles.secondaryCallout}
-        >
-          {secondaryCallout.text}
-        </a>
-      </div>
+      {callout &&
+        <div className={styles.calloutContainer}>
+          <Button
+            to={callout.link}
+            style={{
+              marginRight: "20px",
+            }}
+          >
+            {callout.text}
+          </Button>
+          {secondaryCallout &&
+            <a
+              href={secondaryCallout.link}
+              className={styles.secondaryCallout}
+            >
+              {secondaryCallout.text}
+            </a>
+          }
+        </div>
+      }
     </div>
   );
 }

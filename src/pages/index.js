@@ -1,5 +1,5 @@
 import React from 'react';
-import ViewportView from '../components/viewportView';
+import Viewport from '../components/viewport';
 import Container from '../components/container';
 import LoadingScreen from '../components/loadingScreen';
 import AngledImage from '../components/angledImage';
@@ -13,8 +13,8 @@ import CenterTextBlock from '../components/centerTextBlock';
 import mastheadImage from '../assets/images/mast-cropped.jpg';
 import aboutFull from '../assets/images/aboutFull.jpg';
 import galleryPlaceholder from '../assets/images/Slideshow-placeholder.png';
+import styles from "./css/home.module.css";
 import { investors } from "../data";
-import styles from "./index.module.css";
 
 class IndexPage extends React.Component{
 
@@ -22,7 +22,7 @@ class IndexPage extends React.Component{
     super(props);
 
     this.state = {
-      showLoader: false,
+      showLoader: true,
     }
 
   }
@@ -40,11 +40,9 @@ class IndexPage extends React.Component{
         <LoadingScreen done={this.handleDone}/> :
         <div>
           <Header />
-          <ViewportView style={{
-            marginBottom: "168px",
-          }}>
+          <Viewport className={styles.masthead}>
             <Container>
-              <HeaderTextBlock 
+              <HeaderTextBlock
                 description="A network of the best engineers"
                 headline="Bold ideas require brilliant minds"
                 body="Terminal builds elite engineering teams to solve the toughest challenges of tomorrow."
@@ -59,9 +57,9 @@ class IndexPage extends React.Component{
               />
               <AngledImage src={mastheadImage} />
             </Container>
-          </ViewportView>
+          </Viewport>
           <Container>
-            <CenterTextBlock 
+            <CenterTextBlock
               description="Our mission"
               headline="We&rsquo;re solving the talent shortage problem."
               body="Terminal accelerates innovation by rethinking how the best companies and the most talented people partner in building the future."
@@ -71,13 +69,11 @@ class IndexPage extends React.Component{
               }}
             />
           </Container>
-          <ViewportView style={{
-            marginBottom: "168px",
-          }}>
+          <Viewport className={styles.masthead}>
             <FullBackgroundImage src={aboutFull} />
-          </ViewportView>
+          </Viewport>
           <Container>
-            <CenterTextBlock 
+            <CenterTextBlock
               description="Founding Members"
               headline="Meet the Terminal team"
               style={{
@@ -98,7 +94,7 @@ class IndexPage extends React.Component{
                   marginBottom: "60px",
                 }}
               >
-                <h3 
+                <h3
                   style={{
                     color: "#434343",
                     opacity: 0.78,

@@ -3,11 +3,29 @@
   align-items: center;
   justify-content: center;
   background-color: #f9f9f9;
-  width: 285px;
-  height: 285px;
-  margin-bottom: 30px;
-  margin-left: 12px;
-  margin-right: 12px;
+  width: 115px;
+  height: 115px;
+  margin-bottom: 15px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+@media only screen and (min-width: 450px) {
+  .container {
+    width: 175px;
+    height: 175px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+}
+
+ @media only screen and (min-width: 900px) {
+  .container {
+    width: 285px;
+    height: 285px;
+    margin-bottom: 30px;
+    margin-left: 12px;
+  }
 }
 
 .icon {

@@ -1,8 +1,5 @@
 .container {
   width: 100%;
-  max-height: 470px;
-  min-height: 300px;
-  height: 50vw;
 }
 
 .container::before {
@@ -14,22 +11,18 @@
 }
 
 .logo {
-  max-width: 100%;
   width: 120px;
-  margin-right: 20px;
-  margin-top: -10px;
 }
 
 .content {
   display: flex;
   justify-content: space-between;
-  margin-top: 150px;
+  flex-direction: column;
+  margin-top: 72px;
 }
 
 .body {
-  flex: 1;
-  display: flex;
-  align-items: flex-start;
+  display: none;
 }
 
 .menu {
@@ -61,18 +54,20 @@
 }
 
 .locationList {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
+  width: 100%;
   font-size: 16px;
+  margin-bottom: 78px;
 }
 
 .location {
-  flex: 1;
-  text-align: right;
+  width: 50%;
+  float: left;
+  text-align: left;
+  margin-bottom: 48px;
 }
 
 .location p {
+  font-size: 16px;
   margin-bottom: 8px;
 }
 .location p:first-of-type{
@@ -83,18 +78,58 @@
   font-family: 'MaisonNeueBold' !important;
 }
 
+.mobileLogo{
+  border-top: 1px solid rgba(123, 123, 123, 0.27);
+  padding: 23px 0 31px 0;
+}
 
-@media only screen and (max-width: 1270px) {
-  .content{
-    flex-direction: column;
-    margin-top: 50px;
+@media only screen and (min-width: 700px) {
+  .location {
+    width: 32%;
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+
+  .logo {
+    max-width: 100%;
+    width: 120px;
+    margin-right: 20px;
+    margin-top: -10px;
   }
 
-  .menu{
-    margin-bottom: 36px;
+  .content {
+    flex-direction: row;
+    margin-top: 150px;
+  }
+
+  .body {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+
+  .locationList {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    font-size: 16px;
   }
 
   .location {
-    text-align: left;
+    flex: 1;
+    text-align: right;
   }
+
+  .mobileLogo{
+    display: none;
+  }
+
 }

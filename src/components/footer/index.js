@@ -9,9 +9,8 @@ const Footer = ({  }) => (
     <Container>
       <div className={styles.content}>
         <div className={styles.body}>
-          <img className={styles.logo} src={logo} />
+          <Link to="/"><img className={styles.logo} src={logo} /></Link>
           <ul className={styles.menu}>
-            <li><Link activeClassName={styles.currentLink} to="/about">About</Link></li>
             <li><Link activeClassName={styles.currentLink} to="/manifesto">Privacy Policy</Link></li>
             <li><Link activeClassName={styles.currentLink}to="/manifesto">Terms &amp; Conditions</Link></li>
           </ul>
@@ -34,7 +33,9 @@ const Footer = ({  }) => (
           </div>
         </div>
       </div>
-      
+      <div className={styles.mobileLogo}>
+        <Link to="/"><img className={styles.logo} src={logo} /></Link>
+      </div>
     </Container>
   </div>
 );

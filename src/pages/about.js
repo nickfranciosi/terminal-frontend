@@ -1,7 +1,7 @@
 import React from "react";
 import Reveal from 'react-reveal';
 import 'animate.css/animate.css';
-import ViewportView from '../components/ViewportView';
+import Viewport from '../components/viewport';
 import Container from '../components/container';
 import CalloutLink from '../components/calloutLink';
 import FullBackgroundImage from '../components/fullBackgroundImage';
@@ -29,18 +29,18 @@ const investors = [
 export default () => (
   <div>
     <Header />
-    <ViewportView>
+    <Viewport>
       <Container>
-        <HeaderTextBlock 
+        <HeaderTextBlock
           description="Tristique Parturient"
           headline="Get to know us a little better."
           body="Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem magna mollis euismod."
         />
       </Container>
       <SubMenu />
-    </ViewportView>
+    </Viewport>
     <div id="overview">
-      <ViewportView>
+      <Viewport>
         <FullBackgroundImage src={aboutFull}>
           <Container>
             <Reveal effect="animated fadeInUp">
@@ -57,7 +57,7 @@ export default () => (
             </Reveal>
           </Container>
         </FullBackgroundImage>
-      </ViewportView>
+      </Viewport>
     </div>
     <div id="team">
       <Container>
@@ -91,4 +91,3 @@ export default () => (
     <Footer />
   </div>
 );
-  
