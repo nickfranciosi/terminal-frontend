@@ -17,4 +17,5 @@ To ship: currently using surge.sh for free static deploys
 npm run build
 
 surge /public
-``
+
+```
