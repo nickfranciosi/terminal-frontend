@@ -3,6 +3,10 @@
   max-width: 600px;
 }
 
+.largeBody.container {
+  max-width: 950px;
+}
+
 .description {
   display: inline-block;
   margin-bottom: 8px;
@@ -16,6 +20,12 @@
 .body {
   margin-bottom: 32px;
   max-width: 100%;
+}
+
+.largeBody .body {
+  font-size: 30px;
+  line-height: 1.2;
+  margin-bottom: 35px;
 }
 
 .calloutContainer {
@@ -63,6 +73,13 @@
   .body {
     margin-bottom: 48px;
     max-width: 385px;
+  }
+
+  .largeBody .body {
+    max-width: 100%;
+    font-size: 43px;
+    line-height: 1.23;
+    margin-bottom: 70px;
   }
 
   .calloutContainer {

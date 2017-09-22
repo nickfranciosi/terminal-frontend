@@ -10,6 +10,7 @@ const HeaderTextBlock = ({
   headline,
   headlineSize,
   body,
+  largeBody,
   callout,
   secondaryCallout,
   theme,
@@ -21,6 +22,7 @@ const HeaderTextBlock = ({
   const containerClasses = classNames({
     [styles.container]: true,
     [styles.whiteTheme]: theme === "white",
+    [styles.largeBody]: largeBody,
   });
 
   const renderButton = () => {

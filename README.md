@@ -1,13 +1,20 @@
-# gatsby-starter-default
-The default Gatsby starter
+Terminal - Front End
+
+
+built with Gatsby -
 
 For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+To develop
 ```
-gatsby new gatsby-example-site
+yarn
+
+npm run develop
 ```
 
-## Deploy
+To ship: currently using surge.sh for free static deploys 
+```
+npm run build
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+surge /public
+``

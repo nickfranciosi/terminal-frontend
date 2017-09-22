@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import Viewport from '../components/viewport';
 import Container from '../components/container';
 import LoadingScreen from '../components/loadingScreen';
@@ -65,11 +66,11 @@ class IndexPage extends React.Component{
               body="Terminal accelerates innovation by rethinking how the best companies and the most talented people partner in building the future."
               callout={{
                 text: "Read the manifesto",
-                link: "/",
+                link: "/manifesto",
               }}
             />
           </Container>
-          <Viewport className={styles.masthead}>
+          <Viewport className={classNames(styles.masthead, styles.aboutFull)}>
             <FullBackgroundImage src={aboutFull} />
           </Viewport>
           <Container>
