@@ -84,11 +84,7 @@ class IndexPage extends React.Component{
             <img src={galleryPlaceholder}  style={{
               marginBottom: "96px",
             }}/>
-            <div
-              style={{
-                marginBottom: "112px",
-              }}
-            >
+            <div className={styles.investorSection}>
               <div
                 style={{
                   textAlign: "center",
