@@ -17,6 +17,8 @@
 .reset {
   font-family: inherit;
   font-size: inherit;
+  font-weight: inherit;
+  opacity: inherit;
   line-height: inherit;
   color: inherit;
   letter-spacing: inherit;

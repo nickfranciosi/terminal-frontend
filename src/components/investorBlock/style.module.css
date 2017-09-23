@@ -6,11 +6,11 @@
   background-color: #f9f9f9;
   position: relative;
   margin-bottom: 2%;
+  opacity: 0;
+  transform: translateY(20%);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
-/* .container:nth-of-type() {
-  margin-right: 2%;
-} */
 
 .icon {
   width: 57%;
@@ -19,9 +19,19 @@
   left: 50%;
   bottom: 0;
   right: 0;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translate3d(-50%, 50%, 0);
+  transition: opacity 1s 250ms ease, transform 1s ease;
 }
 
+.container.animate .icon {
+  opacity: 1;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.container.animate {
+  opacity: 1;
+  transform: translateY(0%);
+}
 
  @media only screen and (min-width: 900px) {
   .container {

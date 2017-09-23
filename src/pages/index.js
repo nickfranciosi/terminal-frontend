@@ -11,6 +11,7 @@ import Button from '../components/button';
 import Footer from '../components/footer';
 import HeaderTextBlock from '../components/headerTextBlock';
 import CenterTextBlock from '../components/centerTextBlock';
+import SingleHeading from '../components/singleHeading';
 import Carousel from '../components/carousel';
 import mastheadImage from '../assets/images/mast-cropped.jpg';
 import aboutFull from '../assets/images/aboutFull.jpg';
@@ -92,7 +93,7 @@ class IndexPage extends React.Component{
               marginBottom: "96px",
             }}/> */}
             <div className={styles.investorSection}>
-              <div
+              {/* <div
                 style={{
                   textAlign: "center",
                   marginBottom: "60px",
@@ -105,9 +106,12 @@ class IndexPage extends React.Component{
                     fontWeight: 100,
                   }}
                 >
-                  Trusted by the world&rsquo;s best investors
+                  <SentenceAnimator triggerOnScroll>
+                    
+                  </SentenceAnimator>
                 </h3>
-              </div>
+              </div> */}
+              <SingleHeading>Trusted by the world&rsquo;s best investors</SingleHeading>
               <InvestorGrid investors={investors} />
             </div>
           </Container>

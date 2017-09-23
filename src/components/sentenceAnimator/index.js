@@ -40,6 +40,7 @@ SentenceAnimator.propTypes = {
 SentenceAnimator.defaultProps = {
   children: "",
   wordDelay: 50,
+  startDelay: 500,
   triggerOnScoll: false,
 }
 
