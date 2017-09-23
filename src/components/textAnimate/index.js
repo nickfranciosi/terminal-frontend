@@ -40,7 +40,7 @@ class TextAnimate extends React.Component {
     });
 
     return (
-      <Waypoint onEnter={this.animate} fireOnRapidScroll>
+      <Waypoint onEnter={this.animate} fireOnRapidScroll >
         <SpanReset className={styles.container}>
           <SpanReset className={innerContainerClass}>
             {this.props.children}

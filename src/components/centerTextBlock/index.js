@@ -11,15 +11,15 @@ const CenterTextBlock = ({ description, headline, body,  callout, style}) => {
         <SentenceAnimator triggerOnScroll startDelay={200}>{description}</SentenceAnimator>
       </span>
       <h2 className={styles.headline}>
-        <SentenceAnimator triggerOnScroll startDelay={300}>{headline}</SentenceAnimator>
+        <SentenceAnimator triggerOnScroll startDelay={200}>{headline}</SentenceAnimator>
       </h2>
       {body &&
         <p className={styles.body}>
-          <TextAnimate triggerOnScroll startDelay={400}>{body}</TextAnimate>
+          <TextAnimate triggerOnScroll startDelay={200}>{body}</TextAnimate>
         </p>
       }
       {callout &&
-        <TextAnimate triggerOnScroll startDelay={500}>
+        <TextAnimate triggerOnScroll startDelay={200}>
           <Button to={callout.link}>{callout.text}</Button>
         </TextAnimate>
       }

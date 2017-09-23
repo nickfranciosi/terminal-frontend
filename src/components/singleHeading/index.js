@@ -5,7 +5,7 @@ import styles from './style.module.css';
 const SingleHeading = ({ children }) => (
   <div className={styles.container}>
     <h3 className={styles.headline}>
-      <SentenceAnimator triggerOnScroll>
+      <SentenceAnimator triggerOnScroll startDelay={200}>
         {children}
       </SentenceAnimator>
     </h3>
