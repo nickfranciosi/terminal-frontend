@@ -1,0 +1,25 @@
+.container{
+  float: left;
+  overflow: hidden;
+}
+
+.container.inner{
+  transform: translate3d(0,100%,0);
+  transition: transform 1000ms ease;
+}
+
+.container.animate {
+  transform: translate3d(0, 0%, 0);
+}
+
+.reset {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  display: inherit;
+  margin: 0;
+  padding: 0;
+}

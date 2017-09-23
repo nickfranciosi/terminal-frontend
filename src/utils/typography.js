@@ -13,6 +13,7 @@ const typography = new Typography({
       fontSize: "64px",
       letterSpacing: "-1.92px",
       lineHeight: 1,
+      display: "inline-block",
     },
     h2: {
       fontSize: "42px",
