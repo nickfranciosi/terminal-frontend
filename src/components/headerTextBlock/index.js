@@ -4,6 +4,7 @@ import classNames from "classnames";
 import Button from '../button';
 import CalloutLink from '../calloutLink';
 import styles from './style.module.css';
+import SentenceAnimator from '../sentenceAnimator';
 
 const HeaderTextBlock = ({
   description,
@@ -37,10 +38,10 @@ const HeaderTextBlock = ({
       style={style}
     >
       <span className={styles.description}>
-        {description}
+        <SentenceAnimator>{description}</SentenceAnimator>
       </span>
       <HeadlineElement className={styles.headline}>
-        {headline}
+        <SentenceAnimator>{headline}</SentenceAnimator>
       </HeadlineElement>
       <p className={styles.body}>
         {body}
