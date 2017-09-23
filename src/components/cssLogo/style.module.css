@@ -35,7 +35,7 @@
 .topRight{
   top: 0;
   right: 0;
-  transition: transform 1s ease-out, background-color 1s ease-in-out;
+  transition: transform 500ms ease-out, background-color 500ms ease-in-out;
 }
 
 .active .topRight{

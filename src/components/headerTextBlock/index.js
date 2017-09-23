@@ -39,17 +39,17 @@ const HeaderTextBlock = ({
       style={style}
     >
       <span className={styles.description}>
-        <SentenceAnimator>{description}</SentenceAnimator>
+        <SentenceAnimator triggerOnMount>{description}</SentenceAnimator>
       </span>
       <HeadlineElement className={styles.headline}>
-        <SentenceAnimator startDelay={1100}>{headline}</SentenceAnimator>
+        <SentenceAnimator triggerOnMount startDelay={350}>{headline}</SentenceAnimator>
       </HeadlineElement>
       <p className={styles.body}>
-        <TextAnimate startDelay={1300}>{body}</TextAnimate>
+        <TextAnimate triggerOnMount startDelay={400}>{body}</TextAnimate>
       </p>
       {callout &&
         <div className={styles.calloutContainer}>
-          <TextAnimate startDelay={1500}>
+          <TextAnimate triggerOnMount startDelay={450}>
             <Button
               to={callout.link}
               style={{
@@ -60,7 +60,7 @@ const HeaderTextBlock = ({
             </Button>
           </TextAnimate>
           {secondaryCallout &&
-            <TextAnimate startDelay={1600}>
+            <TextAnimate triggerOnMount startDelay={500}>
               <a
                 href={secondaryCallout.link}
                 className={styles.secondaryCallout}

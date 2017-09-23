@@ -11,24 +11,33 @@ class TextAnimate extends React.Component {
     super(props);
 
     this.state = {
-      animate: false,
+      animating: false,
+      animated: false,
     };
 
     this.animate = this.animate.bind(this);
   }
 
   componentDidMount() {
-    if(!this.props.triggerOnScroll) {
+    if(this.props.triggerOnMount || this.props.animate) {
+      this.animate()
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.animate) {
       this.animate();
     }
   }
 
   animate() {
+    const timeoutTime = 300 + this.props.startDelay;
+    console.log("in text", timeoutTime);
     setTimeout(() => {
       this.setState({
-        animate: true,
+        animated: true,
       });
-    }, this.props.startDelay + this.props.delay)
+    }, timeoutTime)
   }
 
 
@@ -36,29 +45,29 @@ class TextAnimate extends React.Component {
     const innerContainerClass = classNames({
       [styles.container]: true,
       [styles.inner]: true,
-      [styles.animate]: this.state.animate,
+      [styles.animate]: this.state.animated,
     });
 
     return (
-      <Waypoint onEnter={this.animate} fireOnRapidScroll >
-        <SpanReset className={styles.container}>
-          <SpanReset className={innerContainerClass}>
-            {this.props.children}
-          </SpanReset>
+      <SpanReset className={styles.container}>
+        <SpanReset className={innerContainerClass}>
+          {this.props.children}
         </SpanReset>
-      </Waypoint>
+      </SpanReset>
     )
   }
 }
 
 TextAnimate.propTypes = {
+  animate: PropTypes.bool.isRequired,
   startDelay: PropTypes.number.isRequired,
   delay: PropTypes.number.isRequired,
-  triggerOnScroll: PropTypes.bool,
+  triggerOnMount: PropTypes.bool,
 }
 
 TextAnimate.defaultProps = {
-  triggerOnScroll: true,
+  animate: false,
+  triggerOnMount: false,
   startDelay: 1000,
   delay: 0,
 }

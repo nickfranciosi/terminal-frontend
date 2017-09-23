@@ -40,7 +40,7 @@ class IndexPage extends React.Component{
     return(
       <div>
       { this.state.showLoader ?
-        <LoadingScreen done={this.handleDone}/> :
+        <LoadingScreen done={() => this.handleDone()}/> :
         <div>
           <Header />
           <Viewport className={styles.masthead}>
@@ -89,28 +89,7 @@ class IndexPage extends React.Component{
             }}>
               <Carousel slideData={team} />
             </div>
-            {/* <img src={galleryPlaceholder}  style={{
-              marginBottom: "96px",
-            }}/> */}
             <div className={styles.investorSection}>
-              {/* <div
-                style={{
-                  textAlign: "center",
-                  marginBottom: "60px",
-                }}
-              >
-                <h3
-                  style={{
-                    color: "#434343",
-                    opacity: 0.78,
-                    fontWeight: 100,
-                  }}
-                >
-                  <SentenceAnimator triggerOnScroll>
-                    
-                  </SentenceAnimator>
-                </h3>
-              </div> */}
               <SingleHeading>Trusted by the world&rsquo;s best investors</SingleHeading>
               <InvestorGrid investors={investors} />
             </div>

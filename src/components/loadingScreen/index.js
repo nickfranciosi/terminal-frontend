@@ -33,9 +33,8 @@ animateLogo(){
       animateLogo: true,
       progress: 1,
       done: true,
-    })
-    this.props.done();
-  }, 750);
+    }, this.props.done);
+  }, 500);
 }
 
 increaseLoadbar(){
