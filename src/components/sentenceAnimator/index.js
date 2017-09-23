@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import TextAnimate from "../textAnimate";
 import SpanReset from "../textAnimate/spanReset";
 
@@ -11,6 +12,7 @@ class SentenceAnimator extends React.Component {
   getWords() {
     return this.props.children.split(" ");
   }
+
   render() {
 
     return (
@@ -19,6 +21,14 @@ class SentenceAnimator extends React.Component {
       </SpanReset>
     )
   }
+}
+
+SentenceAnimator.propTypes = {
+  children: PropTypes.string.isRequired,
+}
+
+SentenceAnimator.defaultProps = {
+  children: "",
 }
 
 export default SentenceAnimator;
