@@ -167,3 +167,21 @@ button::-moz-focus-inner {
 a {
   cursor: pointer;
 }
+
+.slick-dots.terminal-dots {
+  bottom: 16px;
+}
+
+.slick-dots.terminal-dots li{
+  margin: 0;
+}
+.slick-dots.terminal-dots li button::before{
+  font-size: 11px;
+  color: #D8D8D8;
+  opacity: 0.37;
+}
+
+.slick-dots.terminal-dots li.slick-active button::before{
+  color: #F43D3D;
+  opacity: 1;
+}

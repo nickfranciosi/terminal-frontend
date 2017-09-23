@@ -11,11 +11,12 @@ import Button from '../components/button';
 import Footer from '../components/footer';
 import HeaderTextBlock from '../components/headerTextBlock';
 import CenterTextBlock from '../components/centerTextBlock';
+import Carousel from '../components/carousel';
 import mastheadImage from '../assets/images/mast-cropped.jpg';
 import aboutFull from '../assets/images/aboutFull.jpg';
 import galleryPlaceholder from '../assets/images/Slideshow-placeholder.png';
 import styles from "./css/home.module.css";
-import { investors } from "../data";
+import { investors, team } from "../data";
 
 class IndexPage extends React.Component{
 
@@ -23,7 +24,7 @@ class IndexPage extends React.Component{
     super(props);
 
     this.state = {
-      showLoader: true,
+      showLoader: false,
     }
 
   }
@@ -81,9 +82,15 @@ class IndexPage extends React.Component{
                 marginBottom: "18px",
               }}
             />
-            <img src={galleryPlaceholder}  style={{
+            <div style={{ 
+              marginBottom: 96,
+              maxWidth: 1500,
+            }}>
+              <Carousel slideData={team} />
+            </div>
+            {/* <img src={galleryPlaceholder}  style={{
               marginBottom: "96px",
-            }}/>
+            }}/> */}
             <div className={styles.investorSection}>
               <div
                 style={{
@@ -98,7 +105,7 @@ class IndexPage extends React.Component{
                     fontWeight: 100,
                   }}
                 >
-                  Trusted by the world’s best investors
+                  Trusted by the world&rsquo;s best investors
                 </h3>
               </div>
               <InvestorGrid investors={investors} />

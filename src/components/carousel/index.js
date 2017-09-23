@@ -1,10 +1,44 @@
 import React from 'react';
+import  Slider from 'react-slick';
+import TeamSlide from './teamSlide.js';
+import PaginationButton from './paginationButton.js';
+import styles from './carousel.module.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-const Carousel = () => (
-  <div >
-    <h2>Carousel goes here</h2>
-  </div>
-);
+
+class Carousel extends React.Component{
+
+  renderSlide(person) {
+    return (
+      <div key={person.name}>
+        <TeamSlide {...person} />
+      </div>
+    );
+  }
+
+
+  render() {
+    var settings = {
+      dots: true,
+      infinite: true,
+      speed: 1500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true,
+      dotsClass: `slick-dots terminal-dots`,
+      centerMode: false,
+      draggable: false,
+      nextArrow: <PaginationButton type="next" />,
+      prevArrow: <PaginationButton type="prev" />,
+    };
+    return (
+      <Slider {...settings}>
+        {this.props.slideData.map(this.renderSlide)}
+      </Slider>
+    );
+  } 
+}
 
 
 export default Carousel;
