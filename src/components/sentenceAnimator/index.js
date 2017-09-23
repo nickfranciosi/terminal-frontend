@@ -17,7 +17,14 @@ class SentenceAnimator extends React.Component {
 
     return (
       <SpanReset>
-        {this.getWords().map((word, i) => <TextAnimate key={`${word}-${i}`} delay={(i + 1) * 45}>{word}&nbsp;</TextAnimate>)}
+        {this.getWords().map((word, i) => <TextAnimate 
+          key={`${word}-${i}`} 
+          startDelay={this.props.startDelay}
+          delay={(i + 1) * this.props.wordDelay}
+          triggerOnScoll={this.props.triggerOnScoll}
+        >
+        {word}&nbsp;
+        </TextAnimate>)}
       </SpanReset>
     )
   }
@@ -25,10 +32,13 @@ class SentenceAnimator extends React.Component {
 
 SentenceAnimator.propTypes = {
   children: PropTypes.string.isRequired,
+  wordDelay: PropTypes.number.isRequired,
+  startDelay: PropTypes.number,
 }
 
 SentenceAnimator.defaultProps = {
   children: "",
+  wordDelay: 50,
 }
 
 export default SentenceAnimator;

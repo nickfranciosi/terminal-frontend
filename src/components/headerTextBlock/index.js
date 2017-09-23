@@ -5,6 +5,7 @@ import Button from '../button';
 import CalloutLink from '../calloutLink';
 import styles from './style.module.css';
 import SentenceAnimator from '../sentenceAnimator';
+import TextAnimate from '../textAnimate';
 
 const HeaderTextBlock = ({
   description,
@@ -41,28 +42,32 @@ const HeaderTextBlock = ({
         <SentenceAnimator>{description}</SentenceAnimator>
       </span>
       <HeadlineElement className={styles.headline}>
-        <SentenceAnimator>{headline}</SentenceAnimator>
+        <SentenceAnimator startDelay={1100}>{headline}</SentenceAnimator>
       </HeadlineElement>
       <p className={styles.body}>
-        {body}
+        <TextAnimate startDelay={1300}>{body}</TextAnimate>
       </p>
       {callout &&
         <div className={styles.calloutContainer}>
-          <Button
-            to={callout.link}
-            style={{
-              marginRight: "20px",
-            }}
-          >
-            {callout.text}
-          </Button>
-          {secondaryCallout &&
-            <a
-              href={secondaryCallout.link}
-              className={styles.secondaryCallout}
+          <TextAnimate startDelay={1500}>
+            <Button
+              to={callout.link}
+              style={{
+                marginRight: "20px",
+              }}
             >
-              {secondaryCallout.text}
-            </a>
+              {callout.text}
+            </Button>
+          </TextAnimate>
+          {secondaryCallout &&
+            <TextAnimate startDelay={1600}>
+              <a
+                href={secondaryCallout.link}
+                className={styles.secondaryCallout}
+              >
+                {secondaryCallout.text}
+              </a>
+            </TextAnimate>
           }
         </div>
       }

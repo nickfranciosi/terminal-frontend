@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './styles.module.css';
 import SpanReset from "./spanReset";
@@ -11,13 +12,22 @@ class TextAnimate extends React.Component {
     this.state = {
       animate: false,
     };
+
+    this.animate = this.animate.bind(this);
   }
+
   componentDidMount() {
+    if(!this.props.triggerOnScroll) {
+      this.animate();
+    }
+  }
+
+  animate() {
     setTimeout(() => {
       this.setState({
         animate: true,
       });
-    }, 1000 + this.props.delay)
+    }, this.props.startDelay + this.props.delay)
   }
 
 
@@ -36,6 +46,17 @@ class TextAnimate extends React.Component {
       </SpanReset>
     )
   }
+}
+
+TextAnimate.propTypes = {
+  startDelay: PropTypes.number.isRequired,
+  delay: PropTypes.number.isRequired,
+  triggerOnScroll: PropTypes.bool,
+}
+
+TextAnimate.defaultProps = {
+  startDelay: 1000,
+  delay: 0,
 }
 
 export default TextAnimate;

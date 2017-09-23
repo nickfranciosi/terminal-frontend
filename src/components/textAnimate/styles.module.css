@@ -5,11 +5,13 @@
 
 .container.inner{
   transform: translate3d(0,100%,0);
-  transition: transform 1000ms ease;
+  opacity: 0;
+  transition: transform 1000ms ease, opacity 1000ms ease;
 }
 
 .container.animate {
   transform: translate3d(0, 0%, 0);
+  opacity: 1;
 }
 
 .reset {

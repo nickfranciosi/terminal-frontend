@@ -12,7 +12,7 @@ export default () => (
         <Container>
           <HeaderTextBlock
             description="Tristique Parturient"
-            headline="How it works"
+            headline="How it works How it works"
             body="Maecenas faucibus mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis, nascetur ridiculus mus."
             largeBody
           />
