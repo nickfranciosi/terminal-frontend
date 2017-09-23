@@ -24,7 +24,7 @@ class IndexPage extends React.Component{
     super(props);
 
     this.state = {
-      showLoader: false,
+      showLoader: true,
     }
 
   }
