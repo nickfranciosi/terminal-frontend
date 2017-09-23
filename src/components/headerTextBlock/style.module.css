@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  max-width: 600px;
+  max-width: 545px;
 }
 
 .container:after {
@@ -90,9 +90,9 @@
 
   .largeBody .body {
     max-width: 100%;
-    font-size: 43px;
-    line-height: 1.23;
-    margin-bottom: 70px;
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 30px;
   }
 
   .calloutContainer {

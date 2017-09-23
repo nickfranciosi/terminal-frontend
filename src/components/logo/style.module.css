@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 80px;
+}
+
+.wrapper {
+ position: relative;
+ width: 24px;
+ height: 16px;
+ margin-right: 8px;
+}
+
+.wrapper div{
+  width: 8px;
+  height: 8px;
+  background-color: #414141;
+  position: absolute;
+}
+
+.text {
+  font-size: 21px;
+  line-height: 2;
+  letter-spacing: -0.54px;
+  text-transform: none;
+  color: #414141;
+}
+
+.topLeft{
+  top: 0;
+  left: 0;
+}
+
+.middle{
+  bottom: 0;
+  left:   8px;
+  height: 16px !important;
+}
+
+
+.topRight{
+  top: 0;
+  right: 0;
+  background-color: #F43D3D !important;
+  transform: translateY(-8px);
+}
+

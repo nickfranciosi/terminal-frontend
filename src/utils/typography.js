@@ -34,17 +34,17 @@ const typography = new Typography({
     },
     span: {
       color: colors.higlight,
-      fontFamily: ['MaisonNeueMedium', 'sans-serif'].join(','),
+      fontFamily: ['MaisonNeueBook', 'sans-serif'].join(','),
       fontSize: "13px",
       lineHeight: 3,
       letterSpacing: "1.14px",
       textTransform: "uppercase",
     },
     a: {
-      fontFamily: ['MaisonNeueMedium', 'sans-serif'].join(','),
+      fontFamily: ['MaisonNeueBook', 'sans-serif'].join(','),
       fontSize: "13px",
       color: colors.white,
-      letterSpacing: "0.81px",
+      letterSpacing: "1.14px",
       textDecoration: "none",
       textTransform: "uppercase",
     }

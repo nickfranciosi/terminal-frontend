@@ -32,7 +32,6 @@ class TextAnimate extends React.Component {
 
   animate() {
     const timeoutTime = 300 + this.props.startDelay;
-    console.log("in text", timeoutTime);
     setTimeout(() => {
       this.setState({
         animated: true,
@@ -68,7 +67,7 @@ TextAnimate.propTypes = {
 TextAnimate.defaultProps = {
   animate: false,
   triggerOnMount: false,
-  startDelay: 1000,
+  startDelay: 500,
   delay: 0,
 }
 

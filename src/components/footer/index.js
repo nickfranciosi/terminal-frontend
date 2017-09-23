@@ -11,8 +11,10 @@ const Footer = ({  }) => (
         <div className={styles.body}>
           <Link to="/"><img className={styles.logo} src={logo} /></Link>
           <ul className={styles.menu}>
-            <li><Link activeClassName={styles.currentLink} to="/manifesto">Privacy Policy</Link></li>
-            <li><Link activeClassName={styles.currentLink}to="/manifesto">Terms &amp; Conditions</Link></li>
+            <li><a href="/manifesto">Twitter</a></li>
+            <li><a href="/manifesto">Medium</a></li>
+            <li><a href="/manifesto">Linkedin</a></li>
+            <li><a href="/manifesto">Instagram</a></li>
           </ul>
         </div>
         <div className={styles.locationList}>

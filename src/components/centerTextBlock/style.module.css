@@ -27,6 +27,7 @@
 .headline {
   margin-bottom: 24px;
   display: flex;
+  line-height: 1.2;
   justify-content: center;
   flex-wrap: wrap;
 }

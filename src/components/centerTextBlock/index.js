@@ -29,7 +29,7 @@ class CenterTextBlock extends React.Component {
   render() {
     const { description, headline, body,  callout, style} = this.props;
     return (
-      <Waypoint onEnter={() => this.triggerAnimation()} topOffset={400}>
+      <Waypoint onEnter={() => this.triggerAnimation()} topOffset={500}>
         <div className={styles.container} style={style}>
           <span className={styles.description}>
             <SentenceAnimator  animate={this.state.animate} startDelay={200}>{description}</SentenceAnimator>

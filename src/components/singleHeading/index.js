@@ -24,7 +24,7 @@ class SingleHeading extends React.Component {
 
   render() {
     return (
-      <Waypoint onEnter={() => this.triggerAnimation()}>
+      <Waypoint onEnter={() => this.triggerAnimation()} topOffset={500}>
         <div className={styles.container}>
           <h3 className={styles.headline}>
             <SentenceAnimator animate={this.state.animate} startDelay={200}>

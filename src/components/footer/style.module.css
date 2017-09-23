@@ -35,10 +35,10 @@
 }
 
 .menu li a{
-  font-size: 16px;
+  font-size: 15px;
   font-family: "MaisonNeueBook";
   margin-right: 8px;
-  color: #191919;
+  color: #414141;
   text-transform: none;
   margin-right: 0;
   transition: color .3s ease;
@@ -50,6 +50,8 @@
 
 .menu li+li:before {
   content: '|';
+  color: #A3A3A3;
+  font-size: 15px;
   margin-right: 8px;
 }
 
