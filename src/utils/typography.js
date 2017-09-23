@@ -18,6 +18,7 @@ const typography = new Typography({
     h2: {
       fontSize: "42px",
       letterSpacing: "-1.68px",
+      display: "inline-block",
     },
     h3: {
       fontSize: "24px",

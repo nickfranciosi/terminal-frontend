@@ -34,11 +34,13 @@ SentenceAnimator.propTypes = {
   children: PropTypes.string.isRequired,
   wordDelay: PropTypes.number.isRequired,
   startDelay: PropTypes.number,
+  triggerOnScoll: PropTypes.bool,
 }
 
 SentenceAnimator.defaultProps = {
   children: "",
   wordDelay: 50,
+  triggerOnScoll: false,
 }
 
 export default SentenceAnimator;

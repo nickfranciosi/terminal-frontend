@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Waypoint from 'react-waypoint';
 import styles from './styles.module.css';
 import SpanReset from "./spanReset";
 
@@ -39,11 +40,13 @@ class TextAnimate extends React.Component {
     });
 
     return (
-      <SpanReset className={styles.container}>
-        <SpanReset className={innerContainerClass}>
-          {this.props.children}
+      <Waypoint onEnter={this.animate}>
+        <SpanReset className={styles.container}>
+          <SpanReset className={innerContainerClass}>
+            {this.props.children}
+          </SpanReset>
         </SpanReset>
-      </SpanReset>
+      </Waypoint>
     )
   }
 }
@@ -55,6 +58,7 @@ TextAnimate.propTypes = {
 }
 
 TextAnimate.defaultProps = {
+  triggerOnScroll: true,
   startDelay: 1000,
   delay: 0,
 }

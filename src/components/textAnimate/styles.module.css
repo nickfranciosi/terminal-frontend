@@ -22,6 +22,9 @@
   letter-spacing: inherit;
   text-transform: inherit;
   display: inherit;
+  flex-wrap: inherit;
+  justify-content: inherit;
+  align-items: inherit;
   margin: 0;
   padding: 0;
 }
