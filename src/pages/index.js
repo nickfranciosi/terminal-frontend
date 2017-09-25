@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import Waypoint from 'react-waypoint';
 import Viewport from '../components/viewport';
 import Container from '../components/container';
 import LoadingScreen from '../components/loadingScreen';
@@ -25,9 +26,12 @@ class IndexPage extends React.Component{
     super(props);
 
     this.state = {
-      showLoader: true,
+      showLoader: false,
+      animateTop: false,
+      animateBottom: false,
     }
 
+    this.triggerAnimation = this.triggerAnimation.bind(this);
   }
 
   handleDone = () => {
@@ -35,6 +39,16 @@ class IndexPage extends React.Component{
       this.setState({ showLoader: false});
     }, 2750)
   }
+
+  triggerAnimation(location) {
+    console.log(location);
+    if(!this.state[location]) {
+      this.setState({
+        [location]: true,
+      });
+    }
+  }
+  
 
   render() {
     return(
@@ -62,27 +76,37 @@ class IndexPage extends React.Component{
             </Container>
           </Viewport>
           <Container>
-            <CenterTextBlock
-              description="Our mission"
-              headline="We&rsquo;re solving the talent shortage problem."
-              body="Terminal accelerates innovation by rethinking how the best companies and the most talented people partner in building the future."
-              callout={{
-                text: "Read the manifesto",
-                link: "/manifesto",
-              }}
-            />
+            <Waypoint onEnter={() => this.triggerAnimation("animateTop")} topOffset={500}>
+              <div>
+                <CenterTextBlock
+                  description="Our mission"
+                  headline="We&rsquo;re solving the talent shortage problem."
+                  body="Terminal accelerates innovation by rethinking how the best companies and the most talented people partner in building the future."
+                  callout={{
+                    text: "Read the manifesto",
+                    link: "/manifesto",
+                  }}
+                  animate={this.state.animateTop}
+                />
+              </div>
+            </Waypoint>
           </Container>
           <Viewport className={classNames(styles.masthead, styles.aboutFull)}>
             <FullBackgroundImage src={aboutFull} />
           </Viewport>
           <Container>
-            <CenterTextBlock
-              description="Founding Members"
-              headline="Meet the Terminal team"
-              style={{
-                marginBottom: "18px",
-              }}
-            />
+            <Waypoint onEnter={() => this.triggerAnimation("animateBottom")} topOffset={500}>
+              <div>
+                <CenterTextBlock
+                  description="Founding Members"
+                  headline="Meet the Terminal team"
+                  style={{
+                    marginBottom: "18px",
+                  }}
+                  animate={this.state.animateBottom}
+                />
+              </div>
+            </Waypoint>
             <div style={{ 
               marginBottom: 96,
               maxWidth: 1500,

@@ -9,7 +9,12 @@ const Button = ({ children, to, style }) => (
     to={to}
     style={style}
   >
-    {children}
+    <div className={styles.defaultBackground}/>
+    <div className={styles.hoverBackground}/>
+    <div className={styles.text}>
+      {children}
+      <div className={styles.arrow}>&rarr;</div>
+    </div>
   </Link>
 );
 
