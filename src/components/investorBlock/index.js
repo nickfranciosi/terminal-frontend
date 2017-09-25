@@ -31,7 +31,15 @@ class InvestorBlock extends React.Component {
         <div 
           className={containerClass}
         >
-          <img src={this.props.icon} alt={this.props.name} className={styles.icon}/>
+          <img 
+            src={this.props.icon} 
+            alt={this.props.name} 
+            className={styles.icon}
+            style={{
+              width: this.props.size,
+              maxWidth: this.props.maxSize,
+            }}
+          />
         </div>
       </Waypoint>
     );
