@@ -54,13 +54,24 @@
 
 .secondaryCallout {
   color: #7B7B7B;
-  border-bottom: 1px rgba(151, 151, 151, 0.4) solid;
-  transition: border-bottom .35s ease-in;
 }
 
-.secondaryCallout:hover {
+/* .secondaryCallout:hover {
   color: #7B7B7B;
   border-bottom: 1px #7B7B7B solid;
+} */
+
+.secondaryCallout::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(151, 151, 151, 0.4);
+}
+
+.secondaryCallout:hover::after {
+  animation: leftToRight 750ms ease;
+  animation-fill-mode: forwards;
 }
 
 .whiteTheme *{
@@ -71,6 +82,14 @@
   opacity: 1;
 }
 
+@keyframes leftToRight {
+  0% {
+    width: 0%
+  }
+  100% {
+    width: 100%
+  }
+}
 
 @media only screen and (min-width: 750px) {
 

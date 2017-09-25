@@ -39,10 +39,10 @@ const HeaderTextBlock = ({
       style={style}
     >
       <span className={styles.description}>
-        <SentenceAnimator triggerOnMount startDelay={550}>{description}</SentenceAnimator>
+        <TextAnimate triggerOnMount startDelay={550}>{description}</TextAnimate>
       </span>
       <HeadlineElement className={styles.headline}>
-        <SentenceAnimator triggerOnMount startDelay={550}>{headline}</SentenceAnimator>
+        <TextAnimate triggerOnMount startDelay={550}>{headline}</TextAnimate>
       </HeadlineElement>
       <p className={styles.body}>
         <TextAnimate triggerOnMount startDelay={550}>{body}</TextAnimate>

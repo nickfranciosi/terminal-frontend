@@ -32,10 +32,10 @@ class CenterTextBlock extends React.Component {
       <Waypoint onEnter={() => this.triggerAnimation()} topOffset={500}>
         <div className={styles.container} style={style}>
           <span className={styles.description}>
-            <SentenceAnimator  animate={this.state.animate} startDelay={200}>{description}</SentenceAnimator>
+            <TextAnimate  animate={this.state.animate} startDelay={200}>{description}</TextAnimate>
           </span>
           <h2 className={styles.headline}>
-            <SentenceAnimator  animate={this.state.animate} startDelay={200}>{headline}</SentenceAnimator>
+            <TextAnimate  animate={this.state.animate} startDelay={200}>{headline}</TextAnimate>
           </h2>
           {body &&
             <p className={styles.body}>

@@ -1,6 +1,6 @@
 .masthead {
   margin-bottom: 76px;
-  border-bottom: 1px solid black;
+  box-shadow: 0 22px 24px 0 rgba(0,0,0,0.06);
 }
 
 .aboutFull {
@@ -22,3 +22,4 @@
   }
   
 }
+
