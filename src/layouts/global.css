@@ -194,6 +194,6 @@ a {
 }
 
 .slick-dots.terminal-dots li.slick-active button::before{
-  color: #F43D3D;
+  color: #FF4343;
   opacity: 1;
 }

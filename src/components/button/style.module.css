@@ -1,11 +1,10 @@
 .base {
   border: none;
-  padding: 9px 22px;
+  padding: 9px 10px;
   cursor: pointer;
   display: inline-block;
   position: relative;
   overflow: hidden;
-  font-size: 11px;
 }
 
 .defaultBackground {
@@ -15,7 +14,7 @@
   bottom: 0;
   top: 0;
   z-index: -1;
-  background-color: #F43D3D; 
+  background-color: #FF4343; 
 }
 
 .text {
@@ -35,16 +34,6 @@
   opacity: 1;
   transform: translateY(0px);
 }
-/* .defaultBackground::before {
-  content: " ";
-  display: block;
-  left: 0;
-  top: 0;
-  height: 100%;
-  background-color: rgb(212, 47, 68);
-  width: 0%;
-  transition: width 500ms ease-in-out, transform 500ms ease;
-} */
 
 .hoverBackground {
   display: block;
@@ -64,32 +53,8 @@
   width: 100%;
 }
 
-/* .hoverBackground::after {
-  content: '';
-  position: absolute;
-  height: 110%;
-  width: 100%;
-  top: 0%;
-  left: 0;
-  background-color: #F43D3D;
-  z-index: 5;
-}
-
-.base:hover .hoverBackground::after{
-  width: 150%;
-  transform-origin: 100% 0;
-  animation: rotate 500ms ease;
-  animation-fill-mode: both;
-} */
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0)
-  }
-  80% {
-    transform: rotate(-28deg)
-  }
-  100% {
-    transform: rotate(-28deg)
-  }
+@media only screen and (min-width: 350px) {
+    .base {
+      padding: 9px 22px;
+    }
 }

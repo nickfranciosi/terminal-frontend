@@ -80,8 +80,8 @@ class IndexPage extends React.Component{
             <Waypoint onEnter={() => this.triggerAnimation("animateTop")} topOffset={300}>
               <div>
                 <CenterTextBlock
-                  description="Our mission"
-                  headline="We&rsquo;re solving the talent shortage problem."
+                  description="We help you succeed"
+                  headline="Gain access to top talent around the world"
                   body="Terminal accelerates innovation by rethinking how the best companies and the most talented people partner in building the future."
                   callout={{
                     text: "Read the manifesto",

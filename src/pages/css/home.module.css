@@ -1,10 +1,12 @@
 .masthead {
   margin-bottom: 76px;
+  align-items: flex-end;
   box-shadow: 0 22px 24px 0 rgba(0,0,0,0.06);
 }
 
 .headerBlock {
-  margin-bottom: 76px;
+  margin-top: 0px;
+  margin-bottom: 10.4vh;
 }
 
 .aboutFull {
@@ -13,6 +15,20 @@
 
 .investorSection {
   margin-bottom: 62px;
+}
+
+
+@media only screen and (min-width: 420px) {
+
+  .headerBlock {
+    margin-top: 124px;
+    margin-bottom: 0;
+  }
+
+  .masthead {
+    align-items: center; 
+  }
+  
 }
 
 
@@ -25,10 +41,10 @@
   .investorSection {
     margin-bottom: 112px;
   }
-/* 
+
   .headerBlock {
-    margin-bottom: 15.4vh;
-  } */
+    margin-top: 163px;
+  }
   
 }
 
