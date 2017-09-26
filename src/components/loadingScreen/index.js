@@ -65,7 +65,7 @@ stopLoadingBar(){
 render(){
 
   let options = {
-    color: '#F43D3D',
+    color: '#FF4343',
     trailColor: '#D8D8D8',
     strokeWidth: 1,
   }

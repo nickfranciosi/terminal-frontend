@@ -41,7 +41,6 @@ class IndexPage extends React.Component{
   }
 
   triggerAnimation(location) {
-    console.log(location);
     if(!this.state[location]) {
       this.setState({
         [location]: true,
@@ -60,7 +59,7 @@ class IndexPage extends React.Component{
           <Viewport className={styles.masthead}>
             <Container>
               <HeaderTextBlock
-                description="A network of the best engineers"
+                description="Tap into global talent"
                 headline="Bold ideas require brilliant minds"
                 body="Terminal builds elite engineering teams to solve the toughest challenges of tomorrow."
                 callout={{
@@ -71,16 +70,17 @@ class IndexPage extends React.Component{
                   text: "Open roles",
                   link: "/",
                 }}
+                className={styles.headerBlock}
               />
               <AngledImage src={mastheadImage} />
             </Container>
           </Viewport>
           <Container>
-            <Waypoint onEnter={() => this.triggerAnimation("animateTop")} topOffset={500}>
+            <Waypoint onEnter={() => this.triggerAnimation("animateTop")} topOffset={300}>
               <div>
                 <CenterTextBlock
-                  description="Our mission"
-                  headline="We&rsquo;re solving the talent shortage problem."
+                  description="We help you succeed"
+                  headline="Gain access to top talent around the world"
                   body="Terminal accelerates innovation by rethinking how the best companies and the most talented people partner in building the future."
                   callout={{
                     text: "Read the manifesto",
@@ -91,11 +91,11 @@ class IndexPage extends React.Component{
               </div>
             </Waypoint>
           </Container>
-          <Viewport className={classNames(styles.masthead, styles.aboutFull)}>
+          <div className={styles.aboutFull}>
             <FullBackgroundImage src={aboutFull} />
-          </Viewport>
+          </div>
           <Container>
-            <Waypoint onEnter={() => this.triggerAnimation("animateBottom")} topOffset={500}>
+            <Waypoint onEnter={() => this.triggerAnimation("animateBottom")} topOffset={300}>
               <div>
                 <CenterTextBlock
                   description="Founding Members"

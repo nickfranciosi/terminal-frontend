@@ -21,7 +21,7 @@
 
 @media only screen and (max-width: 1000px) {
   h1 {
-    font-size: 50px;
+    font-size: 55px;
   }
 
   h2 {
@@ -32,14 +32,14 @@
     font-size: 20px;
   }
 
-  span {
+  a, span {
     font-size: 11px;
   }
 }
 
 @media only screen and (max-width: 750px) {
   h1 {
-    font-size: 40px;
+    font-size: 50px;
   }
 
   h2 {
@@ -50,6 +50,18 @@
     font-size: 18px;
   }
 
+}
+
+@media only screen and (max-width: 550px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  h1 {
+    font-size: 33px;
+  }
 }
 
 html,
@@ -168,8 +180,13 @@ a {
   cursor: pointer;
 }
 
+button:focus {outline:0;}
+
+.slick-track{
+  background-color: #1B1B21;
+}
 .slick-dots.terminal-dots {
-  bottom: 16px;
+  bottom: 9px;
 }
 
 .slick-dots.terminal-dots li{
@@ -182,6 +199,6 @@ a {
 }
 
 .slick-dots.terminal-dots li.slick-active button::before{
-  color: #F43D3D;
+  color: #FF4343;
   opacity: 1;
 }

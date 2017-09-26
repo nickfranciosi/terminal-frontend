@@ -1,16 +1,11 @@
 import React from 'react';
 import styles from './style.module.css';
+import { Parallax } from 'react-parallax';
 
 const FullBackgroundImage = ({ children, src }) => (
-  <div 
-    className={styles.container}
-    style={{
-      backgroundImage: `url(${src})`,
-    }}
-  >
-    <div className={styles.gradient} />
+  <Parallax bgImage={src} strength={100} className={styles.container}> 
     {children}
-  </div>
+  </Parallax>
 );
 
 

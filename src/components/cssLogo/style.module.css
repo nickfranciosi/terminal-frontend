@@ -35,11 +35,11 @@
 .topRight{
   top: 0;
   right: 0;
-  transition: transform 500ms ease-out, background-color 500ms ease-in-out;
+  transition: transform 500ms 250ms ease, background-color 500ms ease;
 }
 
 .active .topRight{
-  background-color: #F43D3D;
+  background-color: #FF4343;
   transform: translateY(-25px);
 }
 

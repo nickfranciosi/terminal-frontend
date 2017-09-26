@@ -19,7 +19,7 @@
   .pointer{
     height: 6px;
     position: absolute;
-    background-color: #F43D3D;
+    background-color: #FF4343;
     transition: width .35s ease, left .35s ease, height .5s ease;
   }
 

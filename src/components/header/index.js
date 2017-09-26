@@ -7,15 +7,15 @@ import TextAnimate from '../textAnimate';
 import Reveal from 'react-reveal';
 // import Logo from '../logo';
 const Header = () => (
-    <Reveal effect="animated fadeInUp">
+    
       <Link 
         className={styles.container}
         to="/"
       >
-        <img src={logoImage} />
+      <TextAnimate triggerOnMount><img src={logoImage} /></TextAnimate>
         {/* <Logo /> */}
     </Link>
-   </Reveal>
+   
 );
 
 export default Header;

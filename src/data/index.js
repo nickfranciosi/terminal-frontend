@@ -11,24 +11,14 @@ export default {
   ],
   team: [
     {
-      name: "Kevin Boris",
-      title: "Co-founder",
-      image: "http://lorempixel.com/400/400/people/",
+      name: "Jack Abraham",
+      title: "Co-Founder",
+      image: require('../assets/images/team/Jack-a.jpg'),
     },
     {
-      name: "Susan CakeMan",
-      title: "Founder",
-      image: "http://lorempixel.com/400/200/people/",
-    },
-    {
-      name: "Sunger Minsfild",
-      title: "Lawyer",
-      image: "http://lorempixel.com/400/400/people/",
-    },
-    {
-      name: "Torus",
-      title: "Soothsayer",
-      image: "http://lorempixel.com/400/200/people/",
+      name: "Joe Abraham",
+      title: "Co-Founder",
+      image: require('../assets/images/team/Joe.jpg'),
     },
   ],
 }

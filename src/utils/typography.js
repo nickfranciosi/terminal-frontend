@@ -30,7 +30,6 @@ const typography = new Typography({
       color: colors.secondaryText,
       letterSpacing: "-0.43px",
       lineHeight: 1.6,
-      opacity: 0.6,
     },
     span: {
       color: colors.higlight,

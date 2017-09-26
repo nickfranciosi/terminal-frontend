@@ -1,15 +1,13 @@
 .pagination {
-  width: 50px;
-  height: 50px;
+  width: 65px;
+  height: 65px;
   position: absolute;
   z-index: 1;
   top: 47%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(71, 67, 68, 0.5);
-  color: red;
-  transition: color 500ms ease, background-color 500ms ease;
+  /* transition: color 500ms ease, background-color 500ms ease; */
 }
 
 .pagination.next{
@@ -20,7 +18,42 @@
   left: 0;
 }
 
-.pagination:hover {
+.pagination:hover{
   background-color: red;
   color: white;
+}
+
+
+.defaultBackground {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: -1;
+  background-color: #3B3738;
+}
+
+.hoverBackground {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  z-index: -1;
+  height: 100%;
+  background-color: #D42F44;
+  width: 0%;
+  transition: width 400ms ease-in-out, transform 400ms ease;
+}
+
+.next .hoverBackground {
+  left: 0;
+}
+
+.prev .hoverBackground {
+  right: 0;
+}
+
+.pagination:hover .hoverBackground{
+  width: 100%;
 }

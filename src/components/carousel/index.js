@@ -2,7 +2,6 @@ import React from 'react';
 import  Slider from 'react-slick';
 import TeamSlide from './teamSlide.js';
 import PaginationButton from './paginationButton.js';
-import styles from './carousel.module.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -11,7 +10,7 @@ class Carousel extends React.Component{
 
   renderSlide(person) {
     return (
-      <div key={person.name}>
+      <div key={person.name} >
         <TeamSlide {...person} />
       </div>
     );
@@ -22,7 +21,7 @@ class Carousel extends React.Component{
     var settings = {
       dots: true,
       infinite: true,
-      speed: 1500,
+      speed: 1000,
       slidesToShow: 1,
       slidesToScroll: 1,
       fade: true,
