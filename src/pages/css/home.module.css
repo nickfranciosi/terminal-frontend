@@ -10,7 +10,9 @@
 }
 
 .aboutFull {
-  max-height: 500px;
+  height: 49vw;
+  max-height: 700px;
+  margin-bottom: 76px;
 }
 
 .investorSection {

@@ -41,7 +41,6 @@ class IndexPage extends React.Component{
   }
 
   triggerAnimation(location) {
-    console.log(location);
     if(!this.state[location]) {
       this.setState({
         [location]: true,
@@ -92,9 +91,9 @@ class IndexPage extends React.Component{
               </div>
             </Waypoint>
           </Container>
-          <Viewport className={classNames(styles.masthead, styles.aboutFull)}>
+          <div className={styles.aboutFull}>
             <FullBackgroundImage src={aboutFull} />
-          </Viewport>
+          </div>
           <Container>
             <Waypoint onEnter={() => this.triggerAnimation("animateBottom")} topOffset={300}>
               <div>

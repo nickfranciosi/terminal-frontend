@@ -13,6 +13,7 @@
     "gatsby-source-wordpress": "^1.7.10",
     "normalize.css": "^7.0.0",
     "prop-types": "^15.5.10",
+    "react-parallax": "^1.4.4",
     "react-progressbar.js": "^0.2.0",
     "react-reveal": "^0.2.2",
     "react-scroll": "^1.5.4",
