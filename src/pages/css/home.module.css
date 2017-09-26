@@ -3,6 +3,10 @@
   box-shadow: 0 22px 24px 0 rgba(0,0,0,0.06);
 }
 
+.headerBlock {
+  margin-bottom: 76px;
+}
+
 .aboutFull {
   max-height: 500px;
 }
@@ -10,6 +14,7 @@
 .investorSection {
   margin-bottom: 62px;
 }
+
 
 
 @media only screen and (min-width: 750px) {
@@ -20,6 +25,10 @@
   .investorSection {
     margin-bottom: 112px;
   }
+/* 
+  .headerBlock {
+    margin-bottom: 15.4vh;
+  } */
   
 }
 

@@ -21,7 +21,7 @@
 
 @media only screen and (max-width: 1000px) {
   h1 {
-    font-size: 50px;
+    font-size: 55px;
   }
 
   h2 {
@@ -32,14 +32,14 @@
     font-size: 20px;
   }
 
-  span {
+  a, span {
     font-size: 11px;
   }
 }
 
 @media only screen and (max-width: 750px) {
   h1 {
-    font-size: 40px;
+    font-size: 50px;
   }
 
   h2 {
@@ -50,6 +50,18 @@
     font-size: 18px;
   }
 
+}
+
+@media only screen and (max-width: 550px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  h1 {
+    font-size: 33px;
+  }
 }
 
 html,

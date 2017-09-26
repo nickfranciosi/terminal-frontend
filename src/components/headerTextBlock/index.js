@@ -11,6 +11,7 @@ const HeaderTextBlock = ({
   description,
   headline,
   headlineSize,
+  className,
   body,
   largeBody,
   callout,
@@ -20,18 +21,13 @@ const HeaderTextBlock = ({
 }) => {
 
   const HeadlineElement = headlineSize || "h1";
-  const CalloutElement = theme === "white" ? Button : CalloutLink;
+  
   const containerClasses = classNames({
     [styles.container]: true,
     [styles.whiteTheme]: theme === "white",
     [styles.largeBody]: largeBody,
+    [className]: true,
   });
-
-  const renderButton = () => {
-    return theme === "white" ?
-     <CalloutLink to={callout.link}>{callout.text}</CalloutLink> :
-     <Button to={callout.link}>{callout.text}</Button>
-  }
 
   return (
     <div
@@ -44,33 +40,35 @@ const HeaderTextBlock = ({
       <HeadlineElement className={styles.headline}>
         <TextAnimate triggerOnMount startDelay={550}>{headline}</TextAnimate>
       </HeadlineElement>
-      <p className={styles.body}>
-        <TextAnimate triggerOnMount startDelay={550}>{body}</TextAnimate>
-      </p>
-      {callout &&
-        <div className={styles.calloutContainer}>
-          <TextAnimate triggerOnMount startDelay={550}>
-            <Button
-              to={callout.link}
-              style={{
-                marginRight: "20px",
-              }}
-            >
-              {callout.text}
-            </Button>
-          </TextAnimate>
-          {secondaryCallout &&
+      <div className={styles.heightChecker}>
+        <p className={styles.body}>
+          <TextAnimate triggerOnMount startDelay={550}>{body}</TextAnimate>
+        </p>
+        {callout &&
+          <div className={styles.calloutContainer}>
             <TextAnimate triggerOnMount startDelay={550}>
-              <a
-                href={secondaryCallout.link}
-                className={styles.secondaryCallout}
+              <Button
+                to={callout.link}
+                style={{
+                  marginRight: "20px",
+                }}
               >
-                {secondaryCallout.text}
-              </a>
+                {callout.text}
+              </Button>
             </TextAnimate>
-          }
-        </div>
-      }
+            {secondaryCallout &&
+              <TextAnimate triggerOnMount startDelay={550}>
+                <a
+                  href={secondaryCallout.link}
+                  className={styles.secondaryCallout}
+                >
+                  {secondaryCallout.text}
+                </a>
+              </TextAnimate>
+            }
+          </div>
+        }
+      </div>
     </div>
   );
 }

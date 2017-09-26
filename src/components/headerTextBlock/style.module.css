@@ -3,7 +3,7 @@
   max-width: 545px;
 }
 
-.container:after {
+.container:after, .heightChecker:after {
   content: "";
   display: table;
   clear: both;
@@ -20,6 +20,7 @@
 }
 
 .headline {
+  margin-left: -3px;
   margin-bottom: 16px;
   letter-spacing: -1.2px;
   float: left;
@@ -42,15 +43,16 @@
 .calloutContainer {
   margin-top: 16px;
   display: flex;
-  align-items: left;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   float: left;
   clear: both;
 }
 
-.calloutContainer a{
+/* .calloutContainer a{
   margin-bottom: 24px;
-}
+  font-size: 11px;
+} */
 
 .secondaryCallout {
   color: #7B7B7B;
@@ -70,7 +72,7 @@
 }
 
 .secondaryCallout:hover::after {
-  animation: leftToRight 750ms ease;
+  animation: leftToRight 500ms ease;
   animation-fill-mode: forwards;
 }
 

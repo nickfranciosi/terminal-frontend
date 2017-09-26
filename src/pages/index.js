@@ -60,7 +60,7 @@ class IndexPage extends React.Component{
           <Viewport className={styles.masthead}>
             <Container>
               <HeaderTextBlock
-                description="A network of the best engineers"
+                description="Tap into global talent"
                 headline="Bold ideas require brilliant minds"
                 body="Terminal builds elite engineering teams to solve the toughest challenges of tomorrow."
                 callout={{
@@ -71,12 +71,13 @@ class IndexPage extends React.Component{
                   text: "Open roles",
                   link: "/",
                 }}
+                className={styles.headerBlock}
               />
               <AngledImage src={mastheadImage} />
             </Container>
           </Viewport>
           <Container>
-            <Waypoint onEnter={() => this.triggerAnimation("animateTop")} topOffset={500}>
+            <Waypoint onEnter={() => this.triggerAnimation("animateTop")} topOffset={300}>
               <div>
                 <CenterTextBlock
                   description="Our mission"
@@ -95,7 +96,7 @@ class IndexPage extends React.Component{
             <FullBackgroundImage src={aboutFull} />
           </Viewport>
           <Container>
-            <Waypoint onEnter={() => this.triggerAnimation("animateBottom")} topOffset={500}>
+            <Waypoint onEnter={() => this.triggerAnimation("animateBottom")} topOffset={300}>
               <div>
                 <CenterTextBlock
                   description="Founding Members"
