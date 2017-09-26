@@ -27,7 +27,7 @@
   top: 0;
   opacity: 0;
   transform: translateY(10px);
-  transition: opacity 500ms ease, transform 500ms ease;  
+  transition: opacity 400ms ease, transform 400ms ease;  
 }
 
 .base:hover .arrow {
@@ -46,7 +46,7 @@
   height: 100%;
   background-color: rgb(212, 47, 68);
   width: 0%;
-  transition: width 500ms ease-in-out, transform 500ms ease;
+  transition: width 400ms ease-in-out, transform 400ms ease;
 }
 
 .base:hover .hoverBackground{

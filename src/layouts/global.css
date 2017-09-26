@@ -180,6 +180,8 @@ a {
   cursor: pointer;
 }
 
+button:focus {outline:0;}
+
 .slick-dots.terminal-dots {
   bottom: 16px;
 }
