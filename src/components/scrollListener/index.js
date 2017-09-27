@@ -18,6 +18,9 @@ class ScrollListener extends React.Component {
   }
 
   handleScroll() {
+    if(!this.element) {
+      this.props.onEnter();
+    }
     const elTop = this.element.offsetTop;
     const elBottom = elTop + this.element.elBottom;
     const scrollTop = document.body.scrollTop;
