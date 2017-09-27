@@ -28,11 +28,12 @@ class IndexPage extends React.Component{
 
     this.state = {
       showLoader: true,
-      animateTop: false,
-      animateBottom: false,
+      topAnimation: false,
+      bottomAnimation: false,
     }
 
-    this.triggerAnimation = this.triggerAnimation.bind(this);
+    this.triggerTop = this.triggerTop.bind(this);
+    this.triggerBottom = this.triggerBottom.bind(this);
   }
 
   handleDone = () => {
@@ -41,12 +42,24 @@ class IndexPage extends React.Component{
     }, 1250)
   }
 
-  triggerAnimation(location) {
-    if(!this.state[location]) {
-      this.setState({
-        [location]: true,
-      });
-    }
+  // triggerAnimation(location) {
+  //   if(!this.state[location]) {
+  //     this.setState({
+  //       [location]: true,
+  //     });
+  //   }
+  // }
+
+  triggerTop() {
+    this.setState({
+      topAnimation: true,
+    });
+  }
+
+  triggerBottom() {
+    this.setState({
+      bottomAnimation: true,
+    });
   }
   
 
@@ -77,7 +90,7 @@ class IndexPage extends React.Component{
             </Container>
           </Viewport>
           <Container>
-            <ScrollListener offset={650} onEnter={() => this.triggerAnimation("animateTop")}>
+            <ScrollListener offset={650} onEnter={this.triggerTop}>
               <div>
                 <CenterTextBlock
                   description="We help you succeed"
@@ -87,7 +100,7 @@ class IndexPage extends React.Component{
                     text: "Read the manifesto",
                     link: "/manifesto",
                   }}
-                  animate={this.state.animateTop}
+                  animate={this.state.topAnimation}
                 />
               </div>
             </ScrollListener>
@@ -99,7 +112,7 @@ class IndexPage extends React.Component{
             />
           </div>
           <Container>
-            <ScrollListener onEnter={() => this.triggerAnimation("animateBottom")} offset={650}>
+            <ScrollListener onEnter={this.triggerBottom} offset={650}>
               <div>
                 <CenterTextBlock
                   description="Founding Members"
@@ -107,7 +120,7 @@ class IndexPage extends React.Component{
                   style={{
                     marginBottom: "18px",
                   }}
-                  animate={this.state.animateBottom}
+                  animate={this.state.bottomAnimation}
                 />
               </div>
             </ScrollListener>
