@@ -30,26 +30,27 @@ class TextAnimate extends React.Component {
   }
 
   animate() {
-    const timeoutTime = 300 + this.props.startDelay;
     setTimeout(() => {
       this.setState({
         animated: true,
       });
-    }, timeoutTime)
+    }, this.props.startDelay)
   }
 
 
   render() {
+    const { children, timingClass } = this.props;
     const innerContainerClass = classNames({
       [styles.container]: true,
       [styles.inner]: true,
       [styles.animate]: this.state.animated,
+      [timingClass]: timingClass,
     });
 
     return (
       <SpanReset className={styles.container}>
         <SpanReset className={innerContainerClass}>
-          {this.props.children}
+          {children}
         </SpanReset>
       </SpanReset>
     )

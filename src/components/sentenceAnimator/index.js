@@ -23,6 +23,7 @@ class SentenceAnimator extends React.Component {
           delay={(i + 1) * this.props.wordDelay}
           triggerOnMount={this.props.triggerOnMount}
           animate={this.props.animate}
+          timingClass={this.props.timingClass}
         >
         {word}&nbsp;
         </TextAnimate>)}

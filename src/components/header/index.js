@@ -11,8 +11,13 @@ const Header = () => (
         className={styles.container}
         to="/"
       >
-      <TextAnimate triggerOnMount><img src={logoImage} /></TextAnimate>
-        {/* <Logo /> */}
+      <TextAnimate
+        triggerOnMount
+        startDelay={0}
+        timingClass={styles.second}
+      >
+        <img src={logoImage} />
+      </TextAnimate>
     </Link>
    
 );

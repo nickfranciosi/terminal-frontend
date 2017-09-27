@@ -35,10 +35,22 @@ const HeaderTextBlock = ({
       style={style}
     >
       <span className={styles.description}>
-        <SentenceAnimator triggerOnMount startDelay={650}>{description}</SentenceAnimator>
+        <SentenceAnimator 
+          triggerOnMount
+          startDelay={0}
+          timingClass={styles.first}
+        >  
+          {description}
+        </SentenceAnimator>
       </span>
       <HeadlineElement className={styles.headline}>
-        <SentenceAnimator triggerOnMount startDelay={750}>{headline}</SentenceAnimator>
+        <SentenceAnimator 
+          triggerOnMount
+          startDelay={0}
+          timingClass={styles.second}
+        >  
+          {headline}
+        </SentenceAnimator>
       </HeadlineElement>
       <div className={styles.heightChecker}>
         <p className={styles.body}>
@@ -46,7 +58,11 @@ const HeaderTextBlock = ({
         </p>
         {callout &&
           <div className={styles.calloutContainer}>
-            <TextAnimate triggerOnMount startDelay={700}>
+            <TextAnimate 
+              triggerOnMount
+              startDelay={0}
+              timingClass={styles.second}
+            >  
               <Button
                 to={callout.link}
                 style={{
@@ -57,7 +73,11 @@ const HeaderTextBlock = ({
               </Button>
             </TextAnimate>
             {secondaryCallout &&
-              <TextAnimate triggerOnMount startDelay={750}>
+              <TextAnimate 
+                triggerOnMount
+                startDelay={0}
+                timingClass={styles.second}
+              >  
                 <a
                   href={secondaryCallout.link}
                   className={styles.secondaryCallout}

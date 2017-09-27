@@ -34,7 +34,7 @@
   float: left;
   clear: both;
   opacity: 0;
-  animation: fadeInRaise 700ms 1200ms ease;
+  animation: fadeIn 700ms 2s ease;
   animation-fill-mode: forwards;
 }
 
@@ -90,14 +90,12 @@
 }
 
 
-@keyframes fadeInRaise {
+@keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(30px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -135,3 +133,14 @@
     align-items: center;
   }
 }
+
+
+
+.first {
+  transition: transform 400ms 1.6s ease, opacity 400ms 1.6s ease;
+}
+
+.second {
+  transition: transform 600ms 1.65s ease, opacity 600ms 1.65s ease;
+}
+

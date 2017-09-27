@@ -12,3 +12,8 @@
     top: 45px;
   }
 }
+
+
+.second {
+  transition: transform 500ms 1.4s ease, opacity 500ms 1.4s ease;
+}

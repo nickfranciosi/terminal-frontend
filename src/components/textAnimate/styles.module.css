@@ -6,7 +6,7 @@
 .container.inner{
   transform: translate3d(0,100%,0);
   opacity: 0;
-  transition: transform 550ms ease, opacity 550ms ease;
+  /* transition: transform 550ms ease, opacity 550ms ease; */
 }
 
 .container.animate {
@@ -30,3 +30,6 @@
   margin: 0;
   padding: 0;
 }
+
+
+
