@@ -15,7 +15,8 @@ import CenterTextBlock from '../components/centerTextBlock';
 import SingleHeading from '../components/singleHeading';
 import Carousel from '../components/carousel';
 import mastheadImage from '../assets/images/mast-cropped.jpg';
-import aboutFull from '../assets/images/aboutFull.jpg';
+import aboutFullMobile from '../assets/images/aboutFull.jpg';
+import aboutFullDesktop from '../assets/images/aboutFullNarrow.jpg';
 import galleryPlaceholder from '../assets/images/Slideshow-placeholder.png';
 import styles from "./css/home.module.css";
 import { investors, team } from "../data";
@@ -92,7 +93,10 @@ class IndexPage extends React.Component{
             </ScrollListener>
           </Container>
           <div className={styles.aboutFull}>
-            <FullBackgroundImage src={aboutFull} />
+            <FullBackgroundImage 
+              srcMobile={aboutFullMobile} 
+              srcDesktop={aboutFullDesktop} 
+            />
           </div>
           <Container>
             <ScrollListener onEnter={() => this.triggerAnimation("animateBottom")} offset={650}>

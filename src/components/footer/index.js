@@ -11,10 +11,10 @@ const Footer = ({  }) => (
         <div className={styles.body}>
           <Link to="/"><img className={styles.logo} src={logo} /></Link>
           <ul className={styles.menu}>
-            <li><a href="/manifesto">Twitter</a></li>
-            <li><a href="/manifesto">Medium</a></li>
-            <li><a href="/manifesto">Linkedin</a></li>
-            <li><a href="/manifesto">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Medium</a></li>
+            <li><a href="#">Linkedin</a></li>
+            <li><a href="#">Instagram</a></li>
           </ul>
         </div>
         <div className={styles.locationList}>

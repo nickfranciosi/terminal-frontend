@@ -13,8 +13,9 @@
 }
 
 .aboutFull {
-  height: 49vw;
-  max-height: 700px;
+  /* height: 49vw; */
+  height: 435px;
+  /* max-height: 700px; */
   margin-bottom: 76px;
 }
 
@@ -28,6 +29,13 @@
   .headerBlock {
     margin-top: 13.8vh;
     margin-bottom: 0;
+  }
+
+  .aboutFull {
+    height: 49vw;
+    min-height: 400px;
+    max-height: 700px;
+    margin-bottom: 76px;
   }
 
   .masthead {
