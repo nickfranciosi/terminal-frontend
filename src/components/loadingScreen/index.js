@@ -31,10 +31,8 @@ animateLogo(){
   setTimeout(() => {
     this.setState({
       animateLogo: true,
-      progress: 1,
-      done: true,
-    }, this.props.done);
-  }, 500);
+    });
+  }, 650);
 }
 
 increaseLoadbar(){
@@ -48,7 +46,7 @@ increaseLoadbar(){
 }
 
 startLoading() {
-  this.loadingBarInterval = setInterval(this.increaseLoadbar, 150);
+  this.loadingBarInterval = setInterval(this.increaseLoadbar, 300);
 }
 
 componentWillUnmount() {
@@ -59,7 +57,8 @@ stopLoadingBar(){
   clearInterval(this.loadingBarInterval);
   this.setState({
     progress: 1,
-  })
+    done: true,
+  }, this.props.done)
 }
 
 render(){

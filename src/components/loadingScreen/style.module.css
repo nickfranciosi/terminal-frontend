@@ -4,7 +4,7 @@
 }
 
 .done.container {
-  animation: fadeAway 1s 1.5s ease;
+  animation: fadeAway 1s 1s ease;
   animation-fill-mode: forwards;  
 }
 
