@@ -21,8 +21,7 @@ class ScrollListener extends React.Component {
     const elTop = this.element.offsetTop;
     const elBottom = elTop + this.element.elBottom;
     const scrollTop = document.body.scrollTop;
-    const distanceToTop = elTop - scrollTop
-    console.log(distanceToTop);
+    const distanceToTop = elTop - scrollTop;
     if(distanceToTop <= this.props.offset) {
       this.props.onEnter();
       window.removeEventListener('scroll', this.handleScroll);
