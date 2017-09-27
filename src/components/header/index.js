@@ -4,8 +4,7 @@ import Link from 'gatsby-link';
 import styles from './style.module.css';
 import logoImage from '../../assets/images/LogoMainColor.png';
 import TextAnimate from '../textAnimate';
-import Reveal from 'react-reveal';
-// import Logo from '../logo';
+
 const Header = () => (
     
       <Link 

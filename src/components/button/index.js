@@ -13,7 +13,6 @@ const Button = ({ children, to, style }) => (
     <div className={styles.hoverBackground}/>
     <div className={styles.text}>
       {children}
-      <div className={styles.arrow}>&rarr;</div>
     </div>
   </Link>
 );

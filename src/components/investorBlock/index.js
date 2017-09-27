@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import Waypoint from 'react-waypoint';
+import ScrollListener from '../scrollListener';
 import styles from './style.module.css';
 
 class InvestorBlock extends React.Component {
@@ -27,7 +28,7 @@ class InvestorBlock extends React.Component {
       [styles.animate]: this.state.animate,
     });
     return (
-      <Waypoint onEnter={this.animate}>
+      <Waypoint onEnter={this.animate} offset={650}>
         <div 
           className={containerClass}
         >

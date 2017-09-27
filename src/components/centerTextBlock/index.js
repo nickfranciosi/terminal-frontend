@@ -1,9 +1,8 @@
 import React from 'react';
-import Waypoint from 'react-waypoint';
 import styles from './style.module.css';
 import Button from '../button';
 import SentenceAnimator from '../sentenceAnimator';
-import TextAnimate from '../textAnimate';
+import ScrollAnimate from '../scrollAnimate';
 
 class CenterTextBlock extends React.Component {
   render() {
@@ -11,20 +10,20 @@ class CenterTextBlock extends React.Component {
     return (
       <div className={styles.container} style={style}>
         <span className={styles.description}>
-          <TextAnimate  animate={this.props.animate} startDelay={200}>{description}</TextAnimate>
+          <ScrollAnimate  animate={this.props.animate}>{description}</ScrollAnimate>
         </span>
         <h2 className={styles.headline}>
-          <TextAnimate  animate={this.props.animate} startDelay={200}>{headline}</TextAnimate>
+          <ScrollAnimate  animate={this.props.animate}>{headline}</ScrollAnimate>
         </h2>
         {body &&
           <p className={styles.body}>
-            <TextAnimate  animate={this.props.animate} startDelay={200}>{body}</TextAnimate>
+            <ScrollAnimate  animate={this.props.animate}>{body}</ScrollAnimate>
           </p>
         }
         {callout &&
-          <TextAnimate animate={this.props.animate} startDelay={200}>
+          <ScrollAnimate animate={this.props.animate}>
             <Button to={callout.link}>{callout.text}</Button>
-          </TextAnimate>
+          </ScrollAnimate>
         }
       </div>
     );

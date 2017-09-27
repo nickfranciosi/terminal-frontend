@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-import Waypoint from 'react-waypoint';
 import Viewport from '../components/viewport';
 import Container from '../components/container';
 import LoadingScreen from '../components/loadingScreen';
@@ -8,6 +7,7 @@ import AngledImage from '../components/angledImage';
 import FullBackgroundImage from '../components/fullBackgroundImage';
 import Header from '../components/header';
 import InvestorGrid from '../components/investorGrid';
+import ScrollListener from '../components/scrollListener';
 import Button from '../components/button';
 import Footer from '../components/footer';
 import HeaderTextBlock from '../components/headerTextBlock';
@@ -76,7 +76,7 @@ class IndexPage extends React.Component{
             </Container>
           </Viewport>
           <Container>
-            <Waypoint onEnter={() => this.triggerAnimation("animateTop")} topOffset={300}>
+            <ScrollListener offset={650} onEnter={() => this.triggerAnimation("animateTop")}>
               <div>
                 <CenterTextBlock
                   description="We help you succeed"
@@ -89,13 +89,13 @@ class IndexPage extends React.Component{
                   animate={this.state.animateTop}
                 />
               </div>
-            </Waypoint>
+            </ScrollListener>
           </Container>
           <div className={styles.aboutFull}>
             <FullBackgroundImage src={aboutFull} />
           </div>
           <Container>
-            <Waypoint onEnter={() => this.triggerAnimation("animateBottom")} topOffset={300}>
+            <ScrollListener onEnter={() => this.triggerAnimation("animateBottom")} offset={650}>
               <div>
                 <CenterTextBlock
                   description="Founding Members"
@@ -106,7 +106,7 @@ class IndexPage extends React.Component{
                   animate={this.state.animateBottom}
                 />
               </div>
-            </Waypoint>
+            </ScrollListener>
             <div style={{ 
               marginBottom: 96,
               maxWidth: 1500,

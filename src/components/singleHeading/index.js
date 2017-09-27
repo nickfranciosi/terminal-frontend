@@ -1,6 +1,6 @@
 import React from 'react';
-import Waypoint from 'react-waypoint';
-import SentenceAnimator from '../sentenceAnimator';
+import ScrollListener from '../scrollListener';
+import ScrollAnimate from '../scrollAnimate';
 import styles from './style.module.css';
 
 class SingleHeading extends React.Component {
@@ -24,15 +24,15 @@ class SingleHeading extends React.Component {
 
   render() {
     return (
-      <Waypoint onEnter={() => this.triggerAnimation()} topOffset={500}>
+      <ScrollListener onEnter={() => this.triggerAnimation()} offset={650}>
         <div className={styles.container}>
           <h3 className={styles.headline}>
-            <SentenceAnimator animate={this.state.animate} startDelay={200}>
+            <ScrollAnimate animate={this.state.animate} >
               {this.props.children}
-            </SentenceAnimator>
+            </ScrollAnimate>
           </h3>
         </div>
-      </Waypoint>
+      </ScrollListener>
     );
   }
 }

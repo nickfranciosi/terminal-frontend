@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Waypoint from 'react-waypoint';
 import styles from './styles.module.css';
 import SpanReset from "./spanReset";
 
