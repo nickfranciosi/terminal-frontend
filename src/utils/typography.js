@@ -26,6 +26,13 @@ const typography = new Typography({
       fontFamily: ['MaisonNeueBook', 'sans-serif'].join(','),
       letterSpacing: "-0.43px",
     },
+    h4: {
+      fontSize: "20px",
+      lineHeight: 1.6,
+      color: colors.primaryText,
+      fontFamily: ['MaisonNeueMedium', 'sans-serif'].join(','),
+      letterSpacing: "-0.28px",
+    },
     p: {
       color: colors.secondaryText,
       letterSpacing: "-0.43px",

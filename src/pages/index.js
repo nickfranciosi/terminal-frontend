@@ -13,7 +13,8 @@ import Footer from '../components/footer';
 import HeaderTextBlock from '../components/headerTextBlock';
 import CenterTextBlock from '../components/centerTextBlock';
 import SingleHeading from '../components/singleHeading';
-import Carousel from '../components/carousel';
+import BioGrid from '../components/bioGrid';
+// import Carousel from '../components/carousel';
 import mastheadImage from '../assets/images/mast-cropped.jpg';
 import aboutFullMobile from '../assets/images/aboutFull.jpg';
 import aboutFullDesktop from '../assets/images/aboutFullNarrow.jpg';
@@ -118,7 +119,7 @@ class IndexPage extends React.Component{
                   description="Founding Members"
                   headline="Meet the Terminal team"
                   style={{
-                    marginBottom: "18px",
+                    marginBottom: "128px",
                   }}
                   animate={this.state.bottomAnimation}
                 />
@@ -126,9 +127,8 @@ class IndexPage extends React.Component{
             </ScrollListener>
             <div style={{ 
               marginBottom: 96,
-              maxWidth: 1500,
             }}>
-              <Carousel slideData={team} />
+              <BioGrid team={team} />
             </div>
             <div className={styles.investorSection}>
               <SingleHeading>Trusted by the world&rsquo;s best investors</SingleHeading>

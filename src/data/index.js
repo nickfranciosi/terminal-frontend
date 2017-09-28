@@ -12,13 +12,23 @@ export default {
   team: [
     {
       name: "Jack Abraham",
-      title: "Co-Founder",
-      image: require('../assets/images/team/Jack-a.jpg'),
+      bio: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
+      image: require('../assets/images/team/Jack.jpg'),
     },
     {
       name: "Joe Abraham",
-      title: "Co-Founder",
+      bio: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
       image: require('../assets/images/team/Joe.jpg'),
+    },
+    {
+      name: "Dylan Abraham",
+      bio: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
+      image: require('../assets/images/team/Dylan.jpg'),
+    },
+    {
+      name: "Luke Abraham",
+      bio: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
+      image: require('../assets/images/team/Luke.jpg'),
     },
   ],
 }
