@@ -118,9 +118,7 @@ class IndexPage extends React.Component{
                 <CenterTextBlock
                   description="Founding Members"
                   headline="Meet the Terminal team"
-                  style={{
-                    marginBottom: "128px",
-                  }}
+                  className={styles.investorHeader}
                   animate={this.state.bottomAnimation}
                 />
               </div>

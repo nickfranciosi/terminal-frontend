@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classNames';
 import styles from './style.module.css';
 import Button from '../button';
 import SentenceAnimator from '../sentenceAnimator';
@@ -6,9 +7,9 @@ import ScrollAnimate from '../scrollAnimate';
 
 class CenterTextBlock extends React.Component {
   render() {
-    const { description, headline, body,  callout, style} = this.props;
+    const { description, headline, body,  callout, className, style} = this.props;
     return (
-      <div className={styles.container} style={style}>
+      <div className={classNames(styles.container, className)} style={style}>
         <span className={styles.description}>
           <ScrollAnimate  animate={this.props.animate}>{description}</ScrollAnimate>
         </span>
