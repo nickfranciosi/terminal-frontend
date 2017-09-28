@@ -17,6 +17,9 @@
 }
 
 
+
+
+
 .first {
   transition: transform 500ms 700ms ease, opacity 500ms 700ms ease;
 }

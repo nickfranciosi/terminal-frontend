@@ -6,9 +6,8 @@ import logoImage from '../../assets/images/Terminal-logo.svg';
 import TextAnimate from '../textAnimate';
 
 const Header = () => (
-    
+    <div className={styles.container}>
       <Link 
-        className={styles.container}
         to="/"
       >
       <TextAnimate
@@ -18,7 +17,8 @@ const Header = () => (
       >
         <img className={styles.image} src={logoImage} />
       </TextAnimate>
-    </Link>   
+    </Link>
+  </div> 
    
 );
 
