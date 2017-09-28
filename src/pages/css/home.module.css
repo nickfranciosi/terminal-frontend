@@ -27,6 +27,9 @@
   margin-bottom: 56px;
 }
 
+.bioContainer {
+  margin-bottom: 56px;
+}
 
 @media only screen and (min-width: 420px) {
 
@@ -67,6 +70,10 @@
 
   .investorHeader {
     margin-bottom: 128px;
+  }
+
+  .bioContainer {
+    margin-bottom: 168px;
   }
 }
 

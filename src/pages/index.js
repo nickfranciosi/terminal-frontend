@@ -43,14 +43,6 @@ class IndexPage extends React.Component{
     }, 1700)
   }
 
-  // triggerAnimation(location) {
-  //   if(!this.state[location]) {
-  //     this.setState({
-  //       [location]: true,
-  //     });
-  //   }
-  // }
-
   triggerTop() {
     this.setState({
       topAnimation: true,
@@ -123,9 +115,7 @@ class IndexPage extends React.Component{
                 />
               </div>
             </ScrollListener>
-            <div style={{ 
-              marginBottom: 96,
-            }}>
+            <div className={styles.bioContainer}>
               <BioGrid team={team} />
             </div>
             <div className={styles.investorSection}>

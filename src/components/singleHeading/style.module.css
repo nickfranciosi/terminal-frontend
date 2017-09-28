@@ -1,6 +1,6 @@
 .container {
-  text-align: center;
-  margin-bottom: 60px;
+  text-align: left;
+  margin-bottom: 16px;
 }
 
 .container:after {
@@ -12,8 +12,32 @@
 .headline {
   color: #434343;
   opacity: 0.78;
+  font-size: 16px;
   font-weight: 100;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   flex-wrap: wrap;
+}
+
+@media screen and (min-width: 440px) {
+  .headline {
+    font-size: 24px;
+  }
+  .container {
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .container {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .headline {
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
