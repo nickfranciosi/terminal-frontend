@@ -40,8 +40,8 @@
   background-color: #D8D8D8;
   background-position: 100% 50%;
   background-size: cover;
-  transform: scale(1.1, 1.1, 1);
-  transition: transform 5s cubic-bezier(0.25, 0.65, 0.4, 0.96);
+  transform: scale(1.1, 1.1, 2);
+  transition: transform 10s ease-out;
 }
 
 .active::after {

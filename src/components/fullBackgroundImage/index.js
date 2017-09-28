@@ -8,7 +8,7 @@ const FullBackgroundImage = ({ children, srcDesktop, srcMobile}) => (
     {(matches) => (
         <Parallax 
         bgImage={matches ? srcMobile : srcDesktop} 
-        strength={100} 
+        strength={200} 
         className={styles.container}
       > 
         {children}

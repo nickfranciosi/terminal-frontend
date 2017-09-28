@@ -28,6 +28,7 @@
 .menu {
   display: flex;
   flex-direction: row;
+  margin-top: 1px;
 }
 
 .menu li{
@@ -41,11 +42,13 @@
   color: #414141;
   text-transform: none;
   margin-right: 0;
-  transition: color .3s ease;
+  letter-spacing: 0;
+  transition: color 650ms ease;
 }
 
 .menu li a:hover{
   color: #FF4343;
+  transition: color 650ms ease;
 }
 
 .menu li+li:before {
@@ -66,12 +69,14 @@
   float: left;
   text-align: left;
   margin-bottom: 48px;
+  margin-top: -1px;
 }
 
 .location p {
   font-size: 16px;
   margin-bottom: 8px;
   color: #414141;
+  letter-spacing: 0;
 }
 .location p:first-of-type{
   font-family: "MaisonNeueMedium";
