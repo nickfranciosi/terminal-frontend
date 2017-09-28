@@ -4,13 +4,13 @@
 }
 
 .done.container {
-  animation: fadeAway 750ms 1s ease;
+  animation: fadeAway 550ms 1.5s ease;
   animation-fill-mode: forwards;  
 }
 
 .loadingBar{
   width: 45%;
-  margin: 0 auto;
+  margin: 0 auto; 
   margin-top: 60px;
 }
 
@@ -20,7 +20,7 @@
     opacity: 1;
   }
   100% {
-    transform: translateY(-25px);
+    transform: translateY(-20px);
     opacity: 0;
   }
 }

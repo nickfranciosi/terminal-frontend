@@ -23,15 +23,30 @@ class ScrollListener extends React.Component {
     }
     const elTop = this.element.offsetTop;
     const elBottom = elTop + this.element.elBottom;
-    const scrollTop = document.body.scrollTop;
+    const scrollTop = this.getScrollTop()
     const distanceToTop = elTop - scrollTop;
-
-    console.log({distanceToTop, offset: this.props.offset,  element: this.element})
+    
+    
     if(distanceToTop < this.props.offset) {
       this.props.onEnter();
       window.removeEventListener('scroll', this.handleScroll);
     }
   }
+
+  getScrollTop() {
+    if(typeof pageYOffset!= 'undefined'){
+        //most browsers except IE before #9
+        return pageYOffset;
+    }
+    else{
+        var B= document.body; //IE 'quirks'
+        var D= document.documentElement; //IE with doctype
+        D= (D.clientHeight)? D: B;
+        return D.scrollTop;
+    }
+  }
+
+  
 
   render() {
     return (

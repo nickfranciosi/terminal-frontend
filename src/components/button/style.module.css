@@ -7,7 +7,8 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  min-width: 160px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .defaultBackground {
@@ -22,6 +23,7 @@
 
 .text {
   position: relative;
+  margin-top: 1px;
 }
 
 

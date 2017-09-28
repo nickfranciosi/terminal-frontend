@@ -35,13 +35,13 @@ const HeaderTextBlock = ({
       style={style}
     >
       <span className={styles.description}>
-        <SentenceAnimator 
+        <TextAnimate 
           triggerOnMount
           startDelay={0}
           timingClass={styles.first}
         >  
           {description}
-        </SentenceAnimator>
+        </TextAnimate>
       </span>
       <HeadlineElement className={styles.headline}>
         <SentenceAnimator 
@@ -61,7 +61,7 @@ const HeaderTextBlock = ({
             <TextAnimate 
               triggerOnMount
               startDelay={0}
-              timingClass={styles.second}
+              timingClass={styles.third}
             >  
               <Button
                 to={callout.link}
@@ -76,7 +76,7 @@ const HeaderTextBlock = ({
               <TextAnimate 
                 triggerOnMount
                 startDelay={0}
-                timingClass={styles.second}
+                timingClass={styles.third}
               >  
                 <a
                   href={secondaryCallout.link}

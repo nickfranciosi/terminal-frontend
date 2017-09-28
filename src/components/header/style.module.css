@@ -6,6 +6,9 @@
   z-index: 10;
 }
 
+.image{
+  width: 150px
+}
 @media only screen and (min-width: 750px) {
   .container {
     left: 45px;
@@ -14,6 +17,6 @@
 }
 
 
-.second {
-  transition: transform 500ms 1.4s ease, opacity 500ms 1.4s ease;
+.first {
+  transition: transform 500ms 700ms ease, opacity 500ms 700ms ease;
 }

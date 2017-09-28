@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import styles from './style.module.css';
-import logoImage from '../../assets/images/LogoMainColor.png';
+import logoImage from '../../assets/images/Terminal-logo.svg';
 import TextAnimate from '../textAnimate';
 
 const Header = () => (
@@ -14,11 +14,11 @@ const Header = () => (
       <TextAnimate
         triggerOnMount
         startDelay={0}
-        timingClass={styles.second}
+        timingClass={styles.first}
       >
-        <img src={logoImage} />
+        <img className={styles.image} src={logoImage} />
       </TextAnimate>
-    </Link>
+    </Link>   
    
 );
 

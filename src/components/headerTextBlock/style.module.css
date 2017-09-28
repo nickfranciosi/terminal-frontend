@@ -34,7 +34,7 @@
   float: left;
   clear: both;
   opacity: 0;
-  animation: fadeIn 700ms 2s ease;
+  animation: fadeInRaise 800ms 1100ms ease;
   animation-fill-mode: forwards;
 }
 
@@ -90,12 +90,14 @@
 }
 
 
-@keyframes fadeIn {
+@keyframes fadeInRaise {
   0% {
     opacity: 0;
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -137,10 +139,14 @@
 
 
 .first {
-  transition: transform 400ms 1.6s ease, opacity 400ms 1.6s ease;
+  transition: transform 800ms 700ms ease, opacity 800ms 700ms ease;
 }
 
 .second {
-  transition: transform 600ms 1.65s ease, opacity 600ms 1.65s ease;
+  transition: transform 800ms 800ms ease, opacity 800ms 800ms ease;
+}
+
+.third {
+  transition: transform 800ms 1250ms ease, opacity 800ms 1250ms ease;
 }
 

@@ -74,12 +74,12 @@
   color: #414141;
 }
 .location p:first-of-type{
-  font-family: "MaisonNeueBold";
+  font-family: "MaisonNeueMedium";
 }
 
-.currentLink{
+/* .currentLink{
   font-family: 'MaisonNeueBold' !important;
-}
+} */
 
 .mobileLogo{
   border-top: 1px solid rgba(123, 123, 123, 0.27);

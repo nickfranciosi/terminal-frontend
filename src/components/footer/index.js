@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './style.module.css';
 import Link from "gatsby-link";
 import Container from '../container';
-import logo from '../../assets/images/LogoMainColor.png';
+import logo from '../../assets/images/Terminal-logo.svg';
 
 const Footer = ({  }) => (
   <div className={styles.container}>

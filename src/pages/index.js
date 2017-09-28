@@ -39,7 +39,7 @@ class IndexPage extends React.Component{
   handleDone = () => {
     setTimeout(() => {
       this.setState({ showLoader: false});
-    }, 1250)
+    }, 1700)
   }
 
   // triggerAnimation(location) {
