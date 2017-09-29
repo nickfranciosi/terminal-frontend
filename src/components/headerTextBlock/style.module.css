@@ -34,7 +34,7 @@
   float: left;
   clear: both;
   opacity: 0;
-  animation: fadeInRaise 800ms 1100ms ease;
+  animation: fadeInRaise 800ms 800ms ease;
   animation-fill-mode: forwards;
 }
 
@@ -89,6 +89,18 @@
   }
 }
 
+.first {
+  transition: transform 800ms 400ms ease, opacity 800ms 400ms ease;
+}
+
+.second {
+  transition: transform 800ms 500ms ease, opacity 800ms 500ms ease;
+}
+
+.third {
+  transition: transform 800ms 950ms ease, opacity 800ms 950ms ease;
+}
+
 
 @keyframes fadeInRaise {
   0% {
@@ -104,6 +116,23 @@
 @media only screen and (min-width: 450px) {
   .headline {
     margin-right: 5%;
+  }
+
+  .first {
+    transition: transform 800ms 700ms ease, opacity 800ms 700ms ease;
+  }
+  
+  .second {
+    transition: transform 800ms 800ms ease, opacity 800ms 800ms ease;
+  }
+  
+  .third {
+    transition: transform 800ms 1250ms ease, opacity 800ms 1250ms ease;
+  }
+
+  .body {
+    animation: fadeInRaise 800ms 1100ms ease;
+    animation-fill-mode: forwards;
   }
 }
 

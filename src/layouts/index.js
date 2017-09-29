@@ -11,11 +11,11 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
       title="Terminal"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Bold ideas require brilliant minds' },
+        { name: 'keywords', content: 'Startup, Development, Design, Cowork, Talent' },
       ]}
     >
-      <link rel="icon" type="image/png" href="/favicon-16x16.png" />
+      <link rel="shortcut icon" type="image/png" href="/favicon-32x32.png" />
     </Helmet>
     <div>
       {children()}
