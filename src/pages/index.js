@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import cn from 'classnames';
 import Viewport from '../components/viewport';
 import Container from '../components/container';
 import LoadingScreen from '../components/loadingScreen';
@@ -30,10 +30,12 @@ class IndexPage extends React.Component{
     this.state = {
       showLoader: true,
       topAnimation: false,
+      middleAnimation: false,
       bottomAnimation: false,
     }
 
     this.triggerTop = this.triggerTop.bind(this);
+    this.triggerMiddle = this.triggerMiddle.bind(this);
     this.triggerBottom = this.triggerBottom.bind(this);
   }
 
@@ -46,6 +48,12 @@ class IndexPage extends React.Component{
   triggerTop() {
     this.setState({
       topAnimation: true,
+    });
+  }
+
+  triggerMiddle() {
+    this.setState({
+      middleAnimation: true,
     });
   }
 
@@ -71,7 +79,7 @@ class IndexPage extends React.Component{
                 body="Terminal builds elite engineering teams to solve the toughest challenges of tomorrow."
                 callout={{
                   text: "Request appointment",
-                  link: "/",
+                  link: "mailto:stdin@terminal.io",
                 }}
                 secondaryCallout={{
                   text: "Open roles",
@@ -89,9 +97,10 @@ class IndexPage extends React.Component{
                   description="We help you succeed"
                   headline="Gain access to top talent around the world"
                   body="Terminal accelerates innovation by rethinking how the best companies and the most talented people partner in building the future."
+                  className={styles.manifestoCenterBlock}
                   callout={{
                     text: "Read the manifesto",
-                    link: "/manifesto",
+                    link: "https://medium.com/@terminal/announcing-terminal-c2a271cf7249",
                   }}
                   animate={this.state.topAnimation}
                 />
@@ -105,13 +114,13 @@ class IndexPage extends React.Component{
             />
           </div>
           <Container>
-            <ScrollListener onEnter={this.triggerBottom} offset={650}>
+            <ScrollListener onEnter={this.triggerMiddle} offset={650}>
               <div>
                 <CenterTextBlock
                   description="Founding Members"
                   headline="Meet the Terminal team"
-                  className={styles.investorHeader}
-                  animate={this.state.bottomAnimation}
+                  className={cn(styles.headerNoButton, styles.teamHeadline)}
+                  animate={this.state.middleAnimation}
                 />
               </div>
             </ScrollListener>
@@ -119,7 +128,16 @@ class IndexPage extends React.Component{
               <BioGrid team={team} />
             </div>
             <div className={styles.investorSection}>
-              <SingleHeading>Trusted by the world&rsquo;s best investors</SingleHeading>
+              <ScrollListener onEnter={this.triggerBottom} offset={650}>
+                <div>
+                  <CenterTextBlock
+                    description="Investment Partners"
+                    headline="Trusted by the world&rsquo;s best investors"
+                    className={cn(styles.headerNoButton, styles.investorHeadline)}
+                    animate={this.state.bottomAnimation}
+                  />
+                </div>
+              </ScrollListener>
               <InvestorGrid investors={investors} />
             </div>
           </Container>

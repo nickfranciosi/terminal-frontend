@@ -4,9 +4,9 @@ import Link from "gatsby-link"
 import styles from './style.module.css';
 
 const Button = ({ children, to, style }) => (
-  <Link 
+  <a 
     className={styles.base}
-    to={to}
+    href={to}
     style={style}
   >
     <div className={styles.defaultBackground}/>
@@ -14,7 +14,7 @@ const Button = ({ children, to, style }) => (
     <div className={styles.text}>
       {children}
     </div>
-  </Link>
+  </a>
 );
 
 export default Button;

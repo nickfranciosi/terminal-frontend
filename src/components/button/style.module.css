@@ -7,8 +7,8 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 9px;
+  padding-right: 9px;
 }
 
 .defaultBackground {
@@ -48,5 +48,7 @@
 @media only screen and (min-width: 350px) {
     .base {
       min-width: 190px;
+      padding-left: 25px;
+      padding-right: 25px;
     }
 }

@@ -49,11 +49,11 @@
 }
 
 /* iPadPro fix maybe */
-/* @media only screen and (max-device-aspect-ratio: 4/3) {
+@media only screen and (max-device-aspect-ratio: 4/3) {
   .active::after {
     transform: rotate(28deg) translate3d(-142%,0,0);
   }
-} */
+}
 
 .active .image {
   transform: scale3d(1, 1, 1);

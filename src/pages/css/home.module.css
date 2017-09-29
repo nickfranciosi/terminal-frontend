@@ -23,12 +23,20 @@
   margin-bottom: 62px;
 }
 
-.investorHeader {
-  margin-bottom: 56px;
+.headerNoButton {
+  margin-bottom: 36px;
 }
 
 .bioContainer {
   margin-bottom: 56px;
+}
+
+.teamHeadline h2 {
+  max-width: 230px;
+}
+
+.investorHeadline h2 {
+  max-width: 290px;
 }
 
 @media only screen and (min-width: 420px) {
@@ -53,6 +61,25 @@
   
 }
 
+.manifestoCenterBlock {
+  max-width: 400px;
+}
+
+@media only screen and (min-width: 540px) {
+  .teamHeadline h2{
+    max-width: 100%;
+  }
+
+  .investorHeadline h2{
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .manifestoCenterBlock {
+    max-width: 100%;
+  }
+}
 
 
 @media only screen and (min-width: 750px) {
@@ -68,12 +95,12 @@
     margin-bottom: 168px;
   }
 
-  .investorHeader {
-    margin-bottom: 128px;
+  .headerNoButton {
+    margin-bottom: 62px;
   }
 
   .bioContainer {
-    margin-bottom: 168px;
+    margin-bottom: 82px;
   }
 }
 

@@ -76,11 +76,12 @@
 .location p {
   font-size: 16px;
   margin-bottom: 8px;
-  color: #414141;
+  color: #7B7B7B;
   letter-spacing: 0;
 }
 .location p:first-of-type{
   font-family: "MaisonNeueMedium";
+  color: #414141;
 }
 
 
