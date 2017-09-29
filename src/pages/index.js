@@ -67,6 +67,10 @@ class IndexPage extends React.Component{
   render() {
     return(
       <div>
+        {/* preload the image */}
+        <img src={mastheadImage} style={{
+          display: "none",
+        }}/>
       { this.state.showLoader ?
         <LoadingScreen done={() => this.handleDone()}/> :
         <div>
