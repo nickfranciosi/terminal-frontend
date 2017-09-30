@@ -9,8 +9,6 @@ const Button = ({ children, to, style }) => (
     href={to}
     style={style}
   >
-    <div className={styles.defaultBackground}/>
-    <div className={styles.hoverBackground}/>
     <div className={styles.text}>
       {children}
     </div>
