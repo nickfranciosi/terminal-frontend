@@ -97,7 +97,7 @@ render(){
             initialAnimate
             options={options}
             containerStyle={containerStyle}
-            containerClassName={'.progressbar'}
+            containerClassName={'progressbar'}
           />
         </div>
       </div>
