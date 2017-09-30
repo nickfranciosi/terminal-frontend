@@ -1,11 +1,13 @@
 .container {
-  width: 48%;
-  padding: 22%;
+  width: 40vw;
+  height: 40vw;
+  max-width: 329px;
+  max-height: 329px;
+  margin-bottom: 12px;
   display: inline-block;
   justify-content: center;
   background-color: #f9f9f9;
   position: relative;
-  margin-bottom: 4%;
   opacity: 0;
   transform: translateY(20%);
   transition: opacity 1s ease, transform 1s ease;
@@ -35,9 +37,14 @@
 
  @media only screen and (min-width: 900px) {
   .container {
-    width: 24%;
-    padding: 12%;
-    margin-bottom: 1.2%;
+    width: 20vw;
+    height: 20vw;
+    max-width: 288px;
+    max-height: 288px;
+    margin-bottom: 10px;
+  }
+  .container:nth-child(4n+4) {
+    margin-right: 0px;
   }
 }
 
