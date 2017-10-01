@@ -15,11 +15,14 @@ import CenterTextBlock from '../components/centerTextBlock';
 import SingleHeading from '../components/singleHeading';
 import BioGrid from '../components/bioGrid';
 import LocationGrid from '../components/LocationGrid';
+import GridImage from '../components/gridImage';
 // import Carousel from '../components/carousel';
 import mastheadImage from '../assets/images/mast-cropped.jpg';
-import aboutFullMobile from '../assets/images/aboutFull.jpg';
-import aboutFullDesktop from '../assets/images/aboutFullNarrow.jpg';
-import galleryPlaceholder from '../assets/images/Slideshow-placeholder.png';
+import leftColImage from '../assets/images/partner/leftColImage.jpg';
+import rightColTopImage from '../assets/images/partner/rightColTopImage.jpg';
+import rightColBottomImage from '../assets/images/partner/rightColBottomImage.jpg';
+
+
 import styles from "./css/home.module.css";
 import { investors, team, locations } from "../data";
 
@@ -102,7 +105,7 @@ class IndexPage extends React.Component{
                   description="Our offices span the globe"
                   headline="Tap into global talent"
                   body="All the benefits of adding a new location with none of the hassle. We help you scale your team."
-                  className={styles.manifestoCenterBlock}
+                  className={styles.locationCenterBlock}
                   animate={this.state.topAnimation}
                 />
               </div>
@@ -110,7 +113,28 @@ class IndexPage extends React.Component{
           </Container>
           <LocationGrid locations={locations} className={styles.locationGridSection}/>
           <Container>
-            <h3>Image Grid Here</h3>
+            <div className="clearfix">
+              <div className={styles.leftColumn}>
+                <div>
+                  <CenterTextBlock
+                    description="Meet your new team"
+                    headline="We&rsquo;ll assemble the perfect team for your needs"
+                    body="Whether your challenges are related to infrastructure or building a new product from the ground up, our talented technologists are well equipped to deliver."
+                    className={styles.gridTextBlock}
+                    animate={this.state.topAnimation}
+                  />
+                  <GridImage src={leftColImage} attribution="We&rsquo;ve got the product development process down to a science."/>
+                </div>
+
+              </div>
+              <div className={styles.rightColumn}>
+                  <GridImage src={rightColTopImage} attribution="The team uses the tools of your organization to stay connected." style={{
+                    marginTop: "140px",
+                    marginBottom: "120px",
+                  }}/>
+                  <GridImage src={rightColBottomImage} attribution="We work with a variety of technologies including VR, AR, and more."/>
+              </div>
+            </div>
           </Container>
           <Footer />
         </div>

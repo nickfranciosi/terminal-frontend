@@ -202,3 +202,9 @@ button:focus {outline:0;}
   color: #FF4343;
   opacity: 1;
 }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
