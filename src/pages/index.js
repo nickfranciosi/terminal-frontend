@@ -17,6 +17,7 @@ import SingleHeading from '../components/singleHeading';
 import BioGrid from '../components/bioGrid';
 import LocationGrid from '../components/LocationGrid';
 import GridImage from '../components/gridImage';
+import SubMenu from '../components/subMenu';
 // import Carousel from '../components/carousel';
 import mastheadImage from '../assets/images/mast-cropped.jpg';
 import leftColImage from '../assets/images/partner/leftColImage.jpg';
@@ -99,10 +100,11 @@ class IndexPage extends React.Component{
               />
               <AngledImage src={mastheadImage} />
             </Container>
+            <SubMenu />
           </Viewport>
           <Container>
             <ScrollListener offset={650} onEnter={this.triggerTop}>
-              <div>
+              <div id="locations">
                 <CenterTextBlock
                   description="Our offices span the globe"
                   headline="Tap into global talent"
@@ -117,7 +119,7 @@ class IndexPage extends React.Component{
           <Container style={{
             marginBottom: "144px",
           }}>
-            <div className="clearfix">
+            <div className="clearfix" id="services">
               <div className={styles.leftColumn}>
                 <div>
                   <CenterTextBlock
@@ -144,7 +146,7 @@ class IndexPage extends React.Component{
             position: "relative",
             height: "80vh",
             marginBottom: "-60px",
-          }}>
+          }} id="testimonials">
             <FullBackgroundImage imgSrc={mastheadImage} className={styles.quoteBlockContainer}>
                 <Container>
                   <CenterTextBlock

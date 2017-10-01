@@ -44,8 +44,9 @@ class SubMenu extends React.Component {
             <TabNavigation 
               showLine={this.state.stuck}
               tabs={[
-                {name: "Overview", link: "overview"}, 
-                {name: "Team", link: "team"},
+                {name: "Locations", link: "locations"}, 
+                {name: "Services", link: "services"},
+                {name: "Testimonials", link: "testimonials"},
               ]}
             />
           </div>

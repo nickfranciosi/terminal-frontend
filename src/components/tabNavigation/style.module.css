@@ -17,7 +17,7 @@
   }
 
   .pointer{
-    height: 6px;
+    height: 2px;
     position: absolute;
     background-color: #FF4343;
     transition: width .35s ease, left .35s ease, height .5s ease;
