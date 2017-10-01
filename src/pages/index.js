@@ -10,6 +10,7 @@ import InvestorGrid from '../components/investorGrid';
 import ScrollListener from '../components/scrollListener';
 import Button from '../components/button';
 import Footer from '../components/footer';
+import Author from '../components/author';
 import HeaderTextBlock from '../components/headerTextBlock';
 import CenterTextBlock from '../components/centerTextBlock';
 import SingleHeading from '../components/singleHeading';
@@ -21,6 +22,7 @@ import mastheadImage from '../assets/images/mast-cropped.jpg';
 import leftColImage from '../assets/images/partner/leftColImage.jpg';
 import rightColTopImage from '../assets/images/partner/rightColTopImage.jpg';
 import rightColBottomImage from '../assets/images/partner/rightColBottomImage.jpg';
+import abeAvatar from '../assets/images/avatars/AbrahamSquare.jpg';
 
 
 import styles from "./css/home.module.css";
@@ -32,7 +34,7 @@ class IndexPage extends React.Component{
     super(props);
 
     this.state = {
-      showLoader: true,
+      showLoader: false,
       topAnimation: false,
       middleAnimation: false,
       bottomAnimation: false,
@@ -112,7 +114,9 @@ class IndexPage extends React.Component{
             </ScrollListener>
           </Container>
           <LocationGrid locations={locations} className={styles.locationGridSection}/>
-          <Container>
+          <Container style={{
+            marginBottom: "144px",
+          }}>
             <div className="clearfix">
               <div className={styles.leftColumn}>
                 <div>
@@ -136,6 +140,23 @@ class IndexPage extends React.Component{
               </div>
             </div>
           </Container>
+          <div style={{
+            position: "relative",
+            height: "80vh",
+            marginBottom: "-60px",
+          }}>
+            <FullBackgroundImage imgSrc={mastheadImage} className={styles.quoteBlockContainer}>
+                <Container>
+                  <CenterTextBlock
+                    description="What our customers are saying"
+                    headline="We were able to scale our team and scope of work without breaking a sweat.&rdquo;"
+                    className={styles.quoteTextBlock}
+                    animate={this.state.topAnimation}
+                  />
+                  <Author avatar={abeAvatar} name="Jack Abraham" description="CEO @Zenreach |  240 employees"/>
+                </Container>
+            </FullBackgroundImage>
+          </div>
           <Footer />
         </div>
       }

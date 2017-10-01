@@ -76,10 +76,6 @@ render(){
     strokeWidth: 1,
   }
 
-  var containerStyle = {
-    height: '1px'
-  };
-
   const containerClass = classNames({
     [styles.container]: true,
     [styles.done]: this.state.done,
@@ -96,7 +92,6 @@ render(){
             progress={this.state.progress}
             initialAnimate
             options={options}
-            containerStyle={containerStyle}
             containerClassName={'progressbar'}
           />
         </div>

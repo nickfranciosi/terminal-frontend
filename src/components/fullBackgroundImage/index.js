@@ -1,20 +1,16 @@
 import React from 'react';
-import { Parallax } from 'react-parallax';
-import MediaQuery from 'react-responsive';
+import cn from 'classnames';
 import styles from './style.module.css';
 
-const FullBackgroundImage = ({ children, srcDesktop, srcMobile}) => (
-  <MediaQuery maxWidth={455}>
-    {(matches) => (
-        <Parallax 
-        bgImage={matches ? srcMobile : srcDesktop} 
-        strength={200} 
-        className={styles.container}
-      > 
+const FullBackgroundImage = ({ children, className, imgSrc}) => (
+  <div 
+    className={cn(styles.container, className)}
+    style={{
+      backgroundImage: `url(${imgSrc})`,
+    }}
+  > 
         {children}
-      </Parallax>
-    )}
-  </MediaQuery>
+  </div>
 );
 
 
