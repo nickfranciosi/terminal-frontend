@@ -1,0 +1,49 @@
+.card {
+  background-color: #e4e4e4;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vw;
+  max-height: 544px;
+  text-align: center;
+  color: white;
+}
+
+.card span {
+  color: white;
+  letter-spacing: 1.21px;
+}
+
+.textBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.textBlock span {
+  line-height: 2.2;
+  margin-bottom: 8px;
+}
+
+.textBlock h2 {
+  letter-spacing: -0.37px;
+  line-height:  .62;
+}
+
+.preview {
+  height: 32px;
+  position: absolute;
+  bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 67, 67, .5);
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-top: 1px;  
+}

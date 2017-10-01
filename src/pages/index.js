@@ -14,13 +14,14 @@ import HeaderTextBlock from '../components/headerTextBlock';
 import CenterTextBlock from '../components/centerTextBlock';
 import SingleHeading from '../components/singleHeading';
 import BioGrid from '../components/bioGrid';
+import LocationGrid from '../components/LocationGrid';
 // import Carousel from '../components/carousel';
 import mastheadImage from '../assets/images/mast-cropped.jpg';
 import aboutFullMobile from '../assets/images/aboutFull.jpg';
 import aboutFullDesktop from '../assets/images/aboutFullNarrow.jpg';
 import galleryPlaceholder from '../assets/images/Slideshow-placeholder.png';
 import styles from "./css/home.module.css";
-import { investors, team } from "../data";
+import { investors, team, locations } from "../data";
 
 class IndexPage extends React.Component{
 
@@ -98,52 +99,18 @@ class IndexPage extends React.Component{
             <ScrollListener offset={650} onEnter={this.triggerTop}>
               <div>
                 <CenterTextBlock
-                  description="We help you succeed"
-                  headline="Gain access to top talent around the world"
-                  body="Terminal accelerates innovation by rethinking how the best companies and the most talented people partner in building the future."
+                  description="Our offices span the globe"
+                  headline="Tap into global talent"
+                  body="All the benefits of adding a new location with none of the hassle. We help you scale your team."
                   className={styles.manifestoCenterBlock}
-                  callout={{
-                    text: "Read the manifesto",
-                    link: "https://medium.com/@terminal/announcing-terminal-c2a271cf7249",
-                  }}
                   animate={this.state.topAnimation}
                 />
               </div>
             </ScrollListener>
           </Container>
-          <div className={styles.aboutFull}>
-            <FullBackgroundImage 
-              srcMobile={aboutFullMobile} 
-              srcDesktop={aboutFullDesktop} 
-            />
-          </div>
+          <LocationGrid locations={locations} className={styles.locationGridSection}/>
           <Container>
-            <ScrollListener onEnter={this.triggerMiddle} offset={650}>
-              <div>
-                <CenterTextBlock
-                  description="Founding Members"
-                  headline="Meet the Terminal team"
-                  className={cn(styles.headerNoButton, styles.teamHeadline)}
-                  animate={this.state.middleAnimation}
-                />
-              </div>
-            </ScrollListener>
-            <div className={styles.bioContainer}>
-              <BioGrid team={team} />
-            </div>
-            <div className={styles.investorSection}>
-              <ScrollListener onEnter={this.triggerBottom} offset={650}>
-                <div>
-                  <CenterTextBlock
-                    description="Investment Partners"
-                    headline="Trusted by the world&rsquo;s best investors"
-                    className={cn(styles.headerNoButton, styles.investorHeadline)}
-                    animate={this.state.bottomAnimation}
-                  />
-                </div>
-              </ScrollListener>
-              <InvestorGrid investors={investors} />
-            </div>
+            <h3>Image Grid Here</h3>
           </Container>
           <Footer />
         </div>

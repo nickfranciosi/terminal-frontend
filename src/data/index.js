@@ -31,4 +31,28 @@ export default {
       image: require('../assets/images/team/Luke.jpg'),
     },
   ],
+
+  locations: [
+    {
+      parentPlace: "Ontario",
+      city: "Waterloo",
+      imgSrc: "http://lorempixel.com/360/720/city/1",
+    },
+    {
+      parentPlace: "Quebec",
+      city: "Montreal",
+      imgSrc: "http://lorempixel.com/360/720/city/2",
+    },
+    {
+      parentPlace: "B.C.",
+      city: "Vancouver",
+      imgSrc: "http://lorempixel.com/360/720/city/3",
+    },
+    {
+      parentPlace: "Brazil",
+      city: "Sao Paulo",
+      imgSrc: "http://lorempixel.com/360/720/city/4",
+      comingSoon: true,
+    },
+  ],
 }
