@@ -15,6 +15,7 @@ import HeaderTextBlock from '../components/headerTextBlock';
 import CenterTextBlock from '../components/centerTextBlock';
 import SingleHeading from '../components/singleHeading';
 import BioGrid from '../components/bioGrid';
+import ImageBar from '../components/imageBar';
 import LocationGrid from '../components/LocationGrid';
 import GridImage from '../components/gridImage';
 import SubMenu from '../components/subMenu';
@@ -27,7 +28,7 @@ import abeAvatar from '../assets/images/avatars/AbrahamSquare.jpg';
 
 
 import styles from "./css/home.module.css";
-import { investors, team, locations } from "../data";
+import { investors, team, locations, imageBar } from "../data";
 
 class IndexPage extends React.Component{
 
@@ -35,7 +36,7 @@ class IndexPage extends React.Component{
     super(props);
 
     this.state = {
-      showLoader: false,
+      showLoader: true,
       topAnimation: false,
       middleAnimation: false,
       bottomAnimation: false,
@@ -102,6 +103,7 @@ class IndexPage extends React.Component{
             </Container>
             <SubMenu />
           </Viewport>
+          <ImageBar images={imageBar} />
           <Container>
             <ScrollListener offset={650} onEnter={this.triggerTop}>
               <div id="locations">

@@ -1,0 +1,9 @@
+.contentBlock:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  margin-top: 20%;
+}

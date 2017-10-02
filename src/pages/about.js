@@ -6,42 +6,32 @@ import Container from '../components/container';
 import CalloutLink from '../components/calloutLink';
 import FullBackgroundImage from '../components/fullBackgroundImage';
 import aboutFull from '../assets/images/aboutFull.jpg';
-import Carousel from '../components/carousel';
+// import Carousel from '../components/carousel';
 import InvestorGrid from '../components/investorGrid';
 import Footer from '../components/footer';
 import Header from '../components/header';
 import HeaderTextBlock from '../components/headerTextBlock';
-import SubMenu from '../components/subMenu';
-
-const investors = [
-  {name: "NEA1", icon: require('../assets/images/investors/01-Founders fund.png')},
-  {name: "NEA2", icon: require('../assets/images/investors/02-Kholsa ventures.png')},
-  {name: "NEA3", icon: require('../assets/images/investors/03-SVAngel.png')},
-  {name: "NEA4", icon: require('../assets/images/investors/04-8VC.png')},
-  {name: "NEA5", icon: require('../assets/images/investors/05-Lightspeed Venture.png')},
-  {name: "NEA6", icon: require('../assets/images/investors/06-Bain Capital.png')},
-  {name: "NEA7", icon: require('../assets/images/investors/07-NEA.png')},
-  {name: "NEA8", icon: require('../assets/images/investors/08-Cherubic.png')},
-];
-
-
+import { investors } from "../data";
 
 export default () => (
   <div>
     <Header />
-    <Viewport>
+    <div 
+      style={{
+        paddingTop: "20%",
+      }}
+    >
       <Container>
         <HeaderTextBlock
-          description="Tristique Parturient"
-          headline="Get to know us a little better."
-          body="Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem magna mollis euismod."
+          description="Learn more"
+          headline="Get to know us"
+          body="A look into the mission and team behind Terminal."
         />
       </Container>
-      <SubMenu />
-    </Viewport>
+    </div>
     <div id="overview">
       <Viewport>
-        <FullBackgroundImage src={aboutFull}>
+        <FullBackgroundImage imgSrc={aboutFull}>
           <Container>
             <Reveal effect="animated fadeInUp">
               <HeaderTextBlock
@@ -66,7 +56,7 @@ export default () => (
             textAlign: "center",
           }}
         >
-          {/* <Carousel /> */}
+          {/* <Carousel slideData={} /> */}
         </div>
       </Container>
      <Container>

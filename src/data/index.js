@@ -55,4 +55,11 @@ export default {
       comingSoon: true,
     },
   ],
+  imageBar: [
+    require('../assets/images/culture/1.jpg'),
+    require('../assets/images/culture/2.jpg'),
+    require('../assets/images/culture/3.jpg'),
+    require('../assets/images/culture/4.jpg'),
+    require('../assets/images/culture/5.jpg'),
+  ]
 }
