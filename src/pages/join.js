@@ -7,7 +7,7 @@ import AngledImage from '../components/angledImage';
 import FullBackgroundImage from '../components/fullBackgroundImage';
 import Header from '../components/header';
 import InvestorGrid from '../components/investorGrid';
-import JobListItem from '../components/jobListItem';
+import JobFilter from '../components/jobFilter';
 import ScrollListener from '../components/scrollListener';
 import Button from '../components/button';
 import Footer from '../components/footer';
@@ -16,7 +16,7 @@ import HeaderTextBlock from '../components/headerTextBlock';
 import CenterTextBlock from '../components/centerTextBlock';
 import SingleHeading from '../components/singleHeading';
 import BioGrid from '../components/bioGrid';
-// import ImageBar from '../components/imageBar';
+import ImageBar from '../components/imageBar';
 import LocationGrid from '../components/LocationGrid';
 import GridImage from '../components/gridImage';
 import SubMenu from '../components/subMenu';
@@ -29,7 +29,7 @@ import abeAvatar from '../assets/images/avatars/AbrahamSquare.jpg';
 
 
 import styles from "./css/home.module.css";
-import { investors, team, locations, imageBar } from "../data";
+import { investors, team, locations, imageBar, jobs } from "../data";
 
 class IndexPage extends React.Component{
 
@@ -37,7 +37,7 @@ class IndexPage extends React.Component{
     super(props);
 
     this.state = {
-      showLoader: true,
+      showLoader: false,
       topAnimation: false,
       middleAnimation: false,
       bottomAnimation: false,
@@ -82,7 +82,9 @@ class IndexPage extends React.Component{
         }}/>
       { this.state.showLoader ?
         <LoadingScreen done={() => this.handleDone()}/> :
-        <div>
+        <div style={{
+          background: "#232121"
+        }}>
           <Header />
           <Viewport className={styles.masthead}>
             <Container>
@@ -106,62 +108,8 @@ class IndexPage extends React.Component{
           </Viewport>
           {/* <ImageBar images={imageBar} /> */}
           <Container>
-            <ScrollListener offset={650} onEnter={this.triggerTop}>
-              <div id="locations">
-                <CenterTextBlock
-                  description="Our offices span the globe"
-                  headline="Tap into global talent"
-                  body="All the benefits of adding a new location with none of the hassle. We help you scale your team."
-                  className={styles.locationCenterBlock}
-                  animate={this.state.topAnimation}
-                />
-              </div>
-            </ScrollListener>
+            <JobFilter jobs={jobs} />
           </Container>
-          <LocationGrid locations={locations} className={styles.locationGridSection}/>
-          <Container style={{
-            marginBottom: "144px",
-          }}>
-            <div className="clearfix" id="services">
-              <div className={styles.leftColumn}>
-                <div>
-                  <CenterTextBlock
-                    description="Meet your new team"
-                    headline="We&rsquo;ll assemble the perfect team for your needs"
-                    body="Whether your challenges are related to infrastructure or building a new product from the ground up, our talented technologists are well equipped to deliver."
-                    className={styles.gridTextBlock}
-                    animate={this.state.topAnimation}
-                  />
-                  <GridImage src={leftColImage} attribution="We&rsquo;ve got the product development process down to a science."/>
-                </div>
-
-              </div>
-              <div className={styles.rightColumn}>
-                  <GridImage src={rightColTopImage} attribution="The team uses the tools of your organization to stay connected." style={{
-                    marginTop: "140px",
-                    marginBottom: "120px",
-                  }}/>
-                  <GridImage src={rightColBottomImage} attribution="We work with a variety of technologies including VR, AR, and more."/>
-              </div>
-            </div>
-          </Container>
-          <div style={{
-            position: "relative",
-            height: "80vh",
-            marginBottom: "-60px",
-          }} id="testimonials">
-            <FullBackgroundImage imgSrc={mastheadImage} className={styles.quoteBlockContainer}>
-                <Container>
-                  <CenterTextBlock
-                    description="What our customers are saying"
-                    headline="We were able to scale our team and scope of work without breaking a sweat.&rdquo;"
-                    className={styles.quoteTextBlock}
-                    animate={this.state.topAnimation}
-                  />
-                  <Author avatar={abeAvatar} name="Jack Abraham" description="CEO @Zenreach |  240 employees"/>
-                </Container>
-            </FullBackgroundImage>
-          </div>
           <Footer />
         </div>
       }

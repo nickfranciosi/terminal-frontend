@@ -61,5 +61,33 @@ export default {
     require('../assets/images/culture/3.jpg'),
     require('../assets/images/culture/4.jpg'),
     require('../assets/images/culture/5.jpg'),
+  ], 
+
+  jobs: [
+    {
+      title: "Full-stack engineer",
+      place: "Vancouver, B.C.",
+      company: "Zero"
+    },
+    {
+      title: "Swift engineer",
+      place: "Chicago, USA",
+      company: "Zero"
+    }, 
+    {
+      title: "Operations",
+      place: "Vancouver, B.C.",
+      company: "RosmettaMD"
+    }, 
+    {
+      title: "Full-stack engineer",
+      place: "Montreal, Quebec",
+      company: "Terminal"
+    }, 
+    {
+      title: "Full-stack engineer",
+      place: "Vancouver, B.C.",
+      company: "Zero"
+    }, 
   ]
 }
