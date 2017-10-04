@@ -15,6 +15,7 @@ import Author from '../components/author';
 import HeaderTextBlock from '../components/headerTextBlock';
 import CenterTextBlock from '../components/centerTextBlock';
 import SingleHeading from '../components/singleHeading';
+import QuoteBlockImage from '../components/quoteBlockImage';
 import BioGrid from '../components/bioGrid';
 // import ImageBar from '../components/imageBar';
 import LocationGrid from '../components/LocationGrid';
@@ -90,21 +91,12 @@ class IndexPage extends React.Component{
                 description="Tap into global talent"
                 headline="Bold ideas require brilliant minds"
                 body="Terminal builds elite engineering teams to solve the toughest challenges of tomorrow."
-                callout={{
-                  text: "Request appointment",
-                  link: "mailto:stdin@terminal.io",
-                }}
-                secondaryCallout={{
-                  text: "Open roles",
-                  link: "/",
-                }}
                 className={styles.headerBlock}
               />
               <AngledImage src={mastheadImage} />
             </Container>
             <SubMenu />
           </Viewport>
-          {/* <ImageBar images={imageBar} /> */}
           <Container>
             <ScrollListener offset={650} onEnter={this.triggerTop}>
               <div id="locations">
@@ -145,23 +137,18 @@ class IndexPage extends React.Component{
               </div>
             </div>
           </Container>
-          <div style={{
-            position: "relative",
-            height: "80vh",
-            marginBottom: "-60px",
-          }} id="testimonials">
-            <FullBackgroundImage imgSrc={mastheadImage} className={styles.quoteBlockContainer}>
-                <Container>
-                  <CenterTextBlock
-                    description="What our customers are saying"
-                    headline="We were able to scale our team and scope of work without breaking a sweat.&rdquo;"
-                    className={styles.quoteTextBlock}
-                    animate={this.state.topAnimation}
-                  />
-                  <Author avatar={abeAvatar} name="Jack Abraham" description="CEO @Zenreach |  240 employees"/>
-                </Container>
-            </FullBackgroundImage>
-          </div>
+          <QuoteBlockImage 
+            style={{
+              marginBottom: "-60px",
+            }}
+            imgSrc={mastheadImage}
+            quote="We were able to scale our team and scope of work without breaking a sweat.&rdquo;"
+            author={{
+              avatar: abeAvatar,
+              name: "Jack Abraham",
+              description: "CEO @Zenreach |  240 employees",
+            }}
+          />
           <Footer />
         </div>
       }

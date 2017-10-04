@@ -1,6 +1,8 @@
 .container {
   width: 100%;
   max-width: 545px;
+  z-index: 10;
+  position: relative;
 }
 
 .container:after, .heightChecker:after {

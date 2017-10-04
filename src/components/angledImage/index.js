@@ -1,4 +1,5 @@
 import React, {PureComponent} from 'react';
+import cn from 'classnames';
 import PropTypes from 'prop-types';
 import styles from './style.module.css';
 
@@ -24,10 +25,10 @@ class AngledImage extends PureComponent {
   }
 
   render() {
-    const {src, style} = this.props;
+    const {src, style, className} = this.props;
 
     return (
-      <div className={styles.imageOuter} style={style} ref={(d) => {this.dominic = d;}}>
+      <div className={cn(styles.imageOuter, className)} style={style} ref={(d) => {this.dominic = d;}}>
         <div className={styles.image} style={{backgroundImage: `url('${src}')`}} />
       </div>
     );

@@ -64,6 +64,13 @@
   }
 }
 
+.darkTheme h1, 
+.darkTheme h2,
+.darkTheme h3,
+.darkTheme h4 {
+  color: white !important;
+}
+
 html,
 body,
 div,

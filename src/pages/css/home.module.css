@@ -6,6 +6,13 @@
   min-height: 500px;
   overflow: hidden;
 }
+.darkAngle::after {
+   background-color: #232121;
+}
+
+.darkBg {
+  background-color: #232121;
+}
 
 .headerBlock {
   margin-top: 0px;
@@ -19,29 +26,6 @@
   margin-bottom: 76px;
 }
 
-.quoteBlockContainer {
-  display: flex;
-  align-items: center;
-}
-
-.quoteTextBlock {
-  margin-bottom: 48px;
-  text-align: left;
-  align-items: flex-start;
-  width: 50%;
-}
-
-.quoteTextBlock h2{
-  color: white;
-  position: relative;
-}
-
-.quoteTextBlock h2::before{
-  content: "\201C";
-  position: absolute;
-  left: -25px;
-  right: 0;
-}
 
 .investorSection {
   margin-bottom: 62px;
