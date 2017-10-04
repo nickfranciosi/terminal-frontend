@@ -98,9 +98,9 @@ class IndexPage extends React.Component{
             <ScrollListener offset={650} onEnter={this.triggerTop}>
               <div>
                 <CenterTextBlock
-                  description="We help you succeed"
-                  headline="Gain access to top talent around the world"
-                  body="Terminal accelerates innovation by rethinking how the best companies and the most talented people partner in building the future."
+                  description="Transform the way you scale"
+                  headline="Gain access to the best engineers around the world"
+                  body="Terminal is rethinking how the best companies and the most talented people partner in building the future."
                   className={styles.manifestoCenterBlock}
                   callout={{
                     text: "Read the manifesto",
@@ -118,24 +118,11 @@ class IndexPage extends React.Component{
             />
           </div>
           <Container>
-            <ScrollListener onEnter={this.triggerMiddle} offset={650}>
-              <div>
-                <CenterTextBlock
-                  description="Founding Members"
-                  headline="Meet the Terminal team"
-                  className={cn(styles.headerNoButton, styles.teamHeadline)}
-                  animate={this.state.middleAnimation}
-                />
-              </div>
-            </ScrollListener>
-            <div className={styles.bioContainer}>
-              <BioGrid team={team} />
-            </div>
             <div className={styles.investorSection}>
               <ScrollListener onEnter={this.triggerBottom} offset={650}>
                 <div>
                   <CenterTextBlock
-                    description="Investment Partners"
+                    description="CLIENTS BACKED BY TOP VC FIRMS"
                     headline="Trusted by the world&rsquo;s best investors"
                     className={cn(styles.headerNoButton, styles.investorHeadline)}
                     animate={this.state.bottomAnimation}
