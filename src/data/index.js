@@ -9,26 +9,36 @@ export default {
     {name: "NEA7", icon: require('../assets/images/investors/07-NEA.png'), size: "42%", maxSize: "115px"},
     {name: "NEA8", icon: require('../assets/images/investors/08-Cherubic.png'), size: "42%", maxSize: "128px"},
   ],
-  team: [
+  amenities: [
     {
-      name: "Jack Abraham",
-      bio: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
-      image: require('../assets/images/team/Jack.jpg'),
+      headline: "Catered meals",
+      description: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
+      image: require('../assets/images/icons/cater.svg'),
     },
     {
-      name: "Joe Abraham",
-      bio: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
-      image: require('../assets/images/team/Joe.jpg'),
+      headline: "Flexible schedule",
+      description: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
+      image: require('../assets/images/icons/cater.svg'),
     },
     {
-      name: "Dylan Abraham",
-      bio: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
-      image: require('../assets/images/team/Dylan.jpg'),
+      headline: "Retirement savings",
+      description: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
+      image: require('../assets/images/icons/cater.svg'),
     },
     {
-      name: "Luke Abraham",
-      bio: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
-      image: require('../assets/images/team/Luke.jpg'),
+      headline: "Retirement savings",
+      description: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
+      image: require('../assets/images/icons/cater.svg'),
+    },
+    {
+      headline: "Onsite massages",
+      description: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
+      image: require('../assets/images/icons/cater.svg'),
+    },
+    {
+      headline: "Career enhancement",
+      description: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
+      image: require('../assets/images/icons/cater.svg'),
     },
   ],
 

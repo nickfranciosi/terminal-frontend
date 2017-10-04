@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from 'classnames';
+import cn from 'classnames';
 import { Link } from "react-scroll";
 import styles from "./style.module.css";
 
@@ -85,14 +85,18 @@ class TabNavigation extends React.Component {
   }
 
   render() {
-    let pointerClasses = classNames({
+    let pointerClasses = cn({
       [styles.pointer]: true,
       [styles.hidden]: !this.props.showLine,
     });
+    let containerClass = cn({
+      [styles.navContainer]: true,
+      [styles.dark]: this.props.darkTheme,
+    })
     return (
       <div
         ref={(node) => { this.tabsRef = node; }}
-        className={styles.navContainer}
+        className={containerClass}
       >
         <nav
           ref={(node) => { this.navRef = node; }}
@@ -114,6 +118,7 @@ TabNavigation.propTypes = {
   tabs: PropTypes.array,
   onChange: PropTypes.func,
   showLine: PropTypes.bool,
+  darkTheme: PropTypes.bool,
 };
 
 TabNavigation.defaultProps = {

@@ -30,6 +30,7 @@
   justify-content: space-between;
   padding: 0 50px 0 115px;
   transition: background-color .5s ease;
+  box-shadow: 0 22px 24px 0 rgba(0,0,0,0.06);
 }
 
 .container .menu a{
@@ -43,6 +44,10 @@
 
 .active .container {
   background-color: white;
+}
+
+.dark.active .container {
+  background-color: #232121;
 }
 
 .callout {

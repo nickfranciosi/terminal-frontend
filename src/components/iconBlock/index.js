@@ -4,23 +4,7 @@ import Waypoint from 'react-waypoint';
 import ScrollAnimate from '../scrollAnimate';
 import styles from './style.module.css';
 
-// const BioBlock = ({ image, name, bio }) => (
-//   <div className={styles.outer}>
-//     <div className={styles.container}>
-//       <img src={image} alt={name} />
-//       <div className={styles.info}>
-//         <div>
-//           <h4>{name}</h4>
-//         </div>
-//         <div>
-//           <p>{bio}</p>
-//         </div>
-//       </div>
-//     </div>
-//   </div>
-// );
-
-class BioBlock extends React.Component {
+class IconBlock extends React.Component {
   constructor(props) {
     super(props);
 
@@ -37,7 +21,7 @@ class BioBlock extends React.Component {
     })
   }
   render(){
-    const { image, name, bio } = this.props;
+    const { image, headline, description } = this.props;
     const outerClass = cn({
       [styles.outer]: true,
       [styles.animate]: this.state.animate,
@@ -46,16 +30,16 @@ class BioBlock extends React.Component {
       <Waypoint onEnter={this.animate} offset={650}>
         <div className={outerClass}>
           <div className={styles.container}>
-            <img src={image} alt={name} />
+            <img src={image} alt={headline} />
             <div className={styles.info}>
               <div>
                 <h4>
-                  <ScrollAnimate  animate={this.state.animate}>{name}</ScrollAnimate>
+                  <ScrollAnimate  animate={this.state.animate}>{headline}</ScrollAnimate>
                 </h4>
               </div>
               <div>
                 <p>
-                  <ScrollAnimate  animate={this.state.animate}>{bio}</ScrollAnimate>
+                  <ScrollAnimate  animate={this.state.animate}>{description}</ScrollAnimate>
                 </p>
               </div>
             </div>
@@ -66,4 +50,4 @@ class BioBlock extends React.Component {
   }
 }
 
-export default BioBlock;
+export default IconBlock;

@@ -10,6 +10,10 @@
   box-shadow: 0 22px 34px 0 rgba(0,0,0,0.03);
 }
 
+.copyright {
+  display: none;
+}
+
 .logo {
   width: 120px;
   margin-top: 3px;
@@ -36,7 +40,7 @@
   margin-right: 8px;
 }
 
-.menu li a{
+.menu li a, .copyright p{
   font-size: 15px;
   font-family: "MaisonNeueBook";
   margin-right: 8px;
@@ -61,8 +65,7 @@
 
 .locationList {
   width: 100%;
-  font-size: 15px;
-  margin-bottom: 78px;
+  margin-bottom: 18px;
 }
 
 .location {
@@ -73,17 +76,19 @@
   margin-top: -1px;
 }
 
+
+.location p:first-of-type{
+  font-family: "MaisonNeueMedium";
+  color: #414141;
+  font-size: 15px;
+}
+
 .location p {
-  font-size: 16px;
+  font-size: 13px;
   margin-bottom: 8px;
   color: #7B7B7B;
   letter-spacing: 0;
 }
-.location p:first-of-type{
-  font-family: "MaisonNeueMedium";
-  color: #414141;
-}
-
 
 .mobileLogo{
   border-top: 1px solid rgba(123, 123, 123, 0.27);
@@ -109,12 +114,23 @@
   .content {
     flex-direction: row;
     margin-top: 150px;
+    border-bottom: 1px solid rgba(163, 163, 163, .2);
   }
 
   .body {
     flex: 1;
     display: flex;
     align-items: flex-start;
+  }
+
+  .copyright{
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .copyright li + li{
+    margin-right: 0;
   }
 
   .menu {

@@ -19,21 +19,37 @@ const Footer = ({  }) => (
         </div>
         <div className={styles.locationList}>
           <div className={styles.location}>
-            <p>Waterloo</p>
-            <p>123 First Street</p>
+            <p>Kitchener-Waterloo</p>
+            <p>119 King Street W</p>
             <p>Ontario, Canada</p>
           </div>
           <div className={styles.location}>
             <p>Montreal</p>
-            <p>123 First Street</p>
+            <p>486 Rue Sainte Catherine</p>
             <p>Quebec, Canada</p>
           </div>
           <div className={styles.location}>
             <p>Vancouver</p>
-            <p>123 First Street</p>
+            <p>201-210 Carrall St.</p>
             <p>BC, Canada</p>
           </div>
         </div>
+      </div>
+      <div className={styles.copyright}>
+        <p>&copy;Terminal 2017</p>
+        <ul className={styles.menu}>
+          <li><a href="#">Careers at Terminal</a></li>
+          <li>
+            <a 
+              onClick={(e) => {
+                e.preventDefault();
+                window.scroll(0,0);
+              }}
+            >
+              Back To Top
+            </a>
+          </li>
+        </ul>
       </div>
       <div className={styles.mobileLogo}>
         <Link to="/"><img className={styles.logo} src={logo} /></Link>

@@ -27,6 +27,7 @@ class SubMenu extends React.Component {
     let stickContainerClass = classNames({
       [styles.stickyContainer]: true,
       [styles.active]: this.state.stuck,
+      [styles.dark]: this.props.darkTheme,
     });
     return (
       <Sticky 
@@ -43,6 +44,7 @@ class SubMenu extends React.Component {
           <div className={styles.menu}>
             <TabNavigation 
               showLine={this.state.stuck}
+              darkTheme={this.props.darkTheme}
               tabs={[
                 {name: "Locations", link: "locations"}, 
                 {name: "Services", link: "services"},

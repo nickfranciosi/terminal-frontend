@@ -15,7 +15,7 @@ import Author from '../components/author';
 import HeaderTextBlock from '../components/headerTextBlock';
 import CenterTextBlock from '../components/centerTextBlock';
 import SingleHeading from '../components/singleHeading';
-import BioGrid from '../components/bioGrid';
+import IconGrid from '../components/iconGrid';
 import ImageBar from '../components/imageBar';
 import LocationGrid from '../components/LocationGrid';
 import GridImage from '../components/gridImage';
@@ -31,7 +31,7 @@ import abeAvatar from '../assets/images/avatars/AbrahamSquare.jpg';
 import aboutFull from '../assets/images/aboutFull.jpg';
 
 import styles from "./css/home.module.css";
-import { investors, team, locations, imageBar, jobs } from "../data";
+import { investors, amenities, locations, imageBar, jobs } from "../data";
 
 class JoinPage extends React.Component{
 
@@ -96,7 +96,7 @@ class JoinPage extends React.Component{
               />
               <AngledImage src={aboutFull} className={styles.darkAngle}/>
             </Container>
-            <SubMenu />
+            <SubMenu darkTheme/>
           </Viewport>
           <Container>
             <ScrollListener offset={650} onEnter={this.triggerTop}>
@@ -114,6 +114,9 @@ class JoinPage extends React.Component{
           <ImageBar images={imageBar} style={{
             marginBottom: 118,
           }}/>
+          <div className={styles.bioContainer}>
+            <IconGrid data={amenities} />
+          </div>
           <QuoteBlockImage 
             imgSrc={employeeBg}
             style={{
