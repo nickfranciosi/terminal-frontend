@@ -9,7 +9,6 @@
   }
 
   .tab{
-    flex: 1;
     position: relative;
     display: flex;
     align-self: center;

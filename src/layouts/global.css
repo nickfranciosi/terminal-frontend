@@ -215,3 +215,11 @@ button:focus {outline:0;}
   display: table;
   clear: both;
 }
+
+.Select-control{
+  border-radius: 0 !important;
+}
+
+.Select-arrow {
+  border-color: #FF4343 transparent transparent;
+}

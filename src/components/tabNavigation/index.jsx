@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import cn from 'classnames';
-import { Link } from "react-scroll";
+import TextAnimate from '../textAnimate';
+import { Link, Events } from "react-scroll";
 import styles from "./style.module.css";
 
 class TabNavigation extends React.Component {
@@ -11,6 +12,7 @@ class TabNavigation extends React.Component {
     this.state = {
       pointerId: 0,
       pointer: {},
+      tabs: this.props.tabs.map(i => i.name),
     };
 
     this.handleResizeEnd = this.handleResizeEnd.bind(this);
@@ -23,6 +25,10 @@ class TabNavigation extends React.Component {
     this.updatePointer(this.state.pointerId);
     window.addEventListener("resize", this.handleResize);
     this.handleResize();
+    // Events.scrollEvent.register('begin', function(to, element) {
+    //   console.log("begin", to, element);
+    //   this.updatePointer(this.state.tabs.indexOf(to));
+    // }.bind(this));
   }
 
   componentWillReceiveProps(nextProps) {
@@ -32,6 +38,7 @@ class TabNavigation extends React.Component {
   componentWillUnmount() {
     clearTimeout(this.resizeTimeout);
     clearTimeout(this.pointerTimeout);
+    Events.scrollEvent.remove('begin');
   }
 
 
@@ -59,9 +66,9 @@ class TabNavigation extends React.Component {
       this.setState({
         pointerId: id,
         pointer: {
-          bottom: 0,
+          bottom: "-150%",
           left: `${label.left - startPoint}px`,
-          width: `${label.width}px`,
+          width: `${label.width - 25}px`,
         },
       });
     }, 20);
@@ -70,16 +77,22 @@ class TabNavigation extends React.Component {
   renderTabs() {
     return this.props.tabs.map((tab, index) => (
       <div key={index} id={index} className={styles.tab}>
+        <TextAnimate
+          triggerOnMount
+          startDelay={0}
+          timingClass={this.props.animationClass}
+        >
         <Link 
           smooth={true}
           duration={1000}
           to={tab.link}
-          offset={(index > 0) ? -100 : 0}
-          spy
+          offset={-90}
           onSetActive={() => this.updatePointer(index)}
+          spy
         >
           {tab.name}
         </Link>
+        </TextAnimate>
       </div>
     ));
   }

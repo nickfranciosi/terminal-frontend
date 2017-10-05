@@ -20,10 +20,28 @@
   max-width: 370px;
 }
 
-.container img {
-  width: 100px;
+.imageContainer {
+  min-width: 100px;
+  min-height: 100px;
+  justify-content: center;
+  flex-basis: auto;
+  flex: 1;
+  align-items: center;
+  display: flex;
   margin-right: 12px;
+  border: 1px solid #5A5A5A;
 }
+
+.iconCircle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 50%;
+  width: 50%;
+  height: 50%;
+}
+
 
 .info{
   display: flex;
@@ -68,7 +86,7 @@
     margin-right: 16px;
   }
 
-  .container img {
+  .imageContainer {
     margin-right: 10px;
   }
 
@@ -83,7 +101,7 @@
     font-size: 15px;
   }
 
-  .container img {
+  .imageContainer  {
     margin-right: 27px;
   }
 

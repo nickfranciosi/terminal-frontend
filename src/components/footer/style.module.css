@@ -51,6 +51,10 @@
   transition: color 650ms ease;
 }
 
+.container.dark *{
+  color: white;
+}
+
 .menu li a:hover{
   color: #FF4343;
   transition: color 650ms ease;
@@ -83,6 +87,9 @@
   font-size: 15px;
 }
 
+.container.dark .location p:first-of-type{
+  color: white;
+}
 .location p {
   font-size: 13px;
   margin-bottom: 8px;
@@ -125,6 +132,7 @@
 
   .copyright{
     padding-top: 24px;
+    padding-bottom: 24px;
     display: flex;
     justify-content: space-between;
   }

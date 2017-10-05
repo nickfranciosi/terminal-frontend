@@ -79,13 +79,11 @@ class JoinPage extends React.Component{
     return(
       <div className="darkTheme">
         {/* preload the image */}
-        <img src={mastheadImage} style={{
+        <img src={aboutFull} style={{
           display: "none",
         }}/>
-      { this.state.showLoader ?
-        <LoadingScreen done={() => this.handleDone()}/> :
         <div className={styles.darkBg}>
-          <Header />
+          <Header darkTheme/>
           <Viewport className={styles.masthead}>
             <Container>
               <HeaderTextBlock
@@ -96,11 +94,22 @@ class JoinPage extends React.Component{
               />
               <AngledImage src={aboutFull} className={styles.darkAngle}/>
             </Container>
-            <SubMenu darkTheme/>
+            <SubMenu
+              darkTheme
+              menu={[
+                {name: "benefits", link: "benefits"}, 
+                {name: "testimonials", link: "testimonials"},
+                {name: "open positions", link: "open-positions"},
+              ]}
+              callout={{
+                text: "Find a position",
+                link: "/",
+              }}
+            />
           </Viewport>
           <Container>
             <ScrollListener offset={650} onEnter={this.triggerTop}>
-              <div id="locations">
+              <div id="benefits">
                 <CenterTextBlock
                   description="Cursus Etiam Vehicula"
                   headline="Hard problems. Amazing benefits."
@@ -126,18 +135,22 @@ class JoinPage extends React.Component{
             description="What our employees are saying"
             quote="People come together here to build some amazing technology.&rdquo;"
           />
-          <Container>
-            <CenterTextBlock
-              description="Open roles"
-              headline="Apply for an open position"
-              body="Or send us a note to learn more."
-              animate={this.state.topAnimation}
-            />
-            <JobFilter jobs={jobs} />
-          </Container>
-          <Footer />
+          <ScrollListener offset={650} onEnter={this.triggerBottom}>
+          <div id="open-positions">
+            <Container>
+              <CenterTextBlock
+                description="Open roles"
+                headline="Apply for an open position"
+                body="Or send us a note to learn more."
+                className={styles.applyBlock}
+                animate={this.state.bottomAnimation}
+              />
+              <JobFilter jobs={jobs} />
+            </Container>
+          </div>
+          </ScrollListener>
+          <Footer darkTheme/>
         </div>
-      }
       </div>
     )
   }

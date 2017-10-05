@@ -1,11 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Scroll, { Link, animateScroll } from 'react-scroll'; 
 import classNames from 'classnames';
 import Sticky from 'react-stickynode';
 import styles from './style.module.css';
 import Button from '../button';
+import Container from '../container';
 import TabNavigation from '../tabNavigation';
-import upLogo from '../../assets/images/upLogo.png';
+import TextAnimate from '../textAnimate';
+import upLogoMain from '../../assets/images/upLogoMain.svg';
+import upLogoLight from '../../assets/images/upLogoLight.svg';
 
 class SubMenu extends React.Component {
 
@@ -29,36 +33,57 @@ class SubMenu extends React.Component {
       [styles.active]: this.state.stuck,
       [styles.dark]: this.props.darkTheme,
     });
+    const { menu, callout, darkTheme } = this.props;
+    const logo = darkTheme ? upLogoLight : upLogoMain;
     return (
+     
       <Sticky 
         onStateChange={this.handleStickyStateChange}
         className={stickContainerClass}
         innerZ={100}
       >
-        <img 
-          src={upLogo}
-          className={styles.logo}
-          onClick={animateScroll.scrollToTop}
-        />
-        <div className={styles.container}>
-          <div className={styles.menu}>
-            <TabNavigation 
-              showLine={this.state.stuck}
-              darkTheme={this.props.darkTheme}
-              tabs={[
-                {name: "Locations", link: "locations"}, 
-                {name: "Services", link: "services"},
-                {name: "Testimonials", link: "testimonials"},
-              ]}
-            />
-          </div>
-          <div className={styles.callout}>
-            <Button>Request an appointment</Button>
-          </div>
+        <div className={styles.outerBlock}>
+          
+          <img 
+            src={logo}
+            className={styles.logo}
+            onClick={animateScroll.scrollToTop}
+          />
+          <Container className={styles.container}>
+            <div className={styles.menu}>
+              <TabNavigation 
+                showLine={this.state.stuck}
+                darkTheme={darkTheme}
+                tabs={menu}
+                animationClass={styles.third}
+              />
+            </div>
+            <div className={styles.callout}>
+              <TextAnimate
+                triggerOnMount
+                startDelay={0}
+                timingClass={styles.third}
+              >
+              <Button to={callout.link}>{callout.text}</Button>
+              </TextAnimate>
+            </div>
+          </Container>
+        
         </div>
       </Sticky>
     )
   }
+}
+
+SubMenu.propTypes = {
+  menu: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string,
+    link: PropTypes.string,
+  })),
+  callout: PropTypes.shape({
+    text: PropTypes.string,
+    link: PropTypes.string,
+  })
 }
 
 export default SubMenu;

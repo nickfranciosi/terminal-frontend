@@ -11,7 +11,8 @@ import InvestorGrid from '../components/investorGrid';
 import Footer from '../components/footer';
 import Header from '../components/header';
 import HeaderTextBlock from '../components/headerTextBlock';
-import { investors } from "../data";
+import { investors } from '../data';
+import styles from './css/about.module.css';
 
 export default () => (
   <div>
@@ -31,34 +32,24 @@ export default () => (
     </div>
     <div id="overview">
       <Viewport>
-        <FullBackgroundImage imgSrc={aboutFull}>
-          <Container>
-            <Reveal effect="animated fadeInUp">
-              <HeaderTextBlock
-                theme="white"
-                headlineSize="h2"
-                headline="We bring together companies and engineers."
-                body="Lorem ipsum dolor sit amet consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus fringilla."
-                callout={{
-                  text: "Read the manifesto",
-                  link: "/manifesto"
-                }}
-              />
-            </Reveal>
+        <FullBackgroundImage imgSrc={aboutFull} >
+          <Container className={styles.aboutFull}>
+            <HeaderTextBlock
+              theme="white"
+              headlineSize="h2"
+              description="how we work"
+              headline="We bring together companies and engineers."
+              body="Terminal accelerates innovation by rethinking how the best companies and the most talented people partner in building the future."
+              callout={{
+                text: "Read the manifesto",
+                link: "/manifesto"
+              }}
+            />
           </Container>
         </FullBackgroundImage>
       </Viewport>
     </div>
     <div id="team">
-      <Container>
-        <div
-        style={{
-            textAlign: "center",
-          }}
-        >
-          {/* <Carousel slideData={} /> */}
-        </div>
-      </Container>
      <Container>
         <div
           style={{

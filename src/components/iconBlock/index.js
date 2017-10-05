@@ -30,7 +30,11 @@ class IconBlock extends React.Component {
       <Waypoint onEnter={this.animate} offset={650}>
         <div className={outerClass}>
           <div className={styles.container}>
-            <img src={image} alt={headline} />
+            <div className={styles.imageContainer}>
+              <div className={styles.iconCircle}>
+                <img src={image} alt={headline} />
+              </div>
+            </div>
             <div className={styles.info}>
               <div>
                 <h4>

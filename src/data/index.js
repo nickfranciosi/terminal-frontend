@@ -13,32 +13,32 @@ export default {
     {
       headline: "Catered meals",
       description: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
-      image: require('../assets/images/icons/cater.svg'),
+      image: require('../assets/images/icons/join-the-team/grill.svg'),
     },
     {
       headline: "Flexible schedule",
       description: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
-      image: require('../assets/images/icons/cater.svg'),
+      image: require('../assets/images/icons/join-the-team/hourglass.svg'),
     },
     {
       headline: "Retirement savings",
       description: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
-      image: require('../assets/images/icons/cater.svg'),
+      image: require('../assets/images/icons/join-the-team/Leaf.svg'),
     },
     {
-      headline: "Retirement savings",
+      headline: "World-class talent",
       description: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
-      image: require('../assets/images/icons/cater.svg'),
+      image: require('../assets/images/icons/join-the-team/medal.svg'),
     },
     {
       headline: "Onsite massages",
       description: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
-      image: require('../assets/images/icons/cater.svg'),
+      image: require('../assets/images/icons/join-the-team/bed.svg'),
     },
     {
       headline: "Career enhancement",
       description: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
-      image: require('../assets/images/icons/cater.svg'),
+      image: require('../assets/images/icons/join-the-team/protractor.svg'),
     },
   ],
 
