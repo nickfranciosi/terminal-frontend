@@ -46,22 +46,22 @@ export default {
     {
       parentPlace: "Ontario",
       city: "Waterloo",
-      imgSrc: "http://lorempixel.com/360/720/city/1",
+      imgSrc: require('../assets/images/locations/waterloo.jpg'),
     },
     {
       parentPlace: "Quebec",
       city: "Montreal",
-      imgSrc: "http://lorempixel.com/360/720/city/2",
+      imgSrc: require('../assets/images/locations/montreal.jpg'),
     },
     {
       parentPlace: "B.C.",
       city: "Vancouver",
-      imgSrc: "http://lorempixel.com/360/720/city/3",
+      imgSrc: require('../assets/images/locations/vancouver.jpg'),
     },
     {
       parentPlace: "Brazil",
       city: "Sao Paulo",
-      imgSrc: "http://lorempixel.com/360/720/city/4",
+      imgSrc: require('../assets/images/locations/sao_paulo.jpg'),
       comingSoon: true,
     },
   ],

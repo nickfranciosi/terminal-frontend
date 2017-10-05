@@ -36,7 +36,7 @@ class AboutPage extends React.Component{
   render() {
     return (
         <div>
-        <Header />
+        <Header darkMenu/>
         <div 
           style={{
             paddingTop: "20%",

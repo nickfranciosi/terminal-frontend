@@ -20,6 +20,7 @@ import LocationGrid from '../components/LocationGrid';
 import GridImage from '../components/gridImage';
 import SubMenu from '../components/subMenu';
 import mastheadImage from '../assets/images/mast-cropped.jpg';
+import aboutFull from '../assets/images/aboutFull.jpg';
 import homeQuote from '../assets/images/homeQuote.jpg';
 import leftColImage from '../assets/images/partner/leftColImage.jpg';
 import rightColTopImage from '../assets/images/partner/rightColTopImage.jpg';
@@ -75,8 +76,11 @@ class IndexPage extends React.Component{
   render() {
     return(
       <div>
-        {/* preload the image */}
+        {/* preload the images */}
         <img src={mastheadImage} style={{
+          display: "none",
+        }}/>
+        <img src={aboutFull} style={{
           display: "none",
         }}/>
       { this.state.showLoader ?

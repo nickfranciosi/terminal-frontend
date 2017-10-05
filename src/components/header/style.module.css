@@ -18,10 +18,19 @@
   text-align: right;
 }
 
+.darkMenu .mainLink, .darkMenu .subLink{
+  color: #7B7B7B;
+}
+
+.darkMenu .mainLink.active, .darkMenu .subLink.active{
+  opacity: 1;
+}
+
 .mainLink {
   font-family: 'MaisonNeueBold';
   line-height: 1.5;
   color: white;
+  opacity: .6;
   text-transform: none;
   font-size: 24px;
   letter-spacing: -0.34px;
@@ -29,6 +38,11 @@
 
 .subLink{
   color: white;
+  opacity: .6;
+}
+
+.mainLink.active, .subLink.active {
+  opacity: 1;
 }
 
 .mainLink + .mainLink {

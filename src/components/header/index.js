@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 import Link from 'gatsby-link';
 import styles from './style.module.css';
 import logoMain from '../../assets/images/Terminal-logo.svg';
@@ -7,7 +8,7 @@ import logoWhite from '../../assets/images/logoWhite.svg';
 import TextAnimate from '../textAnimate';
 import Container from '../container';
 
-const Header = ({ darkTheme }) => (
+const Header = ({ darkTheme, darkMenu }) => (
   <Container className={styles.outerContainer}>
       <div className={styles.container}>
         <Link 
@@ -22,11 +23,11 @@ const Header = ({ darkTheme }) => (
             <img className={styles.image} src={darkTheme ? logoWhite : logoMain} />
           </TextAnimate>
         </Link>
-        <div className={styles.menu}>
-          <Link  className={styles.mainLink} to="/">Partner</Link>
-          <Link className={styles.mainLink} to="/join">Join</Link>
-          <Link className={styles.subLink} to="/about">About</Link>
-          <Link className={styles.subLink}to="/locations">Locations</Link>
+        <div className={cn(styles.menu, darkMenu && styles.darkMenu)}>
+          <Link  className={styles.mainLink} exact activeClassName={styles.active}to="/">Partner</Link>
+          <Link className={styles.mainLink} activeClassName={styles.active} to="/join">Join</Link>
+          <Link className={styles.subLink} activeClassName={styles.active} to="/about">About</Link>
+          <Link className={styles.subLink} activeClassName={styles.active} to="/locations">Locations</Link>
         </div>
       </div>
   </Container>

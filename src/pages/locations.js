@@ -13,7 +13,7 @@ import { locations } from "../data";
 
 export default () => (
   <div>
-    <Header />
+    <Header darkMenu/>
     <div 
       style={{
         paddingTop: "20%",
