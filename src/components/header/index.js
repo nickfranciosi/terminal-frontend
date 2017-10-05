@@ -22,7 +22,13 @@ const Header = ({ darkTheme }) => (
             <img className={styles.image} src={darkTheme ? logoWhite : logoMain} />
           </TextAnimate>
         </Link>
-      </div> 
+        <div className={styles.menu}>
+          <Link  className={styles.mainLink} to="/">Partner</Link>
+          <Link className={styles.mainLink} to="/join">Join</Link>
+          <Link className={styles.subLink} to="/about">About</Link>
+          <Link className={styles.subLink}to="/locations">Locations</Link>
+        </div>
+      </div>
   </Container>
 );
 
