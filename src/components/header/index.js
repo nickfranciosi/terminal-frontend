@@ -25,8 +25,8 @@ const Header = ({ darkTheme, darkMenu }) => (
     <div className={cn(styles.menu, darkMenu && styles.darkMenu)}>
       <Link  className={styles.mainLink} exact activeClassName={styles.active}to="/">Partner</Link>
       <Link className={styles.mainLink} activeClassName={styles.active} to="/join">Join</Link>
+      <Link className={cn(styles.subLink, styles.topSub)} activeClassName={styles.active} to="/locations">Locations</Link>
       <Link className={styles.subLink} activeClassName={styles.active} to="/about">About</Link>
-      <Link className={styles.subLink} activeClassName={styles.active} to="/locations">Locations</Link>
     </div>
   </div>
 );
