@@ -4,6 +4,12 @@
   clear: both;
 }
 
+.animate{
+  opacity: 0;
+  animation: fadeInRaise 1s 400ms cubic-bezier(.05,0,.4,1);
+  animation-fill-mode: forwards;    
+}
+
 .locationGridCard {
   width: 50%;
   float: left;
@@ -12,5 +18,17 @@
 @media screen and (min-width: 900px) {
   .locationGridCard {
     width: 25%;
+  }
+}
+
+
+@keyframes fadeInRaise {
+  0% {
+    opacity: 0;
+    transform: translateY(75px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(25px);
   }
 }

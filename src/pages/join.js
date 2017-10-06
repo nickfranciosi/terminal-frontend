@@ -17,7 +17,6 @@ import CenterTextBlock from '../components/centerTextBlock';
 import SingleHeading from '../components/singleHeading';
 import IconGrid from '../components/iconGrid';
 import ImageBar from '../components/imageBar';
-import LocationGrid from '../components/LocationGrid';
 import GridImage from '../components/gridImage';
 import SubMenu from '../components/subMenu';
 import QuoteBlockImage from '../components/quoteBlockImage';

@@ -26,7 +26,7 @@ export default () => (
           body="All the benefits of adding a new location with none of the hassle. We help you scale your team."
         />
       </Container>
-      <LocationGrid locations={locations} className={styles.locationGridSection}/>
+      <LocationGrid animateIn locations={locations} className={styles.locationGridSection}/>
     </div>
     <Footer />
   </div>

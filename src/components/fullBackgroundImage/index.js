@@ -2,14 +2,14 @@ import React from 'react';
 import cn from 'classnames';
 import styles from './style.module.css';
 
-const FullBackgroundImage = ({ children, className, imgSrc}) => (
+const FullBackgroundImage = ({ children, animateIn, className, imgSrc}) => (
   <div 
-    className={cn(styles.container, className)}
+    className={cn(styles.container, animateIn && styles.animate, className)}
     style={{
       backgroundImage: `url(${imgSrc})`,
     }}
   > 
-        {children}
+    {children}
   </div>
 );
 

@@ -4,9 +4,9 @@ import cn from 'classnames';
 import LocationCard from '../locationCard';
 import styles from './style.module.css';
 
-const LocationGrid = ({ locations = [], className, style }) => (
+const LocationGrid = ({ locations = [], animateIn, className, style }) => (
   <div
-    className={cn("clearfix", styles.locationGrid, className)}
+    className={cn(styles.locationGrid, animateIn && styles.animate, className)}
     style={style}
   >
   {locations.map(location => (

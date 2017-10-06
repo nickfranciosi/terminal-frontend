@@ -5,6 +5,13 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: opacity 600ms 400ms ease;
+}
+
+.animate{
+  opacity: 0;
+  animation: fadeInRaise 1s 400ms cubic-bezier(.05,0,.4,1);
+  animation-fill-mode: forwards;    
 }
 
 .gradient {
@@ -15,4 +22,16 @@
   right: 0;
   opacity: 0.67;
   background-image: linear-gradient(to right top, #000000, rgba(0,0,0, 0) 56%);
+}
+
+
+@keyframes fadeInRaise {
+  0% {
+    opacity: 0;
+    transform: translateY(75px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(25px);
+  }
 }

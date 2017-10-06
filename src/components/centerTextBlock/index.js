@@ -2,7 +2,6 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './style.module.css';
 import Button from '../button';
-import SentenceAnimator from '../sentenceAnimator';
 import ScrollAnimate from '../scrollAnimate';
 
 class CenterTextBlock extends React.Component {

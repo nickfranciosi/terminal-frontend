@@ -13,6 +13,7 @@ import InvestorGrid from '../components/investorGrid';
 import Footer from '../components/footer';
 import Header from '../components/header';
 import HeaderTextBlock from '../components/headerTextBlock';
+import SecondaryTextBlock from '../components/secondaryTextBlock';
 import { investors } from '../data';
 import styles from './css/about.module.css';
 
@@ -21,15 +22,16 @@ class AboutPage extends React.Component{
     super(props);
 
     this.state = {
-      animate: false,
+      animateTop: false,
+      animateBottom: false,
     }
 
     this.triggerAnimate = this.triggerAnimate.bind(this);
   }
 
-  triggerAnimate() {
+  triggerAnimate(level) {
     this.setState({
-      animate: true,
+      [`animate${level}`]: true,
     });
   }
 
@@ -51,32 +53,36 @@ class AboutPage extends React.Component{
           </Container>
         </div>
         <div id="overview" className={styles.aboutFull}>
-          <Viewport>
-            <FullBackgroundImage imgSrc={aboutFull} >
-              <Container className={styles.aboutFullFlex}>
-                <HeaderTextBlock
-                  theme="white"
-                  headlineSize="h2"
-                  description="how we work"
-                  headline="We bring together companies and engineers."
-                  body="Terminal accelerates innovation by rethinking how the best companies and the most talented people partner in building the future."
-                  callout={{
-                    text: "Read the manifesto",
-                    link: "/manifesto"
-                  }}
-                />
-              </Container>
-            </FullBackgroundImage>
-          </Viewport>
+          <ScrollListener offset={350} onEnter={() => this.triggerAnimate("Top")}>
+            <Viewport>
+              <FullBackgroundImage imgSrc={aboutFull} animateIn>
+                
+                  <Container className={styles.aboutFullFlex}>
+                    <SecondaryTextBlock
+                      theme="white"
+                      headlineSize="h2"
+                      description="how we work"
+                      headline="We bring together companies and engineers."
+                      body="Terminal accelerates innovation by rethinking how the best companies and the most talented people partner in building the future."
+                      animate={this.state.animateTop}
+                      callout={{
+                        text: "Read the manifesto",
+                        link: "/manifesto"
+                      }}
+                    />
+                  </Container>
+              </FullBackgroundImage>
+            </Viewport>
+          </ScrollListener>
         </div>
         <div id="team">
-          <ScrollListener offset={650} onEnter={this.triggerAnimate}>
+          <ScrollListener offset={650} onEnter={() => this.triggerAnimate("Bottom")}>
             <Container>
                 <CenterTextBlock
                   description="CLIENTS BACKED BY TOP VC FIRMS"
                   headline="Trusted by the world&rsquo;s best investors"
                   className={cn(styles.headerNoButton, styles.investorHeadline)}
-                  animate={this.state.animate}
+                  animate={this.state.animateBottom}
                 />
               <InvestorGrid investors={investors} />
             </Container>
