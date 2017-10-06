@@ -4,6 +4,10 @@
   clear: both;
 }
 
+.locationGrid {
+  overflow: hidden;
+}
+
 .animate{
   opacity: 0;
   animation: fadeInRaise 1s 400ms cubic-bezier(.05,0,.4,1);

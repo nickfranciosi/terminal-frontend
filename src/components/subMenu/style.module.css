@@ -38,11 +38,20 @@
   opacity: 0.6;
   display: block;
   cursor: pointer;
+  transition: color 300ms ease;
+}
+
+.container .menu a:hover{
+  color: black;
+}
+.dark .container .menu a:hover{
+  color: white;
 }
 
 .active .outerBlock {
   background-color: white;
 }
+
 
 .dark.active .outerBlock {
   background-color: #232121;

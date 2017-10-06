@@ -20,6 +20,11 @@
   text-align: right;
 }
 
+
+.menu a:hover {
+  opacity: 1;
+}
+
 .darkMenu .mainLink, .darkMenu .subLink{
   color: #7B7B7B;
 }
@@ -36,11 +41,13 @@
   text-transform: none;
   font-size: 24px;
   letter-spacing: -0.34px;
+  transition: opacity 350ms ease;
 }
 
 .subLink{
   color: white;
   opacity: .6;
+  transition: opacity 350ms ease;
 }
 
 .topSub{

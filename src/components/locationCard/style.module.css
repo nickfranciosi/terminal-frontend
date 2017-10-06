@@ -11,8 +11,13 @@
   max-height: 544px;
   text-align: center;
   color: white;
+  transform: scale(1, 1, 1);
+  transition: transform 1s ease;
 }
 
+.card:hover{
+  transform: scale(1.05, 1.05, 1.05);
+}
 .card span {
   color: white;
   letter-spacing: 1.21px;

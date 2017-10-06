@@ -19,10 +19,10 @@ const Footer = ({ darkTheme }) => {
           <div className={styles.body}>
             <Link to="/"><img className={styles.logo} src={logo} /></Link>
             <ul className={styles.menu}>
-              <li><a href="http://twitter.com/jointerminal">Twitter</a></li>
-              <li><a href="http://medium.com/@terminal">Medium</a></li>
-              <li><a href="https://www.linkedin.com/company/17986001/">Linkedin</a></li>
-              <li><a href="http://instagram.com/jointerminal">Instagram</a></li>
+              <li><a target="_blank" href="http://twitter.com/jointerminal">Twitter</a></li>
+              <li><a target="_blank" href="http://medium.com/@terminal">Medium</a></li>
+              <li><a target="_blank" href="https://www.linkedin.com/company/17986001/">Linkedin</a></li>
+              <li><a target="_blank" href="http://instagram.com/jointerminal">Instagram</a></li>
             </ul>
           </div>
           <div className={styles.locationList}>
@@ -46,7 +46,7 @@ const Footer = ({ darkTheme }) => {
         <div className={styles.copyright}>
           <p>&copy;Terminal 2017</p>
           <ul className={styles.menu}>
-            <li><a href="https://jobs.lever.co/terminal?team=Terminal">Careers at Terminal</a></li>
+            <li><a target="_blank" href="https://jobs.lever.co/terminal?team=Terminal">Careers at Terminal</a></li>
             <li>
               <a 
                 onClick={(e) => {
