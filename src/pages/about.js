@@ -63,12 +63,12 @@ class AboutPage extends React.Component{
                       theme="white"
                       headlineSize="h2"
                       description="how we work"
-                      headline="We bring together companies and engineers."
+                      headline="We’re solving the talent shortage problem"
                       body="Terminal accelerates innovation by rethinking how the best companies and the most talented people partner in building the future."
                       animate={this.state.animateTop}
                       callout={{
                         text: "Read the manifesto",
-                        link: "/manifesto"
+                        link: "https://medium.com/@terminal/announcing-terminal-c2a271cf7249",
                       }}
                     />
                   </Container>
@@ -80,7 +80,7 @@ class AboutPage extends React.Component{
           <ScrollListener offset={650} onEnter={() => this.triggerAnimate("Bottom")}>
             <Container>
                 <CenterTextBlock
-                  description="CLIENTS BACKED BY TOP VC FIRMS"
+                  description="VENTURE CAPITAL"
                   headline="Trusted by the world&rsquo;s best investors"
                   className={cn(styles.headerNoButton, styles.investorHeadline)}
                   animate={this.state.animateBottom}

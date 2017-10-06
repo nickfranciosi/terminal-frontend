@@ -86,9 +86,9 @@ class JoinPage extends React.Component{
           <Viewport className={styles.masthead}>
             <Container>
               <HeaderTextBlock
-                description="Start a new career"
+                description="START A NEW JOURNEY"
                 headline="Join the team"
-                body="Terminal builds elite engineering teams to solve the toughest challenges of tomorrow."
+                body="Don&rsquo;t just work, build the future. Join a high-growth startup team and tackle new challenges everyday."
                 className={styles.headerBlock}
                 hideCallout
                 callout={{
@@ -115,9 +115,9 @@ class JoinPage extends React.Component{
             <ScrollListener offset={650} onEnter={this.triggerTop}>
               <div id="benefits">
                 <CenterTextBlock
-                  description="Cursus Etiam Vehicula"
+                  description="OUR OFFICES SPAN THE GLOBE"
                   headline="Hard problems. Amazing benefits."
-                  body="Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod."
+                  body="Worry about nailing that next release and let us make everything else easy."
                   className={styles.locationCenterBlock}
                   animate={this.state.topAnimation}
                 />
@@ -137,7 +137,7 @@ class JoinPage extends React.Component{
               marginBottom: 118,
             }}
             className={styles.quoteWidth}
-            description="What our employees are saying"
+            description="WHAT OUR ENGINEERS ARE SAYING"
             quote="People come together here to build some amazing technology.&rdquo;"
           />
           <ScrollListener offset={650} onEnter={this.triggerBottom}>
@@ -146,7 +146,7 @@ class JoinPage extends React.Component{
               <CenterTextBlock
                 description="Open roles"
                 headline="Apply for an open position"
-                body="Or send us a note to learn more."
+                body="Use the filters below to find the perfect role."
                 className={styles.applyBlock}
                 animate={this.state.bottomAnimation}
               />

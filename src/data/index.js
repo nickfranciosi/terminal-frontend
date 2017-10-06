@@ -11,33 +11,33 @@ export default {
   ],
   amenities: [
     {
-      headline: "Catered meals",
-      description: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
+      headline: "Catered food + drinks",
+      description: "Delicious meals, snacks galore, endless options of tasty drinks and plenty of caffeine",
       image: require('../assets/images/icons/join-the-team/grill.svg'),
     },
     {
       headline: "Flexible schedule",
-      description: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
+      description: "Sometimes you just need a break and sometimes life happens - we make both easy for you",
       image: require('../assets/images/icons/join-the-team/hourglass.svg'),
     },
     {
-      headline: "Retirement savings",
-      description: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
+      headline: "Equity upside and RRSP",
+      description: "Share in the upside you help create while you save for the future",
       image: require('../assets/images/icons/join-the-team/Leaf.svg'),
     },
     {
       headline: "World-class talent",
-      description: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
+      description: "Work alongside and learn from the best engineers from across our client teams",
       image: require('../assets/images/icons/join-the-team/medal.svg'),
     },
     {
-      headline: "Onsite massages",
-      description: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
+      headline: "Extended health care benefits",
+      description: "Thrive from the best in dental, vision, and extended medical support",
       image: require('../assets/images/icons/join-the-team/bed.svg'),
     },
     {
       headline: "Career enhancement",
-      description: "Nullam quis risus eget urna mollis ornare vel eu leo set  um tresario.",
+      description: "Further your skills through our programs that connect you with industry experts",
       image: require('../assets/images/icons/join-the-team/protractor.svg'),
     },
   ],

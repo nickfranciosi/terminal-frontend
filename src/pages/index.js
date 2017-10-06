@@ -119,7 +119,7 @@ class IndexPage extends React.Component{
             <ScrollListener offset={650} onEnter={this.triggerTop}>
               <div >
                 <CenterTextBlock
-                  description="Our offices span the globe"
+                  description="OUR CAMPUSES SPAN THE GLOBE"
                   headline="Tap into global talent"
                   body="All the benefits of adding a new location with none of the hassle. We help you scale your team."
                   className={styles.locationCenterBlock}
@@ -137,18 +137,18 @@ class IndexPage extends React.Component{
                   <ScrollListener offset={500} onEnter={this.triggerMiddle}>
                     <CenterTextBlock
                       description="Meet your new team"
-                      headline="We&rsquo;ll assemble the perfect team for your needs"
-                      body="Whether your challenges are related to infrastructure or building a new product from the ground up, our talented technologists are well equipped to deliver."
+                      headline="We&rsquo;ll help you add the right people to grow your team."
+                      body="Whether you are scaling your Front-End, DevOps, or Data Science teams, our talented technologists are ready to join and make an impact."
                       className={styles.gridTextBlock}
                       animate={this.state.middleAnimation}
                     />
                   </ScrollListener>
-                  <GridImage src={leftColImage} attribution="We&rsquo;ve got the product development process down to a science."/>
+                  <GridImage src={leftColImage} attribution="Our engineers have the experience to hit the ground running."/>
                 </div>
 
               </div>
               <div className={styles.rightColumn}>
-                  <GridImage src={rightColTopImage} attribution="The team uses the tools of your organization to stay connected." className={styles.gridRightTop} />
+                  <GridImage src={rightColTopImage} attribution="Your team will use the tools of your organization to stay connected." className={styles.gridRightTop} />
                   <GridImage src={rightColBottomImage} attribution="We work with a variety of technologies including VR, AR, and more."/>
               </div>
             </div>
