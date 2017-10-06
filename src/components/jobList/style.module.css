@@ -4,9 +4,9 @@
   margin-right: auto;
 }
 .listContainer > div {
-  border-bottom: 1px solid #979797;
+  border-bottom: 1px solid #454444;
 }
 
 .listContainer > div:first-of-type {
-  border-top: 1px solid #979797;
+  border-top: 1px solid #454444;
 }

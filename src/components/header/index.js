@@ -9,8 +9,8 @@ import TextAnimate from '../textAnimate';
 import Container from '../container';
 
 const Header = ({ darkTheme, darkMenu }) => (
-  <Container className={styles.outerContainer}>
-      <div className={styles.container}>
+  <Container className={styles.outerContainersss}>
+      <div className={styles.containersss}>
         <Link 
           to="/"
           className={styles.link}

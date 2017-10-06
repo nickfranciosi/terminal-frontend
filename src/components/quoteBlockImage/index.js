@@ -12,7 +12,7 @@ const QuoteBlockImage = ({imgSrc, description, quote, author, className, style})
     ...style,
   }} id="testimonials">
     <FullBackgroundImage imgSrc={imgSrc} className={styles.quoteBlockContainer}>
-        <Container>
+        <Container className={styles.container}>
           <CenterTextBlock
             description={description}
             headline={quote}

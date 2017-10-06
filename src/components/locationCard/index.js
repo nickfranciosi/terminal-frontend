@@ -1,10 +1,11 @@
 import React from 'react';
+import cn from 'classnames';
 import styles from './style.module.css';
 
-const LocationCard = ({imgSrc, parentPlace, city, comingSoon, style }) => {
+const LocationCard = ({imgSrc, parentPlace, city, comingSoon, className, style }) => {
   return (
     <div 
-      className={styles.card}
+      className={cn(styles.card, className)}
       style={{
         backgroundImage: `url(${imgSrc})`,
         ...style,

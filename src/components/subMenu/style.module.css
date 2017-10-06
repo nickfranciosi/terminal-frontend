@@ -2,6 +2,7 @@
   position: absolute;
   width: 100%;
   bottom: 0;
+  display: none;
 }
 
 .outerBlock {
@@ -50,4 +51,10 @@
 
 .third {
   transition: transform 800ms 1250ms ease, opacity 800ms 1250ms ease;
+}
+
+@media screen and (min-width: 765px) {
+  .stickyContainer {
+    display: block;
+  }
 }

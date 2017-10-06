@@ -88,6 +88,7 @@ class TabNavigation extends React.Component {
           to={tab.link}
           offset={-90}
           onSetActive={() => this.updatePointer(index)}
+          isDynamic
           spy
         >
           {tab.name}

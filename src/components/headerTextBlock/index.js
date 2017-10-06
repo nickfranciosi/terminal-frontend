@@ -12,6 +12,7 @@ const HeaderTextBlock = ({
   headline,
   headlineSize,
   className,
+  hideCallout,
   body,
   largeBody,
   callout,
@@ -26,6 +27,7 @@ const HeaderTextBlock = ({
     [styles.container]: true,
     [styles.whiteTheme]: theme === "white",
     [styles.largeBody]: largeBody,
+    [styles.hideCallout]: hideCallout,
     [className]: true,
   });
 

@@ -1,13 +1,17 @@
 .quoteBlockContainer {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+}
+
+.container{
+  margin-bottom: 50px;
 }
 
 .quoteTextBlock {
   margin-bottom: 48px;
   text-align: left;
   align-items: flex-start;
-  width: 50%;
+  width: 100%;
 }
 
 .quoteTextBlock h2{
@@ -20,4 +24,25 @@
   position: absolute;
   left: -25px;
   right: 0;
+}
+
+@media only screen and (min-width: 640px) {
+  .quoteTextBlock {
+    width: 70%;
+  }
+
+  .quoteBlockContainer {
+    align-items: center;
+  }
+
+  .container{
+    margin-bottom: 0;
+  }
+}
+
+
+@media only screen and (min-width: 840px) {
+  .quoteTextBlock {
+    width: 50%;
+  }
 }

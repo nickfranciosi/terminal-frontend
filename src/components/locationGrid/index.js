@@ -1,22 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import cn from "classnames";
-import LocationCard from "../locationCard";
+import cn from 'classnames';
+import LocationCard from '../locationCard';
+import styles from './style.module.css';
 
 const LocationGrid = ({ locations = [], className, style }) => (
   <div
-    className={cn("LocationGrid", className)}
-    style={{
-      display: "flex",
-      ...style,
-    }}
+    className={cn("clearfix", styles.locationGrid, className)}
+    style={style}
   >
   {locations.map(location => (
     <LocationCard 
       {...location}
-      style={{
-        flex: 1,
-      }}
+      className={styles.locationGridCard}
     />
   ))}
   </div>

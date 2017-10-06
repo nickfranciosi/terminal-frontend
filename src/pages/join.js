@@ -91,6 +91,11 @@ class JoinPage extends React.Component{
                 headline="Join the team"
                 body="Terminal builds elite engineering teams to solve the toughest challenges of tomorrow."
                 className={styles.headerBlock}
+                hideCallout
+                callout={{
+                  text: "Find a position",
+                  link: "/",
+                }}
               />
               <AngledImage src={aboutFull} className={styles.darkAngle}/>
             </Container>
@@ -123,9 +128,9 @@ class JoinPage extends React.Component{
           <ImageBar images={imageBar} style={{
             marginBottom: 118,
           }}/>
-          <div className={styles.bioContainer}>
+          <Container className={styles.bioContainer}>
             <IconGrid data={amenities} />
-          </div>
+          </Container>
           <QuoteBlockImage 
             imgSrc={employeeBg}
             style={{

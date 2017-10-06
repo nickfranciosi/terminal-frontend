@@ -1,13 +1,28 @@
 .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
+  overflow: hidden;
 }
 
 .container img{
-  max-width: 288px;
-  max-height: 288px;
-  width: 20vw;
-  height: 20vw;
+  /* max-width: 288px;
+  max-height: 288px; */
+  width: 33.33vw;
+  height: 33.33vw;
   flex: 1;
+}
+
+@media screen and (min-width: 600px) {
+  .container img{
+    width: 25vw;
+    height: 25vw;   
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .container img{
+    width: 20vw;
+    height: 20vw;    
+  }
 }

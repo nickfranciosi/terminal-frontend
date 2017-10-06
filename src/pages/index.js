@@ -16,7 +16,7 @@ import HeaderTextBlock from '../components/headerTextBlock';
 import CenterTextBlock from '../components/centerTextBlock';
 import SingleHeading from '../components/singleHeading';
 import QuoteBlockImage from '../components/quoteBlockImage';
-import LocationGrid from '../components/LocationGrid';
+import LocationGrid from '../components/locationGrid';
 import GridImage from '../components/gridImage';
 import SubMenu from '../components/subMenu';
 import mastheadImage from '../assets/images/mast-cropped.jpg';
@@ -94,6 +94,11 @@ class IndexPage extends React.Component{
                 headline="Bold ideas require brilliant minds"
                 body="Terminal builds elite engineering teams to solve the toughest challenges of tomorrow."
                 className={styles.headerBlock}
+                hideCallout
+                callout={{
+                  link: '/',
+                  text: "Request an appointment",
+                }}
               />
               <AngledImage src={mastheadImage} />
             </Container>
@@ -125,9 +130,7 @@ class IndexPage extends React.Component{
           </Container>
           </div>
           <LocationGrid locations={locations} className={styles.locationGridSection}/>
-          <Container style={{
-            marginBottom: "144px",
-          }}>
+          <Container className={styles.gridImageSection}>
             <div className="clearfix" id="services">
               <div className={styles.leftColumn}>
                 <div>
@@ -145,10 +148,7 @@ class IndexPage extends React.Component{
 
               </div>
               <div className={styles.rightColumn}>
-                  <GridImage src={rightColTopImage} attribution="The team uses the tools of your organization to stay connected." style={{
-                    marginTop: "140px",
-                    marginBottom: "120px",
-                  }}/>
+                  <GridImage src={rightColTopImage} attribution="The team uses the tools of your organization to stay connected." className={styles.gridRightTop} />
                   <GridImage src={rightColBottomImage} attribution="We work with a variety of technologies including VR, AR, and more."/>
               </div>
             </div>

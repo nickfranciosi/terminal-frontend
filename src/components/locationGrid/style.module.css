@@ -1,0 +1,16 @@
+.locationGrid::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.locationGridCard {
+  width: 50%;
+  float: left;
+}
+
+@media screen and (min-width: 900px) {
+  .locationGridCard {
+    width: 25%;
+  }
+}
