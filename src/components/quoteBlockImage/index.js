@@ -1,4 +1,5 @@
 import React from 'react';
+import cn from 'classnames';
 import FullBackgroundImage from '../fullBackgroundImage';
 import Container from '../container';
 import CenterTextBlock from '../centerTextBlock';
@@ -11,7 +12,7 @@ const QuoteBlockImage = ({imgSrc, description, quote, author, className, style})
     height: "80vh",
     ...style,
   }} id="testimonials">
-    <FullBackgroundImage imgSrc={imgSrc} className={styles.quoteBlockContainer}>
+    <FullBackgroundImage imgSrc={imgSrc} className={cn(styles.quoteBlockContainer, className)}>
         <Container className={styles.container}>
           <CenterTextBlock
             description={description}

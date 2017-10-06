@@ -82,6 +82,11 @@
 .gridImageSection{
   margin-bottom: 72px;
 }
+
+.quoteWidth h2{
+  max-width: 100%;
+}
+
 @media only screen and (min-width: 420px) {
 
   .headerBlock {
@@ -119,6 +124,8 @@
     max-width: 100%;
     margin-bottom: 76px;
   }
+
+  
 }
 
 
@@ -172,6 +179,10 @@
   
   .gridImageSection{
     margin-bottom: 144px;
+  }
+
+  .quoteWidth h2{
+    max-width: 400px;
   }
 
 }

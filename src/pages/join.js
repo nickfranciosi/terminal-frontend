@@ -136,6 +136,7 @@ class JoinPage extends React.Component{
               height: "90vh",
               marginBottom: 118,
             }}
+            className={styles.quoteWidth}
             description="What our employees are saying"
             quote="People come together here to build some amazing technology.&rdquo;"
           />

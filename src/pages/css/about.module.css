@@ -11,6 +11,10 @@
   align-items: center;
 }
 
+.header p{
+  max-width: 420px;
+}
+
 .investorHeadline h2 {
   max-width: 290px;
 }

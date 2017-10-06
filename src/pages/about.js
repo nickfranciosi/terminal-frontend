@@ -49,6 +49,7 @@ class AboutPage extends React.Component{
               description="Learn more"
               headline="Get to know us"
               body="A look into the mission and team behind Terminal."
+              className={styles.header}
             />
           </Container>
         </div>

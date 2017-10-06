@@ -24,6 +24,7 @@ export default () => (
           description="Our offices span the globe"
           headline="Our locations"
           body="All the benefits of adding a new location with none of the hassle. We help you scale your team."
+          className={styles.header}
         />
       </Container>
       <LocationGrid animateIn locations={locations} className={styles.locationGridSection}/>

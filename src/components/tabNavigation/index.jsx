@@ -68,7 +68,7 @@ class TabNavigation extends React.Component {
         pointer: {
           bottom: "-150%",
           left: `${label.left - startPoint}px`,
-          width: `${label.width - 25}px`,
+          width: `${label.width}px`,
         },
       });
     }, 20);

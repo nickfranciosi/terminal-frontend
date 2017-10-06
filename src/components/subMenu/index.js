@@ -44,11 +44,11 @@ class SubMenu extends React.Component {
       >
         <div className={styles.outerBlock}>
           
-          <img 
+          {/* <img 
             src={logo}
             className={styles.logo}
             onClick={animateScroll.scrollToTop}
-          />
+          /> */}
           <Container className={styles.container}>
             <div className={styles.menu}>
               <TabNavigation 
