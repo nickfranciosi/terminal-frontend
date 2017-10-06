@@ -9,28 +9,26 @@ import TextAnimate from '../textAnimate';
 import Container from '../container';
 
 const Header = ({ darkTheme, darkMenu }) => (
-  <Container className={styles.outerContainersss}>
-      <div className={styles.containersss}>
-        <Link 
-          to="/"
-          className={styles.link}
-        >
-          <TextAnimate
-            triggerOnMount
-            startDelay={0}
-            timingClass={styles.first}
-          >
-            <img className={styles.image} src={darkTheme ? logoWhite : logoMain} />
-          </TextAnimate>
-        </Link>
-        <div className={cn(styles.menu, darkMenu && styles.darkMenu)}>
-          <Link  className={styles.mainLink} exact activeClassName={styles.active}to="/">Partner</Link>
-          <Link className={styles.mainLink} activeClassName={styles.active} to="/join">Join</Link>
-          <Link className={styles.subLink} activeClassName={styles.active} to="/about">About</Link>
-          <Link className={styles.subLink} activeClassName={styles.active} to="/locations">Locations</Link>
-        </div>
-      </div>
-  </Container>
+  <div>
+    <Link 
+      to="/"
+      className={styles.link}
+    >
+      <TextAnimate
+        triggerOnMount
+        startDelay={0}
+        timingClass={styles.first}
+      >
+        <img className={styles.image} src={darkTheme ? logoWhite : logoMain} />
+      </TextAnimate>
+    </Link>
+    <div className={cn(styles.menu, darkMenu && styles.darkMenu)}>
+      <Link  className={styles.mainLink} exact activeClassName={styles.active}to="/">Partner</Link>
+      <Link className={styles.mainLink} activeClassName={styles.active} to="/join">Join</Link>
+      <Link className={styles.subLink} activeClassName={styles.active} to="/about">About</Link>
+      <Link className={styles.subLink} activeClassName={styles.active} to="/locations">Locations</Link>
+    </div>
+  </div>
 );
 
 export default Header;
