@@ -4,7 +4,7 @@ import Container from '../components/container';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import HeaderTextBlock from '../components/headerTextBlock';
-import LocationGrid from '../components/LocationGrid';
+import LocationGrid from '../components/locationGrid';
 
 
 
