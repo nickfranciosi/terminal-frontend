@@ -87,7 +87,7 @@ class IndexPage extends React.Component{
                 }}
                 secondaryCallout={{
                   text: "Open roles",
-                  link: "/",
+                  link: "https://jobs.lever.co/terminal",
                 }}
                 className={styles.headerBlock}
               />
