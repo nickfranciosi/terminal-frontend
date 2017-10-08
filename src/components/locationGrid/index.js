@@ -11,6 +11,7 @@ const LocationGrid = ({ locations = [], animateIn, className, style }) => (
   >
   {locations.map(location => (
     <LocationCard 
+      key={location.city}
       {...location}
       className={styles.locationGridCard}
     />

@@ -6,30 +6,74 @@ import styles from './style.module.css';
 import logoMain from '../../assets/images/Terminal-logo.svg';
 import logoWhite from '../../assets/images/logoWhite.svg';
 import TextAnimate from '../textAnimate';
+import ScrollLock from '../scrollLock';
+import Button from '../button';
+import MobileMenuToggle from '../mobileMenuToggle';
 import Container from '../container';
 
-const Header = ({ darkTheme, darkMenu }) => (
-  <div>
-    <Link 
-      to="/"
-      className={styles.link}
-    >
-      <TextAnimate
-        triggerOnMount
-        startDelay={0}
-        timingClass={styles.first}
-      >
-        <img className={styles.image} src={darkTheme ? logoWhite : logoMain} />
-      </TextAnimate>
-    </Link>
-    <div className={cn(styles.menu, darkMenu && styles.darkMenu)}>
-      <Link  className={styles.mainLink} exact activeClassName={styles.active}to="/">Partner</Link>
-      <Link className={styles.mainLink} activeClassName={styles.active} to="/join">Join</Link>
-      <Link className={cn(styles.subLink, styles.topSub)} activeClassName={styles.active} to="/locations">Locations</Link>
-      <Link className={styles.subLink} activeClassName={styles.active} to="/about">About</Link>
-    </div>
-  </div>
-);
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      mobileMenuOpen: false,
+    }
+
+    this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
+  }
+
+  toggleMobileMenu() {
+    this.setState({
+      mobileMenuOpen: !this.state.mobileMenuOpen,
+    })
+  }
+
+  render() {
+    const { darkTheme, darkMenu } = this.props;
+    return (
+      <div>
+        <Link 
+          to="/"
+          className={styles.logoLink}
+        >
+          <TextAnimate
+            triggerOnMount
+            startDelay={0}
+            timingClass={styles.first}
+          >
+            <img className={styles.image} src={darkTheme ? logoWhite : logoMain} />
+          </TextAnimate>
+        </Link>
+        <div className={cn(styles.menu, darkMenu && styles.darkMenu)}>
+          <Link  className={styles.mainLink} exact activeClassName={styles.active}to="/">Partner</Link>
+          <Link className={styles.mainLink} activeClassName={styles.active} to="/join">Join</Link>
+          <Link className={cn(styles.subLink, styles.topSub)} activeClassName={styles.active} to="/locations">Locations</Link>
+          <Link className={styles.subLink} activeClassName={styles.active} to="/about">About</Link>
+        </div>
+        <div className={styles.mobileMenuToggleWrapper}>
+          <MobileMenuToggle onClick={this.toggleMobileMenu} isOpen={this.state.mobileMenuOpen} />
+        </div>
+        {this.state.mobileMenuOpen &&
+          <div className={styles.mobileMenu}>
+            <div>
+              <Link  className={styles.mainLink} exact activeClassName={styles.active}to="/">Partner</Link>
+              <Link className={styles.mainLink} activeClassName={styles.active} to="/join">Join</Link>
+              <Link className={cn(styles.subLink, styles.topSub)} activeClassName={styles.active} to="/locations">Locations</Link>
+              <Link className={styles.subLink} activeClassName={styles.active} to="/about">About</Link>
+              <Button
+                to="/"
+                className={styles.mobileCallout}
+              >
+                Request an appointment
+              </Button>
+            </div>
+            <ScrollLock />
+          </div>
+        }
+      </div>
+    );
+  }
+}
 
 export default Header;
 

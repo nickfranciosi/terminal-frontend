@@ -1,0 +1,30 @@
+.container {
+  width: 24px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.container span{
+  height: 2px;
+  width: 100%;
+  background: #414141;
+  opacity: 1;
+  transform: rotate(0deg);
+  transform-origin: center center;
+  transition: transform 300ms ease;
+}
+
+.container span + span {
+  transform: translate3d(0, 8px, 0);
+}
+
+.ex.container span{
+  transform: rotate(135deg);
+}
+
+.ex.container span + span{
+  transform: rotate(-135deg) translate3d(1px, 1px, 0);
+}
