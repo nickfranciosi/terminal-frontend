@@ -8,6 +8,7 @@ const Button = ({ children, to, style }) => (
     className={styles.base}
     href={to}
     style={style}
+    target="_blank"
   >
     <div className={styles.text}>
       {children}

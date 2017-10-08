@@ -81,6 +81,7 @@ const HeaderTextBlock = ({
                 <a
                   href={secondaryCallout.link}
                   className={styles.secondaryCallout}
+                  target="_blank"
                 >
                   {secondaryCallout.text}
                 </a>
