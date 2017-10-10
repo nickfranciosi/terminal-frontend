@@ -143,28 +143,40 @@ class IndexPage extends React.Component{
                       animate={this.state.middleAnimation}
                     />
                   </ScrollListener>
-                  <GridImage src={leftColImage} attribution="Our engineers have the experience to hit the ground running."/>
+                  <GridImage 
+                    src={leftColImage} 
+                    animate={this.state.middleAnimation}
+                    attribution="Our engineers have the experience to hit the ground running."/>
                 </div>
 
               </div>
               <div className={styles.rightColumn}>
-                  <GridImage src={rightColTopImage} attribution="Your team will use the tools of your organization to stay connected." className={styles.gridRightTop} />
-                  <GridImage src={rightColBottomImage} attribution="We work with a variety of technologies including VR, AR, and more."/>
+                  <GridImage src={rightColTopImage}
+                  animate={this.state.middleAnimation}
+                  attribution="Your team will use the tools of your organization to stay connected." className={styles.gridRightTop} />
+                  <GridImage
+                  animate={this.state.middleAnimation}
+                  src={rightColBottomImage} 
+                  attribution="We work with a variety of technologies including VR, AR, and more."/>
               </div>
             </div>
           </Container>
-          <QuoteBlockImage 
-            style={{
-              marginBottom: "-60px",
-            }}
-            imgSrc={homeQuote}
-            quote="We were able to scale our team and scope of work without breaking a sweat.&rdquo;"
-            author={{
-              avatar: abeAvatar,
-              name: "Jack Abraham",
-              description: "CEO @Zenreach |  240 employees",
-            }}
-          />
+          <ScrollListener offset={600} onEnter={this.triggerBottom}>
+            <QuoteBlockImage 
+              style={{
+                marginBottom: "-60px",
+              }}
+              className={styles.quoteImageHome}
+              imgSrc={homeQuote}
+              quote="We were able to scale our team and scope of work without breaking a sweat.&rdquo;"
+              animate={this.state.bottomAnimation}
+              author={{
+                avatar: abeAvatar,
+                name: "Jack Abraham",
+                description: "CEO @Zenreach |  240 employees",
+              }}
+            />
+          </ScrollListener>
           <Footer />
         </div>
       }

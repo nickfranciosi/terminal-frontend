@@ -21,7 +21,7 @@ import GridImage from '../components/gridImage';
 import SubMenu from '../components/subMenu';
 import QuoteBlockImage from '../components/quoteBlockImage';
 // import Carousel from '../components/carousel';
-import mastheadImage from '../assets/images/mast-cropped.jpg';
+import mastheadImage from '../assets/images/red-room-tall.jpg';
 import employeeBg from '../assets/images/employeeBg.jpg';
 import leftColImage from '../assets/images/partner/leftColImage.jpg';
 import rightColTopImage from '../assets/images/partner/rightColTopImage.jpg';
@@ -96,7 +96,7 @@ class JoinPage extends React.Component{
                   link: "/",
                 }}
               />
-              <AngledImage src={aboutFull} className={styles.darkAngle}/>
+              <AngledImage src={mastheadImage} className={styles.darkAngle}/>
             </Container>
             <SubMenu
               darkTheme
@@ -130,17 +130,20 @@ class JoinPage extends React.Component{
           <Container className={styles.bioContainer}>
             <IconGrid data={amenities} />
           </Container>
-          <QuoteBlockImage 
-            imgSrc={employeeBg}
-            style={{
-              height: "90vh",
-              marginBottom: 118,
-            }}
-            className={styles.quoteWidth}
-            description="WHAT OUR ENGINEERS ARE SAYING"
-            quote="People come together here to build some amazing technology.&rdquo;"
-          />
-          <ScrollListener offset={650} onEnter={this.triggerBottom}>
+          <ScrollListener offset={650} onEnter={this.triggerMiddle}>
+            <QuoteBlockImage 
+              imgSrc={employeeBg}
+              style={{
+                height: "90vh",
+                marginBottom: 118,
+              }}
+              animate={this.state.middleAnimation}
+              className={styles.quoteWidth}
+              description="WHAT OUR ENGINEERS ARE SAYING"
+              quote="People come together here to build some amazing technology.&rdquo;"
+            />
+          </ScrollListener>
+          <ScrollListener offset={600} onEnter={this.triggerBottom}>
           <div id="open-positions">
             <Container>
               <CenterTextBlock

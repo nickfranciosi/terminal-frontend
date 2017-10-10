@@ -8,3 +8,13 @@
   color: #7B7B7B;
   letter-spacing: -0.21px;
 }
+
+.container{
+  opacity: 0;
+  transform: translateY(20%);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.container.animate{
+  opacity: 1;
+  transform: translateY(0%);
+}

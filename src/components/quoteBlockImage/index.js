@@ -6,19 +6,19 @@ import CenterTextBlock from '../centerTextBlock';
 import Author from '../author';
 import styles from './style.module.css';
 
-const QuoteBlockImage = ({imgSrc, description, quote, author, className, style}) => (
+const QuoteBlockImage = ({animate, imgSrc, description, quote, author, className, style}) => (
   <div style={{
     position: "relative",
     height: "80vh",
     ...style,
   }} id="testimonials">
-    <FullBackgroundImage imgSrc={imgSrc} className={cn(styles.quoteBlockContainer, className)}>
+    <FullBackgroundImage imgSrc={imgSrc} className={cn(styles.quoteBlockContainer, className)} gradient>
         <Container className={styles.container}>
           <CenterTextBlock
             description={description}
             headline={quote}
             className={styles.quoteTextBlock}
-            animate={true}
+            animate={animate}
           />
           {author &&
           <Author avatar={author.avatar} name={author.name} description={author.description}/>

@@ -17,7 +17,8 @@
   }
 
   .dark .tab a{
-    color: rgba(255, 255, 255, 0.6);
+    color: #7B7B7B;
+    opacity: 1;
   }
 
   .pointer{

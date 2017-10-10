@@ -5,9 +5,8 @@
 }
 
 .container {
-  float: left;
-  height: 0;
-  cursor: pointer;
+  width: 100vw;
+  position: relative;
 }
 
 .menu{
@@ -41,6 +40,10 @@
   justify-content: center;
   background: white;
   z-index: 500;
+}
+
+.dark .mobileMenu{
+  background: #232121;
 }
 
 .mobileMenu > div{
@@ -110,6 +113,10 @@
   background-color: white;
 }
 
+.mobileMenu .mainLink.active::after, .subLink.active::after {
+  display: none;
+}
+
 .mainLink + .mainLink {
   margin-bottom: 23px;
 }
@@ -129,7 +136,9 @@
   transition: transform 500ms 700ms ease, opacity 500ms 700ms ease;
 }
 
-
+.mobileAnimate{
+  transition: transform 500ms 100ms ease, opacity 500ms 100ms ease;
+}
 
 @media only screen and (min-width: 975px) {
   .menu{

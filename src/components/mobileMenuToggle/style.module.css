@@ -17,6 +17,10 @@
   transition: transform 300ms ease;
 }
 
+.dark.container span{
+  background: white;
+}
+
 .container span + span {
   transform: translate3d(0, 8px, 0);
 }

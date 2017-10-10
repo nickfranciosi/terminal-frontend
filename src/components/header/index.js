@@ -31,7 +31,7 @@ class Header extends React.Component {
   render() {
     const { darkTheme, darkMenu } = this.props;
     return (
-      <div>
+      <div className={cn(styles.container, darkTheme && styles.dark)}>
         <Link 
           to="/"
           className={styles.logoLink}
@@ -51,21 +51,56 @@ class Header extends React.Component {
           <Link className={styles.subLink} activeClassName={styles.active} to="/about">About</Link>
         </div>
         <div className={styles.mobileMenuToggleWrapper}>
-          <MobileMenuToggle onClick={this.toggleMobileMenu} isOpen={this.state.mobileMenuOpen} />
+          <MobileMenuToggle 
+            onClick={this.toggleMobileMenu} 
+            isOpen={this.state.mobileMenuOpen} 
+            darkTheme={darkTheme}
+          />
         </div>
         {this.state.mobileMenuOpen &&
           <div className={styles.mobileMenu}>
             <div>
-              <Link  className={styles.mainLink} exact activeClassName={styles.active}to="/">Partner</Link>
-              <Link className={styles.mainLink} activeClassName={styles.active} to="/join">Join</Link>
-              <Link className={cn(styles.subLink, styles.topSub)} activeClassName={styles.active} to="/locations">Locations</Link>
-              <Link className={styles.subLink} activeClassName={styles.active} to="/about">About</Link>
-              <Button
-                to="/"
-                className={styles.mobileCallout}
+              <TextAnimate
+                triggerOnMount
+                startDelay={0}
+                timingClass={styles.mobileAnimate}
               >
-                Request an appointment
-              </Button>
+                <Link  className={styles.mainLink} exact activeClassName={styles.active}to="/">Partner</Link>
+              </TextAnimate>
+              <TextAnimate
+                triggerOnMount
+                startDelay={0}
+                timingClass={styles.mobileAnimate}
+              >
+                <Link className={styles.mainLink} activeClassName={styles.active} to="/join">Join</Link>
+              </TextAnimate>
+              <TextAnimate
+                triggerOnMount
+                startDelay={0}
+                timingClass={styles.mobileAnimate}
+              >
+              <Link className={cn(styles.subLink, styles.topSub)} activeClassName={styles.active} to="/locations">Locations</Link>
+              </TextAnimate>
+              <TextAnimate
+                triggerOnMount
+                startDelay={0}
+                timingClass={styles.mobileAnimate}
+              >
+              <Link className={styles.subLink} activeClassName={styles.active} to="/about">About</Link>
+              </TextAnimate>
+              <div  className={styles.mobileCallout}>
+                <TextAnimate
+                  triggerOnMount
+                  startDelay={0}
+                  timingClass={styles.mobileAnimate}
+                >
+                  <Button
+                    to="/"
+                  >
+                    Request an appointment
+                  </Button>
+                </TextAnimate>
+              </div>
             </div>
             <ScrollLock />
           </div>

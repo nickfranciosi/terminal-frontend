@@ -87,6 +87,10 @@
   max-width: 100%;
 }
 
+.quoteImageHome {
+  background-position: right bottom;
+}
+
 @media only screen and (min-width: 420px) {
 
   .headerBlock {
@@ -125,7 +129,9 @@
     margin-bottom: 76px;
   }
 
-  
+  .quoteImageHome {
+    background-position: center center;
+  }
 }
 
 

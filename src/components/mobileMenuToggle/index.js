@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './style.module.css';
 
-const MobileMenuToggle = ({ onClick, isOpen }) => {
+const MobileMenuToggle = ({ onClick, isOpen, darkTheme }) => {
   const wrapperClass = classNames({
     [styles.container]: true,
+    [styles.dark]: darkTheme,
     [styles.ex]: isOpen,
   });
   return (
