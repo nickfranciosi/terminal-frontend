@@ -21,7 +21,7 @@ import GridImage from '../components/gridImage';
 import SubMenu from '../components/subMenu';
 import QuoteBlockImage from '../components/quoteBlockImage';
 // import Carousel from '../components/carousel';
-import mastheadImage from '../assets/images/red-room-tall.jpg';
+import mastheadImageJoin from '../assets/images/red-room-tall.jpg';
 import employeeBg from '../assets/images/employeeBg.jpg';
 import leftColImage from '../assets/images/partner/leftColImage.jpg';
 import rightColTopImage from '../assets/images/partner/rightColTopImage.jpg';
@@ -96,7 +96,7 @@ class JoinPage extends React.Component{
                   link: "/",
                 }}
               />
-              <AngledImage src={mastheadImage} className={styles.darkAngle}/>
+              <AngledImage src={mastheadImageJoin} className={styles.darkAngle}/>
             </Container>
             <SubMenu
               darkTheme

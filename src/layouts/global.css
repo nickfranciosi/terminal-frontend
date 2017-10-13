@@ -220,6 +220,10 @@ button:focus {outline:0;}
   clear: both;
 }
 
+.Select {
+  text-align: left;
+}
+
 .Select *{
   text-transform: uppercase !important;
   font-size: 13px !important;
@@ -238,4 +242,10 @@ button:focus {outline:0;}
 
 .Select-arrow {
   border-color: #FF4343 transparent transparent;
+}
+
+@media only screen and (min-width: 650px) {
+  .Select {
+    text-align: center;
+  }
 }
