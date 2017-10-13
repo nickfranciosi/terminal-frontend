@@ -41,8 +41,11 @@ class AboutPage extends React.Component{
         <Header darkMenu/>
         <div 
           style={{
-            paddingTop: "20%",
-          }}
+          paddingTop: "20%",
+          minHeight: 400,
+          display: "flex",
+          alignItems: "flex-end",
+        }}
         >
           <Container>
             <HeaderTextBlock
@@ -56,9 +59,14 @@ class AboutPage extends React.Component{
         <div id="overview" className={styles.aboutFull}>
           <ScrollListener offset={350} onEnter={() => this.triggerAnimate("Top")}>
             <Viewport>
-              <FullBackgroundImage imgSrc={aboutFull} animateIn>
+              <FullBackgroundImage 
+                imgSrc={aboutFull} 
+                animateIn 
+                className={styles.aboutFullFlex}
+                gradient
+              >
                 
-                  <Container className={styles.aboutFullFlex}>
+                  <Container >
                     <SecondaryTextBlock
                       theme="white"
                       headlineSize="h2"

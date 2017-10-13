@@ -11,6 +11,7 @@
     "gatsby-plugin-react-helmet": "^1.0.5",
     "gatsby-plugin-typography": "^1.7.9",
     "gatsby-source-wordpress": "^1.7.10",
+    "js-cookie": "^2.1.4",
     "normalize.css": "^7.0.0",
     "prop-types": "^15.5.10",
     "react-parallax": "^1.4.4",

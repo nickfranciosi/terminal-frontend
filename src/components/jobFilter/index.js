@@ -10,20 +10,25 @@ export default class JobFilter extends Component {
 
     this.state = {
       filteredJobs: this.props.jobs,
-      placeValue: null,
-      companyValue: null,
+      placeValue: "all",
+      companyValue: "all",
     };
 
     this.handleFilter = this.handleFilter.bind(this);
     this.resetFilter = this.resetFilter.bind(this);
+    this.getLocationOptions = this.getLocationOptions.bind(this);
+    this.getTeamOptions = this.getTeamOptions.bind(this);
   }
 
   handleFilter(item, key) {
   
+    const otherFilter = key === "place" ? "company" : "place";
+
     if(item) {
       this.setState({
         filteredJobs: this.props.jobs.filter(job => job[key] === item.value),
         [`${key}Value`]: item.value,
+        [`${otherFilter}Value`]: "all",
       })
     } else {
       this.resetFilter(key)
@@ -33,7 +38,7 @@ export default class JobFilter extends Component {
   resetFilter(key) {
     this.setState({
       filteredJobs: this.props.jobs,
-      [`${key}Value`]: null,
+      [`${key}Value`]: "all",
     });
   }
 
@@ -48,28 +53,44 @@ export default class JobFilter extends Component {
     return self.indexOf(value) === index;
   }
 
+  getLocationOptions() {
+    const locations = this.props.jobs
+           .map(job => job.place)
+           .filter(this.onlyUnique)
+           .map(this.renderOption);
+
+    return [{ value: "all", label: "all locations"}, ...locations];
+  }
+
+  getTeamOptions() {
+    const locations = this.props.jobs
+           .map(job => job.company)
+           .filter(this.onlyUnique)
+           .map(this.renderOption);
+
+    return [{ value: "all", label: "all teams"}, ...locations];
+  }
+
   render () {
     return (
       <div>
         <div className={styles.selectContainer}>
         <Select
           name="form-field-location"
-          options={this.props.jobs.map(job => job.place).filter(this.onlyUnique).map(this.renderOption)}
+          options={this.getLocationOptions()}
           value={this.state.placeValue}
-          placeholder="All Locations"
           onChange={(e) => this.handleFilter(e, 'place')}
-          clearable={true}
           searchable={false}
+          clearable={false}
           className={styles.select}
         />
         <Select
           name="form-field-team"
-          options={this.props.jobs.map(job => job.company).filter(this.onlyUnique).map(this.renderOption)}
+          options={this.getTeamOptions()}
           value={this.state.companyValue}
-          placeholder="All Teams"
           onChange={(e) => this.handleFilter(e, 'company')}
-          clearable={true}
           searchable={false}
+          clearable={false}
           className={styles.select}
         />
         </div>

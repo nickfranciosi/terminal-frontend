@@ -1,6 +1,6 @@
 .container {
   text-align: left;
-  margin-bottom: 104px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -20,7 +20,7 @@
 
 .body {
   max-width: 610px;
-  margin: 0 auto;
+  margin: 0;
   margin-bottom: 24px;
   color: #7B7B7B;
   opacity: 1;
@@ -48,5 +48,6 @@
   .body {
     margin-bottom: 35px;
     font-size: 20px;
+    margin: 0 auto;
   }
 }

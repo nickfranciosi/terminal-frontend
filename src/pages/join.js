@@ -124,25 +124,24 @@ class JoinPage extends React.Component{
               </div>
             </ScrollListener>
           </Container>
-          <ImageBar images={imageBar} style={{
-            marginBottom: 118,
-          }}/>
+          <ImageBar images={imageBar} className={styles.imgBar}/>
           <Container className={styles.bioContainer}>
             <IconGrid data={amenities} />
           </Container>
-          <ScrollListener offset={650} onEnter={this.triggerMiddle}>
-            <QuoteBlockImage 
-              imgSrc={employeeBg}
-              style={{
-                height: "90vh",
-                marginBottom: 118,
-              }}
-              animate={this.state.middleAnimation}
-              className={styles.quoteWidth}
-              description="WHAT OUR ENGINEERS ARE SAYING"
-              quote="People come together here to build some amazing technology.&rdquo;"
-            />
-          </ScrollListener>
+          <div  className={styles.quoteContainer}>
+            <ScrollListener offset={650} onEnter={this.triggerMiddle}>
+              <QuoteBlockImage 
+                imgSrc={employeeBg}
+                style={{
+                  height: "90vh",
+                }}
+                animate={this.state.middleAnimation}
+                className={styles.quoteWidth}
+                description="WHAT OUR ENGINEERS ARE SAYING"
+                quote="People come together here to build some amazing technology.&rdquo;"
+              />
+            </ScrollListener>
+          </div>
           <ScrollListener offset={600} onEnter={this.triggerBottom}>
           <div id="open-positions">
             <Container>

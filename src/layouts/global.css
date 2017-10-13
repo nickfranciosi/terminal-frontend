@@ -40,10 +40,12 @@
 @media only screen and (max-width: 750px) {
   h1 {
     font-size: 50px;
+    letter-spacing: -0.6px !important;
   }
 
   h2 {
     font-size: 32px;
+    letter-spacing: -0.6px !important;
   }
 
   p{
@@ -218,8 +220,20 @@ button:focus {outline:0;}
   clear: both;
 }
 
+.Select *{
+  text-transform: uppercase !important;
+  font-size: 13px !important;
+}
+
 .Select-control{
   border-radius: 0 !important;
+  border: 0 !important;
+  height: 50px;
+}
+
+.Select-placeholder, 
+.Select--single > .Select-control .Select-value {
+  line-height: 50px;
 }
 
 .Select-arrow {
