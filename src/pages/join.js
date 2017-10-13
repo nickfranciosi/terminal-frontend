@@ -1,5 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
+import { scroller } from 'react-scroll';
 import Viewport from '../components/viewport';
 import Container from '../components/container';
 import LoadingScreen from '../components/loadingScreen';
@@ -7,8 +8,8 @@ import AngledImage from '../components/angledImage';
 import FullBackgroundImage from '../components/fullBackgroundImage';
 import Header from '../components/header';
 import InvestorGrid from '../components/investorGrid';
-import JobFilter from '../components/jobFilter';
 import ScrollListener from '../components/scrollListener';
+import JobFilter from '../components/jobFilter';
 import Button from '../components/button';
 import Footer from '../components/footer';
 import Author from '../components/author';
@@ -30,7 +31,7 @@ import abeAvatar from '../assets/images/avatars/AbrahamSquare.jpg';
 import aboutFull from '../assets/images/aboutFull.jpg';
 
 import styles from "./css/home.module.css";
-import { investors, amenities, locations, imageBar, jobs } from "../data";
+import { investors, amenities, locations, imageBar } from "../data";
 
 class JoinPage extends React.Component{
 
@@ -77,10 +78,6 @@ class JoinPage extends React.Component{
   render() {
     return(
       <div className="darkTheme">
-        {/* preload the image */}
-        <img src={aboutFull} style={{
-          display: "none",
-        }}/>
         <div className={styles.darkBg}>
           <Header darkTheme/>
           <Viewport className={styles.masthead}>
@@ -93,7 +90,7 @@ class JoinPage extends React.Component{
                 hideCallout
                 callout={{
                   text: "Find a position",
-                  link: "/",
+                  link: "#open-positions",
                 }}
               />
               <AngledImage src={mastheadImageJoin} className={styles.darkAngle}/>
@@ -107,27 +104,35 @@ class JoinPage extends React.Component{
               ]}
               callout={{
                 text: "Find a position",
-                link: "/",
+                action: () => {
+                  scroller.scrollTo('open-positions', {
+                    duration: 1000,
+                    delay: 100,
+                    smooth: true,
+                    offset: -190,
+                  })
+                },
               }}
             />
           </Viewport>
-          <Container>
-            <ScrollListener offset={650} onEnter={this.triggerTop}>
-              <div id="benefits">
-                <CenterTextBlock
-                  description="OUR OFFICES SPAN THE GLOBE"
-                  headline="Hard problems. Amazing benefits."
-                  body="Worry about nailing that next release and let us make everything else easy."
-                  className={styles.locationCenterBlock}
-                  animate={this.state.topAnimation}
-                />
-              </div>
-            </ScrollListener>
-          </Container>
-          <ImageBar images={imageBar} className={styles.imgBar}/>
-          <Container className={styles.bioContainer}>
-            <IconGrid data={amenities} />
-          </Container>
+          <div id="benefits">
+            <Container>
+              <ScrollListener offset={650} onEnter={this.triggerTop}>
+              
+                  <CenterTextBlock
+                    description="OUR OFFICES SPAN THE GLOBE"
+                    headline="Hard problems. Amazing benefits."
+                    body="Worry about nailing that next release and let us make everything else easy."
+                    className={styles.locationCenterBlock}
+                    animate={this.state.topAnimation}
+                  />
+              </ScrollListener>
+            </Container>
+            <ImageBar images={imageBar} className={styles.imgBar}/>
+            <Container className={styles.bioContainer}>
+              <IconGrid data={amenities} />
+            </Container>
+          </div>
           <div  className={styles.quoteContainer}>
             <ScrollListener offset={650} onEnter={this.triggerMiddle}>
               <QuoteBlockImage 
@@ -143,18 +148,18 @@ class JoinPage extends React.Component{
             </ScrollListener>
           </div>
           <ScrollListener offset={600} onEnter={this.triggerBottom}>
-          <div id="open-positions">
-            <Container>
-              <CenterTextBlock
-                description="Open roles"
-                headline="Apply for an open position"
-                body="Use the filters below to find the perfect role."
-                className={styles.applyBlock}
-                animate={this.state.bottomAnimation}
-              />
-              <JobFilter jobs={jobs} />
-            </Container>
-          </div>
+            <div id="open-positions">
+              <Container>
+                <CenterTextBlock
+                  description="Open roles"
+                  headline="Apply for an open position"
+                  body="Use the filters below to find the perfect role."
+                  className={styles.applyBlock}
+                  animate={this.state.bottomAnimation}
+                />
+                <JobFilter />
+              </Container>
+            </div>
           </ScrollListener>
           <Footer darkTheme/>
         </div>

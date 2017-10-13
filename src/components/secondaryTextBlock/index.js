@@ -66,6 +66,7 @@ const SecondaryTextBlock = ({
             >  
               <Button
                 to={callout.link}
+                external
                 style={{
                   marginRight: "20px",
                 }}

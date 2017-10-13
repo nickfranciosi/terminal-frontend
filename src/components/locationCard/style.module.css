@@ -11,7 +11,7 @@
   max-height: 544px;
   text-align: center;
   color: white;
-  transform: scale(1, 1, 1);
+  transform: scale(1.01, 1.01, 1.01);
   transition: transform 1s ease;
 }
 
@@ -37,6 +37,7 @@
 }
 
 .textBlock h2 {
+  font-size: 32px;
   letter-spacing: -0.37px;
   line-height:  .62;
 }

@@ -65,28 +65,28 @@ class Header extends React.Component {
                 startDelay={0}
                 timingClass={styles.mobileAnimate}
               >
-                <Link  className={styles.mainLink} exact activeClassName={styles.active}to="/">Partner</Link>
+                <Link  className={styles.mobileLink} exact activeClassName={styles.active}to="/">Partner</Link>
               </TextAnimate>
               <TextAnimate
                 triggerOnMount
                 startDelay={0}
                 timingClass={styles.mobileAnimate}
               >
-                <Link className={styles.mainLink} activeClassName={styles.active} to="/join">Join</Link>
+                <Link className={styles.mobileLink} activeClassName={styles.active} to="/join">Join</Link>
               </TextAnimate>
               <TextAnimate
                 triggerOnMount
                 startDelay={0}
                 timingClass={styles.mobileAnimate}
               >
-              <Link className={cn(styles.subLink, styles.topSub)} activeClassName={styles.active} to="/locations">Locations</Link>
+              <Link className={styles.mobileLink} activeClassName={styles.active} to="/locations">Locations</Link>
               </TextAnimate>
               <TextAnimate
                 triggerOnMount
                 startDelay={0}
                 timingClass={styles.mobileAnimate}
               >
-              <Link className={styles.subLink} activeClassName={styles.active} to="/about">About</Link>
+              <Link className={styles.mobileLink} activeClassName={styles.active} to="/about">About</Link>
               </TextAnimate>
               <div  className={styles.mobileCallout}>
                 <TextAnimate
@@ -100,6 +100,19 @@ class Header extends React.Component {
                     Request an appointment
                   </Button>
                 </TextAnimate>
+                <TextAnimate 
+                triggerOnMount
+                startDelay={0}
+                timingClass={styles.mobileAnimate}
+              >  
+                <a
+                  href="#"
+                  className={styles.secondaryCallout}
+                  target="_blank"
+                >
+                  Open Roles
+                </a>
+              </TextAnimate>
               </div>
             </div>
             <ScrollLock />

@@ -19,12 +19,22 @@ class SubMenu extends React.Component {
       stuck: false,
     }
     this.handleStickyStateChange = this.handleStickyStateChange.bind(this);
+    this.handleAction = this.handleAction.bind(this);
   }
   
   handleStickyStateChange = (status) => {
     this.setState({
       stuck: status.status === Sticky.STATUS_FIXED,
     })
+  }
+
+  handleAction(e) {
+    console.log("in th andler");
+    if(this.props.callout.action) {
+      console.log("in th action");
+      e.preventDefault();
+      this.props.callout.action();
+    }
   }
 
   render()  {
@@ -64,7 +74,7 @@ class SubMenu extends React.Component {
                 startDelay={0}
                 timingClass={styles.third}
               >
-              <Button to={callout.link}>{callout.text}</Button>
+              <Button to={callout.link} onClick={this.handleAction}>{callout.text}</Button>
               </TextAnimate>
             </div>
           </Container>

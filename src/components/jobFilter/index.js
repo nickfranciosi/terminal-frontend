@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
+import axios from 'axios';
 import 'react-select/dist/react-select.css';
 import JobList from '../jobList';
 import styles from './style.module.css';
@@ -9,7 +10,8 @@ export default class JobFilter extends Component {
     super(props);
 
     this.state = {
-      filteredJobs: this.props.jobs,
+      jobs: [],
+      filteredJobs: [],
       placeValue: "all",
       companyValue: "all",
     };
@@ -18,27 +20,56 @@ export default class JobFilter extends Component {
     this.resetFilter = this.resetFilter.bind(this);
     this.getLocationOptions = this.getLocationOptions.bind(this);
     this.getTeamOptions = this.getTeamOptions.bind(this);
+    this.fetchJobs = this.fetchJobs.bind(this);
   }
+
+  componentDidMount() {
+    this.fetchJobs();
+  }
+
+  fetchJobs() {
+    axios.get('https://api.lever.co/v0/postings/terminal?mode=json')
+    .then(response => {
+      const formattedJobs = response.data.map(this.formatJob);
+      this.setState({
+        jobs: formattedJobs,
+        filteredJobs: formattedJobs,
+      })
+    })
+  }
+
+  formatJob(job){
+    return {
+      title: job.text,
+      place: job.categories.location,
+      company: job.categories.team,
+      link: job.hostedUrl,
+    }
+  }
+  
 
   handleFilter(item, key) {
   
     const otherFilter = key === "place" ? "company" : "place";
 
-    if(item) {
+    if(item.value === "all") {
+      this.resetFilter(key);
+    }else {
       this.setState({
-        filteredJobs: this.props.jobs.filter(job => job[key] === item.value),
+        filteredJobs: this.state.jobs.filter(job => job[key] === item.value),
         [`${key}Value`]: item.value,
         [`${otherFilter}Value`]: "all",
       })
-    } else {
-      this.resetFilter(key)
     }
   }
 
-  resetFilter(key) {
+
+
+  resetFilter() {
     this.setState({
-      filteredJobs: this.props.jobs,
-      [`${key}Value`]: "all",
+      filteredJobs: this.state.jobs,
+      placeValue: "all",
+      companyValue: "all",
     });
   }
 
@@ -54,7 +85,7 @@ export default class JobFilter extends Component {
   }
 
   getLocationOptions() {
-    const locations = this.props.jobs
+    const locations = this.state.jobs
            .map(job => job.place)
            .filter(this.onlyUnique)
            .map(this.renderOption);
@@ -63,7 +94,7 @@ export default class JobFilter extends Component {
   }
 
   getTeamOptions() {
-    const locations = this.props.jobs
+    const locations = this.state.jobs
            .map(job => job.company)
            .filter(this.onlyUnique)
            .map(this.renderOption);

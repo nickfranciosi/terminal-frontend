@@ -79,7 +79,7 @@ class IndexPage extends React.Component{
               className={styles.headerBlock}
               hideCallout
               callout={{
-                link: '/',
+                link: 'mailto:stdin@terminal.io',
                 text: "Request an appointment",
               }}
             />
@@ -93,7 +93,7 @@ class IndexPage extends React.Component{
             ]}
             callout={{
               text: "Request an appointment",
-              link: "/",
+              link: "mailto:stdin@terminal.io",
             }}
           />
         </Viewport>

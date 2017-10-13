@@ -5,6 +5,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "animate.css": "^3.5.2",
+    "axios": "^0.16.2",
     "classnames": "^2.2.5",
     "gatsby": "^1.9.17",
     "gatsby-link": "^1.6.15",
