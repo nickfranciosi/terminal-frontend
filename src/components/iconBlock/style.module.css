@@ -37,6 +37,8 @@
   align-items: center;
   justify-content: center;
   background: white;
+  min-width: 50px;
+  min-height: 50px;
   border-radius: 50%;
   width: 50%;
   height: 50%;

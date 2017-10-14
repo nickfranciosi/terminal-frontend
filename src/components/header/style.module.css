@@ -30,7 +30,7 @@
 }
 
 .mobileMenu {
-  height: 75vh;
+  height: 80vh;
   width: 100vw;
   max-width: 100%;
   position: fixed;
@@ -72,11 +72,13 @@
 .mobileCallout{
   position: absolute;
   bottom: 16px;
+  left: 0;
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 90%;
+  width: 100%;
+  padding: 0 5%;
 }
 
 

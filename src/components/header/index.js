@@ -95,7 +95,8 @@ class Header extends React.Component {
                   timingClass={styles.mobileAnimate}
                 >
                   <Button
-                    to="/"
+                    to="mailto:stdin@terminal.io"
+                    external
                   >
                     Request an appointment
                   </Button>
@@ -106,7 +107,7 @@ class Header extends React.Component {
                 timingClass={styles.mobileAnimate}
               >  
                 <a
-                  href="#"
+                  href="https://jobs.lever.co/terminal"
                   className={styles.secondaryCallout}
                   target="_blank"
                 >
