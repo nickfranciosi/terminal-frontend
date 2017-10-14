@@ -6,15 +6,16 @@
   transition: padding 350ms ease;
 }
 
-.container:hover{
-  padding: 52px 0;
+.container:hover h3{
+  color: #7b7b7b !important;
 }
 
-.container  h3{
+.container h3{
   text-transform: none;
   color: white;
   letter-spacing: -0.34px;
   font-size: 19px;
+  transition: color 350ms ease;
 }
 
 .container p{
@@ -43,7 +44,7 @@
     align-items: center;
   }
 
-  .container  h3{
+  .container h3{
     font-size: 24px;
   }
 }

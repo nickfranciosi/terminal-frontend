@@ -105,7 +105,7 @@ class IndexPage extends React.Component{
                 description="OUR CAMPUSES SPAN THE GLOBE"
                 headline="Tap into global talent"
                 body="All the benefits of adding a new location with none of the hassle. We help you scale your team."
-                className={styles.locationCenterBlock}
+                className={cn(styles.locationCenterBlock, styles.home)}
                 animate={this.state.topAnimation}
               />
             </div>

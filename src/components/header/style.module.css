@@ -6,6 +6,7 @@
 
 .container {
   width: 100vw;
+  max-width: 100%;
   position: relative;
 }
 
@@ -31,6 +32,7 @@
 .mobileMenu {
   height: 75vh;
   width: 100vw;
+  max-width: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
