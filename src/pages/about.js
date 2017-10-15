@@ -36,6 +36,7 @@ class AboutPage extends React.Component{
   }
 
   render() {
+    const content = this.props.data.wordpressPage.acf;
     return (
         <div>
         <Header darkMenu/>
@@ -49,9 +50,9 @@ class AboutPage extends React.Component{
         >
           <Container>
             <HeaderTextBlock
-              description="Learn more"
-              headline="Get to know us"
-              body="A look into the mission and team behind Terminal."
+              description={content.description}
+              headline={content.headline}
+              body={content.body}
               className={styles.header}
             />
           </Container>
@@ -70,9 +71,9 @@ class AboutPage extends React.Component{
                     <SecondaryTextBlock
                       theme="white"
                       headlineSize="h2"
-                      description="how we work"
-                      headline="We’re solving the talent shortage problem"
-                      body="Terminal accelerates innovation by rethinking how the best companies and the most talented people partner in building the future."
+                      description={content.secondBlockDescriptionText}
+                      headline={content.secondBlockHeadline}
+                      body={content.secondBlockBody}
                       animate={this.state.animateTop}
                       callout={{
                         text: "Read the manifesto",
@@ -88,8 +89,8 @@ class AboutPage extends React.Component{
           <ScrollListener offset={650} onEnter={() => this.triggerAnimate("Bottom")}>
             <Container>
                 <CenterTextBlock
-                  description="VENTURE CAPITAL"
-                  headline="Trusted by the world&rsquo;s best investors"
+                  description={content.thirdBlockDescription}
+                  headline={content.thirdBlockHeadline}
                   className={cn(styles.headerNoButton, styles.investorHeadline)}
                   animate={this.state.animateBottom}
                 />
@@ -102,5 +103,24 @@ class AboutPage extends React.Component{
     )
   }
 }
+
+export const query = graphql`
+query AboutPageQuery {
+  wordpressPage(id: { eq: "8f4a73ae-3715-5f79-b05a-d6a2e1f51575" }) {
+    id
+    title
+    acf{
+      description
+      headline
+      body
+      secondBlockDescriptionText
+      secondBlockHeadline
+      secondBlockBody
+      thirdBlockDescription
+      thirdBlockHeadline
+    }
+  }
+}
+`
 
 export default AboutPage;

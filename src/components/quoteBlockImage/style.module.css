@@ -26,6 +26,7 @@
   right: 0;
 }
 
+
 @media only screen and (min-width: 640px) {
   .quoteTextBlock {
     width: 70%;

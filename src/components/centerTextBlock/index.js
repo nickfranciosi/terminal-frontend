@@ -13,7 +13,9 @@ class CenterTextBlock extends React.Component {
           <ScrollAnimate  animate={this.props.animate}>{description}</ScrollAnimate>
         </span>
         <h2 className={styles.headline}>
-          <ScrollAnimate  animate={this.props.animate}>{headline}</ScrollAnimate>
+          <ScrollAnimate  animate={this.props.animate}>
+            <div dangerouslySetInnerHTML={{__html: headline}}/>
+          </ScrollAnimate>
         </h2>
         {body &&
           <p className={styles.body}>

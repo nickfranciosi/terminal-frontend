@@ -76,6 +76,7 @@ class JoinPage extends React.Component{
   
 
   render() {
+    const content = this.props.data.wordpressPage.acf;
     return(
       <div className="darkTheme">
         <div className={styles.darkBg}>
@@ -83,9 +84,9 @@ class JoinPage extends React.Component{
           <Viewport className={styles.masthead}>
             <Container>
               <HeaderTextBlock
-                description="START A NEW JOURNEY"
-                headline="Join the team"
-                body="Don&rsquo;t just work, build the future. Join a high-growth startup team and tackle new challenges everyday."
+                description={content.description}
+                headline={content.headline}
+                body={content.body}
                 className={styles.headerBlock}
                 hideCallout
                 callout={{
@@ -120,9 +121,9 @@ class JoinPage extends React.Component{
               <ScrollListener offset={650} onEnter={this.triggerTop}>
               
                   <CenterTextBlock
-                    description="OUR OFFICES SPAN THE GLOBE"
-                    headline="Hard problems. Amazing benefits."
-                    body="Worry about nailing that next release and let us make everything else easy."
+                    description={content.secondBlockDescriptionText}
+                    headline={content.secondBlockHeadline}
+                    body={content.secondBlockBody}
                     className={styles.locationCenterBlock}
                     animate={this.state.topAnimation}
                   />
@@ -142,8 +143,8 @@ class JoinPage extends React.Component{
                 }}
                 animate={this.state.middleAnimation}
                 className={styles.quoteWidth}
-                description="WHAT OUR ENGINEERS ARE SAYING"
-                quote="People come together here to build some amazing technology.&rdquo;"
+                description={content.quoteDescription}
+                quote={content.quote}
               />
             </ScrollListener>
           </div>
@@ -151,9 +152,9 @@ class JoinPage extends React.Component{
             <div id="open-positions">
               <Container>
                 <CenterTextBlock
-                  description="Open roles"
-                  headline="Apply for an open position"
-                  body="Use the filters below to find the perfect role."
+                  description={content.thirdBlockDescription}
+                  headline={content.thirdBlockHeadline}
+                  body={content.thirdBlockBody}
                   className={styles.applyBlock}
                   animate={this.state.bottomAnimation}
                 />
@@ -167,5 +168,28 @@ class JoinPage extends React.Component{
     )
   }
 }
+
+
+export const query = graphql`
+query JoinPageQuery {
+  wordpressPage(id: { eq: "36a09538-df23-5231-89ea-6e5e96e29bfe" }) {
+    id
+    title
+    acf{
+      description
+      headline
+      body
+      secondBlockDescriptionText
+      secondBlockHeadline
+      secondBlockBody
+      thirdBlockDescription
+      thirdBlockHeadline
+      thirdBlockBody
+      quote
+      quoteDescription
+    }
+  }
+}
+`
 
 export default JoinPage;

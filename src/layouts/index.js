@@ -6,6 +6,7 @@ import Header from '../components/header';
 import LoadingScreen from '../components/loadingScreen';
 import mastheadImagePartner from '../assets/images/mast-cropped.jpg';
 import mastheadImageJoin from '../assets/images/red-room-tall.jpg';
+import aboutFull from '../assets/images/aboutFull.jpg';
 
 import './global.css';
 
@@ -44,6 +45,9 @@ class TemplateWrapper extends React.Component {
             display: "none",
           }}/>
           <img src={mastheadImageJoin} style={{
+            display: "none",
+          }}/>
+          <img src={aboutFull} style={{
             display: "none",
           }}/>
           { this.state.showLoader ?

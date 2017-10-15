@@ -16,7 +16,7 @@ const QuoteBlockImage = ({animate, imgSrc, description, quote, author, className
         <Container className={styles.container}>
           <CenterTextBlock
             description={description}
-            headline={quote}
+            headline={quote + "&#8221;"}
             className={styles.quoteTextBlock}
             animate={animate}
           />

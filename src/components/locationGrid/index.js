@@ -10,11 +10,10 @@ const LocationGrid = ({ locations = [], animateIn, className, style }) => (
     style={style}
   >
   {locations.map(location => (
-    <div className={styles.locationGridCard} style={{
+    <div className={styles.locationGridCard}  key={location.city} style={{
       overflow: "hidden",
     }}> 
       <LocationCard 
-        key={location.city}
         {...location}
       />
     </div>

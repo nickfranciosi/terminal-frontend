@@ -45,6 +45,8 @@ class IndexPage extends React.Component{
     this.triggerTop = this.triggerTop.bind(this);
     this.triggerMiddle = this.triggerMiddle.bind(this);
     this.triggerBottom = this.triggerBottom.bind(this);
+
+    console.log(props.data);
   }
 
   triggerTop() {
@@ -67,15 +69,16 @@ class IndexPage extends React.Component{
   
 
   render() {
+    const content = this.props.data.wordpressPage.acf;
     return(
       <div>
         <Header />
         <Viewport className={styles.masthead}>
           <Container>
             <HeaderTextBlock
-              description="Tap into global talent"
-              headline="Bold ideas require brilliant minds"
-              body="Terminal builds elite engineering teams to solve the toughest challenges of tomorrow."
+              description={content.description}
+              headline={content.headline}
+              body={content.body}
               className={styles.headerBlock}
               hideCallout
               callout={{
@@ -102,9 +105,9 @@ class IndexPage extends React.Component{
           <ScrollListener offset={650} onEnter={this.triggerTop}>
             <div >
               <CenterTextBlock
-                description="OUR CAMPUSES SPAN THE GLOBE"
-                headline="Tap into global talent"
-                body="All the benefits of adding a new location with none of the hassle. We help you scale your team."
+                description={content.secondBlockDescriptionText}
+                headline={content.secondBlockHeadline}
+                body={content.secondBlockBody}
                 className={cn(styles.locationCenterBlock, styles.home)}
                 animate={this.state.topAnimation}
               />
@@ -119,9 +122,9 @@ class IndexPage extends React.Component{
               <div>
                 <ScrollListener offset={500} onEnter={this.triggerMiddle}>
                   <CenterTextBlock
-                    description="Meet your new team"
-                    headline="We&rsquo;ll help you add the right people to grow your team."
-                    body="Whether you are scaling your Front-End, DevOps, or Data Science teams, our talented technologists are ready to join and make an impact."
+                    description={content.thirdBlockDescription}
+                    headline={content.thirdBlockHeadline}
+                    body={content.thirdBlockBody}
                     className={styles.gridTextBlock}
                     animate={this.state.middleAnimation}
                   />
@@ -151,12 +154,13 @@ class IndexPage extends React.Component{
             }}
             className={styles.quoteImageHome}
             imgSrc={homeQuote}
-            quote="We were able to scale our team and scope of work without breaking a sweat.&rdquo;"
+            description={content.quoteDescription}
+            quote={content.quote}
             animate={this.state.bottomAnimation}
             author={{
-              avatar: abeAvatar,
-              name: "Jack Abraham",
-              description: "CEO @Zenreach |  240 employees",
+              avatar: content.authorAvatar.url,
+              name: content.authorName,
+              description: content.authorDescription,
             }}
           />
         </ScrollListener>
@@ -165,5 +169,32 @@ class IndexPage extends React.Component{
     )
   }
 }
+
+export const query = graphql`
+query PartnerPageQuery {
+  wordpressPage(id: { eq: "317460cd-6bab-5eb3-b08f-105b99c98a49" }) {
+    id
+    title
+    acf{
+      description
+      headline
+      body
+      secondBlockDescriptionText
+      secondBlockHeadline
+      secondBlockBody
+      thirdBlockDescription
+      thirdBlockHeadline
+      thirdBlockBody
+      quote
+      quoteDescription
+      authorName
+      authorDescription
+      authorAvatar {
+        url
+      }
+    }
+  }
+}
+`
 
 export default IndexPage;
