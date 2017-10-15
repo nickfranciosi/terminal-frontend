@@ -29,9 +29,7 @@ class SubMenu extends React.Component {
   }
 
   handleAction(e) {
-    console.log("in th andler");
     if(this.props.callout.action) {
-      console.log("in th action");
       e.preventDefault();
       this.props.callout.action();
     }

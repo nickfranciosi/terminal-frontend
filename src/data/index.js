@@ -8,8 +8,6 @@ export default {
     {name: "NEA7", icon: require('../assets/images/investors/07-NEA.png'), size: "42%", maxSize: "115px"},
     {name: "NEA11", icon: require('../assets/images/investors/sequoia.svg')},
     {name: "NEA12", icon: require('../assets/images/investors/thrive_capital.png')},
-    // {name: "NEA6", icon: require('../assets/images/investors/06-Bain Capital.png')},
-    // {name: "NEA8", icon: require('../assets/images/investors/08-Cherubic.png'), size: "42%", maxSize: "128px"},
   ],
   amenities: [
     {
