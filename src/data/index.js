@@ -1,13 +1,15 @@
 export default {
   investors: [
+    {name: "NEA4", icon: require('../assets/images/investors/04-8VC.png'), size: "33%", maxSize: "83px"},
+    {name: "NEA9", icon: require('../assets/images/investors/forerunner.png')},
     {name: "NEA1", icon: require('../assets/images/investors/01-Founders fund.png')},
     {name: "NEA2", icon: require('../assets/images/investors/02-Kholsa ventures.png')},
-    {name: "NEA3", icon: require('../assets/images/investors/03-SVAngel.png'),size: "42%", maxSize: "113px"},
-    {name: "NEA4", icon: require('../assets/images/investors/04-8VC.png'), size: "33%", maxSize: "83px"},
-    {name: "NEA5", icon: require('../assets/images/investors/05-Lightspeed Venture.png')},
-    {name: "NEA6", icon: require('../assets/images/investors/06-Bain Capital.png')},
+    {name: "NEA10", icon: require('../assets/images/investors/05-Lightspeed Venture.png')},
     {name: "NEA7", icon: require('../assets/images/investors/07-NEA.png'), size: "42%", maxSize: "115px"},
-    {name: "NEA8", icon: require('../assets/images/investors/08-Cherubic.png'), size: "42%", maxSize: "128px"},
+    {name: "NEA11", icon: require('../assets/images/investors/sequoia.svg')},
+    {name: "NEA12", icon: require('../assets/images/investors/thrive_capital.png')},
+    // {name: "NEA6", icon: require('../assets/images/investors/06-Bain Capital.png')},
+    // {name: "NEA8", icon: require('../assets/images/investors/08-Cherubic.png'), size: "42%", maxSize: "128px"},
   ],
   amenities: [
     {
