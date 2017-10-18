@@ -132,18 +132,18 @@ class IndexPage extends React.Component{
                 <GridImage 
                   src={leftColImage} 
                   animate={this.state.middleAnimation}
-                  attribution="Our engineers have the experience to hit the ground running."/>
+                  attribution={content.leftColumnImageText}/>
               </div>
 
             </div>
             <div className={styles.rightColumn}>
                 <GridImage src={rightColTopImage}
                 animate={this.state.middleAnimation}
-                attribution="Your team will use the tools of your organization to stay connected." className={styles.gridRightTop} />
+                attribution={content.rightColumnTopImageText} className={styles.gridRightTop} />
                 <GridImage
                 animate={this.state.middleAnimation}
                 src={rightColBottomImage} 
-                attribution="We work with a variety of technologies including VR, AR, and more."/>
+                attribution={content.rightColumnBottomImageText}/>
             </div>
           </div>
         </Container>
@@ -185,6 +185,9 @@ query PartnerPageQuery {
       thirdBlockDescription
       thirdBlockHeadline
       thirdBlockBody
+      leftColumnImageText
+      rightColumnTopImageText
+      rightColumnBottomImageText
       quote
       quoteDescription
       authorName

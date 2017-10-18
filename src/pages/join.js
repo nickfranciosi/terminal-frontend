@@ -21,7 +21,6 @@ import ImageBar from '../components/imageBar';
 import GridImage from '../components/gridImage';
 import SubMenu from '../components/subMenu';
 import QuoteBlockImage from '../components/quoteBlockImage';
-// import Carousel from '../components/carousel';
 import mastheadImageJoin from '../assets/images/red-room-tall.jpg';
 import employeeBg from '../assets/images/employeeBg.jpg';
 import leftColImage from '../assets/images/partner/leftColImage.jpg';
@@ -31,7 +30,7 @@ import abeAvatar from '../assets/images/avatars/AbrahamSquare.jpg';
 import aboutFull from '../assets/images/aboutFull.jpg';
 
 import styles from "./css/home.module.css";
-import { investors, amenities, locations, imageBar } from "../data";
+import { investors, locations, imageBar } from "../data";
 
 class JoinPage extends React.Component{
 
@@ -74,9 +73,21 @@ class JoinPage extends React.Component{
     });
   }
   
+  formatAmenities(raw) {
+    return raw.map(item => {
+      const itemContent = item.node.acf;
+      return {
+        headline: itemContent.amenityHeadline,
+        description: itemContent.amenityDetail,
+        image: require(`../assets/images/icons/join-the-team/${itemContent.amenityImageName}.svg`),
+      }
+    })
+  }
 
   render() {
     const content = this.props.data.wordpressPage.acf;
+    const amenities = this.props.data.allWordpressWpAmenities.edges;
+    
     return(
       <div className="darkTheme">
         <div className={styles.darkBg}>
@@ -131,7 +142,7 @@ class JoinPage extends React.Component{
             </Container>
             <ImageBar images={imageBar} className={styles.imgBar}/>
             <Container className={styles.bioContainer}>
-              <IconGrid data={amenities} />
+              <IconGrid data={this.formatAmenities(amenities)} />
             </Container>
           </div>
           <div  className={styles.quoteContainer}>
@@ -187,6 +198,17 @@ query JoinPageQuery {
       thirdBlockBody
       quote
       quoteDescription
+    }
+  }
+  allWordpressWpAmenities{
+    edges{
+      node{
+        acf {
+          amenityHeadline
+          amenityDetail
+          amenityImageName
+        }
+      }
     }
   }
 }
