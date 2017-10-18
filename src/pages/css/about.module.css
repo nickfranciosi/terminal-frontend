@@ -1,7 +1,6 @@
 
 .aboutFull {
   height: 100%;
-  /* max-height: 700px; */
   margin-bottom: 76px;
 }
 
@@ -23,6 +22,12 @@
   margin-bottom: 36px;
 }
 
+
+.headerContainer{
+  margin: 0;
+}
+
+
 @media only screen and (min-width: 540px) {
 
   .investorHeadline h2{
@@ -38,6 +43,10 @@
 
   .aboutFull {
     margin-bottom: 168px;
+  }
+
+  .headerContainer {
+    margin: 0 auto;
   }
 
 }

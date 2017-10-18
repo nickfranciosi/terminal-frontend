@@ -11,3 +11,14 @@
 .header p{
   max-width: 420px;
 }
+
+.headerContainer{
+  margin: 0;
+}
+
+
+@media only screen and (min-width: 750px) {
+  .headerContainer {
+    margin: 0 auto;
+  }
+}

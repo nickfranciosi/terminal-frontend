@@ -61,11 +61,15 @@
   line-height: 1.33;
   letter-spacing: -0.6px !important;
   font-family: "MaisonNeueBold";
-  color: #232121;
+  color: #7B7B7B;
   text-transform: none;
 }
 
-.dark .mobileLink {
+.mobileLink.active{
+  color: #232121;
+}
+
+.dark .mobileLink.active {
   color: white;
 }
 
@@ -190,7 +194,7 @@
   }
 }
 
-@media only screen and (min-width: 975px) {
+@media only screen and (min-width: 1080px) {
   .menu{
     display: flex;
   }

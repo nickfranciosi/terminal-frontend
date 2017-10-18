@@ -5,7 +5,7 @@ import styles from './style.module.css';
 
 const IconGrid = ({ data = [] }) => (
   <div className={styles.container}>
-    {data.map(i => <IconBlock {...i}  key={i.name}/>)}
+    {data.map(i => <IconBlock {...i}  key={i.headline}/>)}
   </div>
 );
 

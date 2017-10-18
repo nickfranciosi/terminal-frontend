@@ -18,13 +18,14 @@ export default ({ data }) => {
       <Header darkMenu/>
         <div 
           style={{
-            paddingTop: "20%",
+            paddingTop: "27%",
             minHeight: 400,
+            maxHeight: "80vh",
             display: "flex",
             alignItems: "flex-end",
           }}
         >
-          <Container>
+          <Container className={styles.headerContainer}>
             <HeaderTextBlock
               description={content.description}
               headline={content.headline}

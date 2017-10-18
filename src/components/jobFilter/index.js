@@ -30,12 +30,17 @@ export default class JobFilter extends Component {
   fetchJobs() {
     axios.get('https://api.lever.co/v0/postings/terminal?mode=json')
     .then(response => {
-      const formattedJobs = response.data.map(this.formatJob);
+
+      const formattedJobs = response.data.filter(this.filterOutTerminalJobs).map(this.formatJob);
       this.setState({
         jobs: formattedJobs,
         filteredJobs: formattedJobs,
       })
     })
+  }
+
+  filterOutTerminalJobs(item) {
+    return item.categories.team !== "Terminal";
   }
 
   formatJob(job){
