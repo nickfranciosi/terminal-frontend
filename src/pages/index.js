@@ -24,8 +24,7 @@ import aboutFull from '../assets/images/aboutFull.jpg';
 import homeQuote from '../assets/images/homeQuote.jpg';
 import leftColImage from '../assets/images/partner/leftColImage.jpg';
 import rightColTopImage from '../assets/images/partner/rightColTopImage.jpg';
-import rightColBottomImage from '../assets/images/partner/rightColBottomImage.jpg';
-import abeAvatar from '../assets/images/avatars/AbrahamSquare.jpg';
+import rightColBottomImage from '../assets/images/partner/rightColBottomImage.jpg'
 
 
 import styles from "./css/home.module.css";

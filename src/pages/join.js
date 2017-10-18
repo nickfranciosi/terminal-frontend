@@ -21,13 +21,11 @@ import ImageBar from '../components/imageBar';
 import GridImage from '../components/gridImage';
 import SubMenu from '../components/subMenu';
 import QuoteBlockImage from '../components/quoteBlockImage';
-// import Carousel from '../components/carousel';
 import mastheadImageJoin from '../assets/images/red-room-tall.jpg';
 import employeeBg from '../assets/images/employeeBg.jpg';
 import leftColImage from '../assets/images/partner/leftColImage.jpg';
 import rightColTopImage from '../assets/images/partner/rightColTopImage.jpg';
 import rightColBottomImage from '../assets/images/partner/rightColBottomImage.jpg';
-import abeAvatar from '../assets/images/avatars/AbrahamSquare.jpg';
 import aboutFull from '../assets/images/aboutFull.jpg';
 
 import styles from "./css/home.module.css";
