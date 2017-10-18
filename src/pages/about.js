@@ -1,10 +1,7 @@
 import React from "react";
-import Reveal from 'react-reveal';
 import cn from 'classnames';
-import 'animate.css/animate.css';
 import Viewport from '../components/viewport';
 import Container from '../components/container';
-import CalloutLink from '../components/calloutLink';
 import CenterTextBlock from '../components/centerTextBlock';
 import FullBackgroundImage from '../components/fullBackgroundImage';
 import ScrollListener from '../components/scrollListener';

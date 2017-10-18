@@ -2,25 +2,19 @@ import React from 'react';
 import cn from 'classnames';
 import Viewport from '../components/viewport';
 import Container from '../components/container';
-import LoadingScreen from '../components/loadingScreen';
 import AngledImage from '../components/angledImage';
-import FullBackgroundImage from '../components/fullBackgroundImage';
 import Header from '../components/header';
 import InvestorGrid from '../components/investorGrid';
-import JobListItem from '../components/jobListItem';
 import ScrollListener from '../components/scrollListener';
 import Button from '../components/button';
 import Footer from '../components/footer';
-import Author from '../components/author';
 import HeaderTextBlock from '../components/headerTextBlock';
 import CenterTextBlock from '../components/centerTextBlock';
-import SingleHeading from '../components/singleHeading';
 import QuoteBlockImage from '../components/quoteBlockImage';
 import LocationGrid from '../components/locationGrid';
 import GridImage from '../components/gridImage';
 import SubMenu from '../components/subMenu';
 import mastheadImagePartner from '../assets/images/mast-cropped.jpg';
-import aboutFull from '../assets/images/aboutFull.jpg';
 import homeQuote from '../assets/images/homeQuote.jpg';
 import leftColImage from '../assets/images/partner/leftColImage.jpg';
 import rightColTopImage from '../assets/images/partner/rightColTopImage.jpg';
@@ -28,7 +22,7 @@ import rightColBottomImage from '../assets/images/partner/rightColBottomImage.jp
 
 
 import styles from "./css/home.module.css";
-import { investors, team, locations, imageBar } from "../data";
+import { locations } from "../data";
 
 class IndexPage extends React.Component{
 
@@ -45,7 +39,6 @@ class IndexPage extends React.Component{
     this.triggerMiddle = this.triggerMiddle.bind(this);
     this.triggerBottom = this.triggerBottom.bind(this);
 
-    console.log(props.data);
   }
 
   triggerTop() {
@@ -115,8 +108,8 @@ class IndexPage extends React.Component{
         </Container>
         </div>
         <LocationGrid locations={locations} className={styles.locationGridSection}/>
-        <Container className={styles.gridImageSection}>
-          <div className="clearfix" id="services">
+        <Container className={styles.gridImageSection} id="services">
+          <div className="clearfix">
             <div className={styles.leftColumn}>
               <div>
                 <ScrollListener offset={500} onEnter={this.triggerMiddle}>
@@ -146,23 +139,25 @@ class IndexPage extends React.Component{
             </div>
           </div>
         </Container>
-        <ScrollListener offset={600} onEnter={this.triggerBottom}>
-          <QuoteBlockImage 
-            style={{
-              marginBottom: "-60px",
-            }}
-            className={styles.quoteImageHome}
-            imgSrc={homeQuote}
-            description={content.quoteDescription}
-            quote={content.quote}
-            animate={this.state.bottomAnimation}
-            author={{
-              avatar: content.authorAvatar.url,
-              name: content.authorName,
-              description: content.authorDescription,
-            }}
-          />
-        </ScrollListener>
+        <div id="testimonials">
+          <ScrollListener offset={600} onEnter={this.triggerBottom}>
+            <QuoteBlockImage 
+              style={{
+                marginBottom: "-60px",
+              }}
+              className={styles.quoteImageHome}
+              imgSrc={homeQuote}
+              description={content.quoteDescription}
+              quote={content.quote}
+              animate={this.state.bottomAnimation}
+              author={{
+                avatar: content.authorAvatar.url,
+                name: content.authorName,
+                description: content.authorDescription,
+              }}
+            />
+          </ScrollListener>
+        </div>
         <Footer />
       </div>
     )

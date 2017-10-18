@@ -9,6 +9,7 @@
     "classnames": "^2.2.5",
     "gatsby": "^1.9.67",
     "gatsby-link": "^1.6.15",
+    "gatsby-plugin-google-analytics": "^1.0.10",
     "gatsby-plugin-react-helmet": "^1.0.5",
     "gatsby-plugin-typography": "^1.7.9",
     "gatsby-source-wordpress": "^2.0.19",

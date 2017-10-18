@@ -3,33 +3,24 @@ import cn from 'classnames';
 import { scroller } from 'react-scroll';
 import Viewport from '../components/viewport';
 import Container from '../components/container';
-import LoadingScreen from '../components/loadingScreen';
 import AngledImage from '../components/angledImage';
 import FullBackgroundImage from '../components/fullBackgroundImage';
 import Header from '../components/header';
-import InvestorGrid from '../components/investorGrid';
 import ScrollListener from '../components/scrollListener';
 import JobFilter from '../components/jobFilter';
-import Button from '../components/button';
 import Footer from '../components/footer';
 import Author from '../components/author';
 import HeaderTextBlock from '../components/headerTextBlock';
 import CenterTextBlock from '../components/centerTextBlock';
-import SingleHeading from '../components/singleHeading';
 import IconGrid from '../components/iconGrid';
 import ImageBar from '../components/imageBar';
-import GridImage from '../components/gridImage';
 import SubMenu from '../components/subMenu';
 import QuoteBlockImage from '../components/quoteBlockImage';
 import mastheadImageJoin from '../assets/images/red-room-tall.jpg';
 import employeeBg from '../assets/images/employeeBg.jpg';
-import leftColImage from '../assets/images/partner/leftColImage.jpg';
-import rightColTopImage from '../assets/images/partner/rightColTopImage.jpg';
-import rightColBottomImage from '../assets/images/partner/rightColBottomImage.jpg';
-import aboutFull from '../assets/images/aboutFull.jpg';
 
 import styles from "./css/home.module.css";
-import { investors, locations, imageBar } from "../data";
+import { imageBar } from "../data";
 
 class JoinPage extends React.Component{
 
@@ -144,7 +135,7 @@ class JoinPage extends React.Component{
               <IconGrid data={this.formatAmenities(amenities)} />
             </Container>
           </div>
-          <div  className={styles.quoteContainer}>
+          <div  className={styles.quoteContainer} id="testimonials">
             <ScrollListener offset={650} onEnter={this.triggerMiddle}>
               <QuoteBlockImage 
                 imgSrc={employeeBg}

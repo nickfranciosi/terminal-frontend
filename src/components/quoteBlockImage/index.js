@@ -11,7 +11,7 @@ const QuoteBlockImage = ({animate, imgSrc, description, quote, author, className
     position: "relative",
     height: "80vh",
     ...style,
-  }} id="testimonials">
+  }}>
     <FullBackgroundImage imgSrc={imgSrc} className={cn(styles.quoteBlockContainer, className)} gradient>
         <Container className={styles.container}>
           <CenterTextBlock

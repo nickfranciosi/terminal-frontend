@@ -9,38 +9,6 @@ export default {
     {name: "NEA11", icon: require('../assets/images/investors/sequoia.svg')},
     {name: "NEA12", icon: require('../assets/images/investors/thrive_capital.png')},
   ],
-  amenities: [
-    {
-      headline: "Catered food + drinks",
-      description: "Delicious meals, snacks galore, endless options of tasty drinks and plenty of caffeine",
-      image: require('../assets/images/icons/join-the-team/grill.svg'),
-    },
-    {
-      headline: "Flexible schedule",
-      description: "Sometimes you just need a break and sometimes life happens - we make both easy for you",
-      image: require('../assets/images/icons/join-the-team/hourglass.svg'),
-    },
-    {
-      headline: "Equity upside and RRSP",
-      description: "Share in the upside you help create while you save for the future",
-      image: require('../assets/images/icons/join-the-team/Leaf.svg'),
-    },
-    {
-      headline: "World-class talent",
-      description: "Work alongside and learn from the best engineers from across our client teams",
-      image: require('../assets/images/icons/join-the-team/medal.svg'),
-    },
-    {
-      headline: "Extended health care benefits",
-      description: "Thrive from the best in dental, vision, and extended medical support",
-      image: require('../assets/images/icons/join-the-team/bed.svg'),
-    },
-    {
-      headline: "Career enhancement",
-      description: "Further your skills through our programs that connect you with industry experts",
-      image: require('../assets/images/icons/join-the-team/protractor.svg'),
-    },
-  ],
 
   locations: [
     {
@@ -73,31 +41,4 @@ export default {
     require('../assets/images/culture/5.jpg'),
   ], 
 
-  jobs: [
-    {
-      title: "Full-stack engineer",
-      place: "Vancouver, B.C.",
-      company: "Zero"
-    },
-    {
-      title: "Swift engineer",
-      place: "Chicago, USA",
-      company: "Zero"
-    }, 
-    {
-      title: "Operations",
-      place: "Vancouver, B.C.",
-      company: "RosmettaMD"
-    }, 
-    {
-      title: "Full-stack engineer",
-      place: "Montreal, Quebec",
-      company: "Terminal"
-    }, 
-    {
-      title: "Full-stack engineer",
-      place: "Vancouver, B.C.",
-      company: "Zero"
-    }, 
-  ]
 }

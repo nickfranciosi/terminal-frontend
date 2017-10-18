@@ -32,12 +32,6 @@ class ScrollPosition extends React.Component {
     const elBottom = elTop + this.element.elBottom;
     const scrollTop = this.getScrollTop()
     const distanceToTop = elTop - scrollTop;
-    console.log({
-      elTop,
-      elBottom,
-      scrollTop,
-      distanceToTop,
-    });
     this.setState({
       elTop,
       elBottom,
