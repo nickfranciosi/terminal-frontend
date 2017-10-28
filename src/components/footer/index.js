@@ -61,6 +61,12 @@ const Footer = ({ darkTheme }) => {
         </div>
         <div className={styles.mobileLogo}>
           <Link to="/"><img className={styles.logo} src={logo} /></Link>
+          <ul className={styles.menu}>
+              <li><a target="_blank" href="http://twitter.com/jointerminal">Twitter</a></li>
+              <li><a target="_blank" href="http://medium.com/@terminal">Medium</a></li>
+              <li><a target="_blank" href="https://www.linkedin.com/company/17986001/">Linkedin</a></li>
+              <li><a target="_blank" href="http://instagram.com/jointerminal">Instagram</a></li>
+          </ul>
         </div>
       </Container>
     </div>
