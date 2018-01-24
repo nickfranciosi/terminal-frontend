@@ -44,7 +44,7 @@ const Footer = ({ darkTheme }) => {
           </div>
         </div>
         <div className={styles.copyright}>
-          <p>&copy;Terminal 2017</p>
+          <p>&copy;Terminal 2018</p>
           <ul className={styles.menu}>
             <li><a target="_blank" href="https://jobs.lever.co/terminal?team=Terminal">Careers at Terminal</a></li>
             <li>

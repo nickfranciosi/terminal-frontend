@@ -151,7 +151,7 @@ class IndexPage extends React.Component{
               quote={content.quote}
               animate={this.state.bottomAnimation}
               author={{
-                avatar: content.authorAvatar.url,
+                avatar: content.authorAvatar.source_url,
                 name: content.authorName,
                 description: content.authorDescription,
               }}
@@ -187,7 +187,7 @@ query PartnerPageQuery {
       authorName
       authorDescription
       authorAvatar {
-        url
+        source_url
       }
     }
   }
