@@ -66,7 +66,7 @@ class TabNavigation extends React.Component {
       this.setState({
         pointerId: id,
         pointer: {
-          bottom: "-150%",
+          bottom: "-250%",
           left: `${label.left - startPoint}px`,
           width: `${label.width}px`,
         },
