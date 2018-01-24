@@ -38,7 +38,7 @@ const Footer = ({ darkTheme }) => {
             </div>
             <div className={styles.location}>
               <p>Vancouver</p>
-              <p>201-210 Carrall St.</p>
+              <p>1110 Hamilton St - Suite 208</p>
               <p>BC, Canada</p>
             </div>
           </div>
